@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include banner.html %}
+
+{{ content }}
+
+<section class="banner-overlap">
+  <div class="row row--padding">
+
+    <div class="row--columns-6-6 row--columns-6-6-gutters">
+      {% assign offers = site.data.offers %}
+      {% for offer in offers %}
+        {% include offer-block.html class="stack" %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+

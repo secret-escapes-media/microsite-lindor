@@ -1,80 +1,126 @@
-// all custom styles for the site
 
+
+
+body {
+  background-color: $light-grey;
+}
+
+/*=========================================================
+   ---------- CUSTOM SECTIONS ----------
+   Areas styled with custom content/interactive elements
+=========================================================*/
+
+
+// ---------- Footer ----------
 
 .site-footer {
-  padding-top: $margin;
-  padding-bottom: $margin;
+  padding-top: 3em;
+  padding-bottom: 3em;
   color: darken( $white, 20 );
   font-size: .8em;
   font-weight: 400;
   background-color: $black;
 
+  .logo {
+    display: block;
+    text-align: center;
+    @include bp(large) {
+      display: inline-block;
+    }
+  }
+
   .footer-nav {
+    @include bp(large) {
+      display: flex;
+      flex-flow: row nowrap;
+      li { flex-grow: 1; }
+    }
     &__link {
       text-transform: uppercase;
-      font-size: 1.2em;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      padding: 0 10px;
+      letter-spacing: 0.05em;
+      padding: 2px 5px;
+      display: inline-block;
     }
   }
 }
 
 
-// ---------- Section styles ----------
+// ---------- Banner ----------
 
-.section {
-  // Fixed background section
-  &--fixed-bg {
-    padding-top: 8em;
-    padding-bottom: 8em;
-    color: $white;
-    background-color: $se-light-grey;
-    background: $se-light-grey center no-repeat;
-    background-image: url('../img/bg/bg.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    p { font-weight: 400; }
-    .page-content &:first-child:before {
-      content: '';
-      display: block;
-      height: 3.375em;
-    }
-  }
-  // Coloured backgrounds
-  &--light-grey-bg {
-    background-color: $light-grey;
-  }
-  &--dark-grey-bg {
-    background-color: $dark-grey;
-    color: $white;
-  }
-  &--black-bg {
-    background-color: $black;
-    color: $white;
-  }
-  &--partner-bg {
-    background-color: $partner-secondary;
-    color: $white;
+.banner {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 240px;
+  color: $white;
+  background-color: $se-light-grey;
+  background: $se-light-grey center no-repeat;
+  background-image: url('../img/bg/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  &__title { letter-spacing: 0.2em; }
+  &__content { padding-top: 20px; margin-top: 20px; border-top: 3px double $white-75; }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 40%;
+    width: 100%;
+    z-index: 0;
+    background: -moz-linear-gradient(top,  rgba(248,248,248,0) 0%, rgba(248,248,248,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(248,248,248,0) 0%,rgba(248,248,248,1) 100%);
+    background: linear-gradient(to bottom,  rgba(248,248,248,0) 0%,rgba(248,248,248,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f8f8f8', endColorstr='#f8f8f8',GradientType=0 );
   }
 }
 
-// ---------- button ----------
+.banner-overlap {
+  margin-top: -150px;
+}
 
-.btn {
-  @include transition;
-  display:inline-block;
-  padding: .5em 1.5em;
-  border: 1px solid $se-orange;
-  font-weight: 500;
-  border-radius: 10em;
-  &:hover {
-    color: white;
-    background-color: $se-orange;
-    text-decoration: none;
+
+// ---------- Competition section ----------
+
+.competition-section {
+  &__content {
+    padding: 3em 1.5em;
   }
-  * + & { margin-top: 1em; }
+  @include bp(large) {
+    height: 480px;
+    &__image {
+      height: 100%;
+    }
+  }
+}
 
-  &--solid { color: white; border: 0; background-color: $se-orange; }
-  &--large { font-size: 1.2em; padding: .5em 3em; }
+// ---------- Overview page ----------
+
+
+.overview-nav {
+  &__item {
+    display: block;
+    margin-bottom: 2em;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &__title {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%; transform: translateY(-50%);
+    &:before, &:after {
+      content: "";
+      width: 80px;
+      position: absolute;
+      left: 50%; margin-left: -40px;
+      border-top: 3px double $white-75;
+    }
+    &:before { top: -0.25em; }
+    &:after { bottom: -0.35em; }
+  }
 }

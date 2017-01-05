@@ -13,7 +13,7 @@ $gutters:( gutters: 1 / 2, );
 $margin: 2em;
 
 
-// -------- grid sections --------
+// -------- Sections --------
 
 section {
   padding-top: 2.25em;
@@ -24,8 +24,24 @@ section {
   }
 }
 
+.section {
+  &--white-bg { background-color: $white; }
+  &--light-grey-bg { background-color: $light-grey; }
+  &--dark-grey-bg { background-color: $dark-grey; color: $white; }
+  &--black-bg { background-color: $black; color: $white; }
+  &--partner-bg { background-color: $partner-secondary; color: $white; }
+  // Section padding
+  &--padding-none { padding: 0; }
+  &--padding-sm { padding-top: 1.2em; padding-bottom: 1.2em; }
+  &--padding-md { padding-top: 3.583em; padding-bottom: 3.583em;  }
+  &--padding-lg { padding-top: 5.16em; padding-bottom: 5.16em;  }
+}
+
+
+// -------- Rows --------
+
 .row {
-  @include container( $xxlarge );
+  @include container( $xxxlarge );
   position: relative;
   & + .row { margin-top: $margin; }
 }

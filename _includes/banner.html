@@ -1,0 +1,24 @@
+<section
+  class="banner site-header__offset color-white"
+  style="background-image: url('{{ site.baseurl }}/img/bg/banner-{{ page.class }}.jpg');">
+
+  <div class="row row--padding row--columns-6-6">
+
+    <div class="row__column">
+      <h1 class="banner__title title title--xxl">
+        {% if page.banner-title %}
+          {{ page.banner-title | upcase }}
+        {% else %}
+          {{ page.title | upcase }}
+        {% endif %}
+      </h1>
+      {% if page.banner-content %}
+      <div class="banner__content">
+        <p class="lead-paragraph title--kerning-wide">{{ page.banner-content | upcase }}</p>
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+</section>

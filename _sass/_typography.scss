@@ -4,20 +4,20 @@
 // -------- root typography styles --------
 
 $core-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-$main-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-$title-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+$main-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+$title-font-family: 'Playfair Display', 'Helvetica Neue', sans-serif;
 
 html { font-size:62.5%; }
 body,
 input, textarea, keygen, select, button {
   font: 400 14px/1.728 $main-font-family;
   -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
   @include bp(medium) {
     font-size: 15px;
   }
   color: $text-paragraph;
 }
-
 
 // -------- Headings --------
 
@@ -27,42 +27,47 @@ h3, .h3,
 h4, .h4,
 h5, .h5 {
   font-family: $title-font-family;
-  color: $text-heading;
+  color: $text-title;
   line-height: 1.2;
-  margin-bottom: .5em;
 }
 
-h1, .h1 {
-  font-size: 3.375em;
-  @include bp(medium) {
-    font-size: 4em;
-  }
+.title {
+  color: $text-title;
+  font-family: $title-font-family;
+  font-size: 2.2em;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  + * { margin-top: .2em; }
+
+  &--margin    { margin-bottom: 0.5em; }
+
+  &--xxl    { font-size: 2.986em; }
+  &--xl   { font-size: 2.488em; }
+  &--lg    { font-size: 2.2em; }
+  &--md  { font-size: 2.2em; }
+  &--sm { font-size: 1.728em; }
+  &--xs     { font-size: 1.2em; }
+  &--xxs    { font-size: 0.9em; }
+
+  &--light     { font-weight: 200; }
+  &--medium     { font-weight: 300; }
+  &--bold      { font-weight: 600; }
+  &--bolder    { font-weight: 800; }
+  &--expanded  { letter-spacing: .2em; }
+  &--condense  { letter-spacing: 0; }
+  &--tight     { line-height: .9; }
+  &--lower     { text-transform: initial; }
+
+  &--kerning-wide { letter-spacing: 0.06em; }
+
   @include bp(large) {
-    font-size: 5.063em;
+    &--xxl    { font-size: 5.16em; }
+    &--xl   { font-size: 4.3em; }
+    &--lg    { font-size: 3.375em; }
+    &--md  { font-size: 2.986em; }
   }
-}
 
-h2, .h2 {
-  font-size: 2em;
-  @include bp(medium) {
-    font-size: 2.488em;
-  }
-  @include bp(large) {
-    font-size: 2.986em;
-  }
 }
-
-h3, .h3 {
-  font-size: 1.728em;
-  @include bp(medium) {
-    font-size: 2.074em;
-  }
-  @include bp(large) {
-    font-size: 2.488em;
-  }
-}
-
-h4, .h4 { font-size: 1.728em; }
 
 
 // -------- Lists --------
@@ -84,18 +89,26 @@ dl {
   &--horizontal {
     list-style: none; padding: 0; margin: 0;
     li {
-      display: inline-block; position: relative; padding: 0 1em;
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      padding: 0 1em;
+      @include bp(large) {
+        width: auto;
+      }
     }
-    li + li:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      display: block;
-      height: 100%;
-      width: 1px;
-      background-color: rgba(255, 255, 255, 0.15);
-      transform: translateY(-50%);
+    @include bp(large) {
+      li + li:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        height: 100%;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-50%);
+      }
     }
   }
   &--lined {
@@ -108,9 +121,35 @@ dl {
   }
 }
 
+
+// ---------- button ----------
+
+.btn {
+  @include transition;
+  display:inline-block;
+  padding: .55em 3em .4em;
+  border: 2px solid $partner-primary;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+  color: $partner-primary;
+  font-weight: 800;
+  &:hover {
+    color: white;
+    background-color: $partner-primary;
+    text-decoration: none;
+  }
+  * + & { margin-top: 1.5em; }
+
+  &--solid { color: white; border: 0; background-color: $partner-primary; }
+  &--large { font-size: 1.2em; padding: .6em 3em; }
+}
+
 // -------- general content styles --------
 
+p             { max-width: 720px; }
 p + *         { margin-top: 1em; }
+.lead-paragraph { font-size: 1.25em; }
 li            { list-style-position: inside; }
 ul li         { list-style-type: disc; }
 ol li         { list-style-type: decimal; }
@@ -119,7 +158,10 @@ strong        { font-weight: 800; }
 .align-left   { text-align: left; }
 .align-right  { text-align: right; }
 .align-center { text-align: center; }
-.text-white {
+p.align-center,
+.align-center p { margin-left: auto; margin-right: auto; }
+
+.color-white {
   color: #fff;
   p,h1,h2,h3,h4,h5,h6,
   .h1,.h2,.h3,.h4,.h5,.h6 { color: #fff; }

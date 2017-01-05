@@ -1,0 +1,20 @@
+---
+layout: content
+title: Offers
+class: offers
+nav-order: 5
+overview-nav-order: 4
+
+banner-title: Offers
+banner-content: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.
+---
+
+
+<section class="offers">
+  <div class="row row--padding">
+    {% assign offers = site.data.offers %}
+    {% for offer in offers %}
+        {% include offer-block.html %}
+    {% endfor %}
+  </div>
+</section>

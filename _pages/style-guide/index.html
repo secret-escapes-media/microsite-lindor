@@ -2,11 +2,15 @@
 layout: default
 title: Style Guide
 class: style-guide
-nav-order: 5
-meta-description: Accusamus ab expedita in impedit pariatur molestiae eveniet adipisci obcaecati autem explicabo, laudantium dolor amet, commodi officia enim tempora illum dolorem. Culpa.
+
+banner-title: Style Guide
+banner-content: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.
 ---
 
-<section class="section--fixed-bg intro site-header__offset text-white">
+
+{% include banner.html %}
+
+<section class="section--fixed-bg intro site-header__offset color-white">
   <div class="row row--padding">
     <h1>{{ page.title }}</h1>
     <ul class="list--horizontal">
@@ -123,7 +127,7 @@ meta-description: Accusamus ab expedita in impedit pariatur molestiae eveniet ad
         </dt>
         <dt>
           <span class="styleguide--colour bg--text-heading"></span>
-          Text Heading <code>$text-heading</code>
+          Text Heading <code>$text-title</code>
         </dt>
         <dt>
           <span class="styleguide--colour bg--text-paragraph"></span>

@@ -3,7 +3,7 @@ Steps to install
 
 1. __Rename microsite__
 
-All microsites on secret escapes are hosted under a unique sub directory. Complete a find and replace across the project for "se-microsite-template" and replace all with the new name. Also rename the route folder to the same name.
+All microsites on secret escapes are hosted under a unique sub directory. Complete a find and replace across the project for "lindor" and replace all with the new name. Also rename the route folder to the same name.
 
 
 2. __Gulp & Bower install__

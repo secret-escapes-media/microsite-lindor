@@ -1,0 +1,28 @@
+---
+layout: home
+title: Overview
+class: overview
+nav-order: 1
+
+banner-title: Romantic Breaks
+banner-content: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.
+---
+
+
+<section>
+  <div class="row row--padding row--columns-6-6-gutters align-center overview-nav banner-overlap">
+
+    {% assign overview-nav = site.pages | sort:"overview-nav-order" %}
+    {% for nav in overview-nav %}
+    {% if nav.overview-nav-order %}
+      <div class="overview-nav__item row__column bg-image-ratio bg-image-ratio--3-2" style="background-image:url('{{ site.baseurl }}/img/bg/banner-{{ nav.class }}.jpg');">
+        <a class="overview-nav__content" href="{{ site.baseurl }}{{ nav.url }}">
+          <span class="overview-nav__title color-white title title--lg title--kerning-wide">{{ nav.title | upcase }}</span>
+        </a>
+      </div>
+    {% endif %}
+    {% endfor %}
+
+  </div>
+</section>
+

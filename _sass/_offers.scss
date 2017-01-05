@@ -4,11 +4,9 @@
 
 
 .offer {
-  border: 1px solid $light-grey;
-  &:hover { background-color: $light-grey; }
-  .row__column{
-    margin-top: 0;
-  }
+  background-color: $white;
+  margin-bottom: 2em;
+
   &__image {
     position: relative;
     height: 18em;
