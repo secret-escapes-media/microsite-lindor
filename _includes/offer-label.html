@@ -1,0 +1,11 @@
+{% if offer.lindor-hero %}
+  <span class="offer__label offer__label-hero">
+    Lindor Premium
+    <span class="offer__label__description">Enjoy a luxury Lindor hamper on arrival at this hotel</span>
+  </span>
+{% elsif offer.lindor %}
+  <span class="offer__label offer__label-lindor">
+    Lindor
+    <span class="offer__label__description">You will receive a Lindor gift on arrival</span>
+  </span>
+{% endif %}

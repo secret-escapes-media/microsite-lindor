@@ -5,16 +5,34 @@ class: offers
 nav-order: 5
 overview-nav-order: 4
 
-banner-title: Offers
-banner-content: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.
+banner-title: Romance Abounds
+
+intro-content: >
+  <p class="lead-paragraph">A lucky five bookings will have the opportunity to have any Secret Escapes romantic getaway paid for in full, courtesy of Lindor. Book any romantic stay </p>
 ---
 
 
-<section class="offers">
-  <div class="row row--padding">
+<section>
+
+  <!--========  All Romantic Breaks ========-->
+  <div class="row row--padding align-center">
+    <h2 class="title title--margin title--md title--italic">All Romantic Breaks</h2>
+    <hr class="center">
+    <p class="lead-paragraph">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="row row--columns-4-4-4-gutters row--padding">
     {% assign offers = site.data.offers %}
     {% for offer in offers %}
-        {% include offer-block.html %}
+      {% include offer-block.html %}
     {% endfor %}
+  </div>
+</section>
+
+
+
+<section class="section--grey-bg">
+  <div class="row row--padding align-center">
+    <a href="{{ site.baseurl }}/offers" class="btn btn--solid btn--large">View all offers</a>
   </div>
 </section>

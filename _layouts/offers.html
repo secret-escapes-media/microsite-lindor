@@ -4,18 +4,93 @@ layout: default
 
 {% include banner.html %}
 
-{{ content }}
+
 
 <section class="banner-overlap">
   <div class="row row--padding">
+    <div class="expert-section row row--columns-6-6 row--columns-vertical-align">
 
-    <div class="row--columns-6-6 row--columns-6-6-gutters">
-      {% assign offers = site.data.offers %}
-      {% for offer in offers %}
-        {% include offer-block.html class="stack" %}
-      {% endfor %}
+      <div class="row__column expert-section__content color-white">
+        <h2 class="title--kerning-xwide title--sans">EXPERT'S PICK:</h2>
+        <h3 class="title title--margin title--italic">{{ page.expert-title }}</h3>
+        {{ page.expert-content }}
+      </div>
+
+      <div class="row__column expert-section__offer">
+        {% assign offers = site.data.offers | where:"type",page.class %}
+        {% for offer in offers | limit:1 %}
+          {% if offer.experts-pick %}
+          <div class="expert-offer">
+
+            <a href="{{ offer.details.link }}" class="bg-image-ratio bg-image-ratio--16-9" style="background-image: url('{{ site.baseurl }}/img/offers/{{ offer.details.class }}.jpg')">
+            </a>
+
+            <div class="expert-offer__content">
+              <div class="row__column">
+                <h2 class="title title--xs title--bold title--kerning-wide  title--margin">
+                  <a id="title-link-{{ offer.details.class }}" href="{{ offer.link }}">{{ offer.details.title | upcase }}</a>
+                </h2>
+                <p class="offer__content-location title--sans title--kerning-wide">{{ offer.details.location | upcase }}</p>
+              </div>
+              <div class="row__column expert-offer__btn">
+                <a id="button-link-{{ offer.details.class }}" href="{{ offer.link }}" class="btn btn--solid">View Offer</a>
+              </div>
+            </div>
+
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
     </div>
+  </div>
+</section>
 
+
+
+<section class="section--grey-bg">
+
+  <div class="row row--padding align-center">
+    <h2 class="title title--margin title--md title--italic">Romantic {{ page.title | downcase }} breaks</h2>
+    <hr class="center">
+    {{ page.offer-intro }}
+  </div>
+
+  <div class="row row--padding">
+
+    {% assign offers = site.data.offers | where:"type",page.class %}
+    {% for offer in offers %}
+      {% if offer.title %}
+
+      <div class="offer-region row row--columns-5-7">
+
+        <div
+          class="offer-region__image color-white row__column bg-image-ratio bg-image-ratio--4-3"
+          style="background-image:url('{{ site.baseurl }}/img/content/offers-{{ offer.class }}.jpg');">
+          <div class="offer-region__title">
+            <h2 class="title title--kerning-wide">{{ offer.title | upcase }}</h2>
+            <p class="lead-paragraph">{{ offer.subtitle }}</p>
+            <a href="#" class="btn btn--solid">View all {{ offer.title }} offers</a>
+          </div>
+        </div>
+
+        <div class="offer-region__content row__column">
+          <p>{{ offer.description }}</p>
+          {% include offer-block.html class="wide" %}
+        </div>
+      </div>
+
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</section>
+
+
+
+<section class="section--light-grey-bg">
+  <div class="row row--padding align-center">
+    <a href="{{ site.baseurl }}/offers" class="btn btn--solid btn--large">View all offers</a>
   </div>
 </section>
 

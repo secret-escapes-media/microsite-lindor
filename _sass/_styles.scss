@@ -49,32 +49,44 @@ body {
 
 .banner {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 240px;
+  padding-top: 100px;
+  padding-bottom: 300px;
   color: $white;
   background-color: $se-light-grey;
   background: $se-light-grey center no-repeat;
   background-image: url('../img/bg/bg.jpg');
   background-size: cover;
   background-position: center;
-  &__title { letter-spacing: 0.2em; }
-  &__content { padding-top: 20px; margin-top: 20px; border-top: 3px double $white-75; }
+  &__title { letter-spacing: 0.3em; line-height: 1; text-shadow: 0 0 60px #2f1d28; }
+  &__content { display: block; float: left; padding-top: 20px; margin-top: 20px; border-top: 3px double $white-75; text-shadow: 0 0 20px #2f1d28; }
   &:after {
     content: "";
     position: absolute;
     bottom: 0; left: 0;
-    height: 40%;
+    height: 30%;
     width: 100%;
     z-index: 0;
-    background: -moz-linear-gradient(top,  rgba(248,248,248,0) 0%, rgba(248,248,248,1) 100%);
-    background: -webkit-linear-gradient(top,  rgba(248,248,248,0) 0%,rgba(248,248,248,1) 100%);
-    background: linear-gradient(to bottom,  rgba(248,248,248,0) 0%,rgba(248,248,248,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f8f8f8', endColorstr='#f8f8f8',GradientType=0 );
+    background: -moz-linear-gradient(top,  rgba(248,248,248,0) 0%, $light-grey 100%);
+    background: -webkit-linear-gradient(top,  rgba(248,248,248,0) 0%,$light-grey 100%);
+    background: linear-gradient(to bottom,  rgba(248,248,248,0) 0%,$light-grey 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f8f8f8', endColorstr='$light-grey',GradientType=0 );
   }
 }
 
 .banner-overlap {
   margin-top: -150px;
+}
+
+
+// ---------- Page intro ----------
+
+.intro {
+  &__content {
+    width: 100%;
+    padding: 30px;
+    background-color: $partner-primary;
+    border: 5px solid  $white-5;
+  }
 }
 
 
@@ -92,8 +104,69 @@ body {
   }
 }
 
-// ---------- Overview page ----------
 
+// ---------- Expert section ----------
+
+.expert-section {
+  background-color: $partner-primary;
+  width: 100%;
+  margin-bottom: 2em;
+  @include bp(large) {
+    border-top: 5px solid  $white-5;
+    border-left: 5px solid  $white-5;
+    border-bottom: 5px solid  $white-5;
+  }
+
+  &__content {
+    padding: 25px 25px 0;
+    @include bp(large) { padding: 25px; }
+  }
+  &__offer {
+    @include bp(large) {
+      margin-top: -2em !important;
+      margin-bottom: -2em;
+    }
+  }
+}
+
+.expert-offer {
+  background-color: $white;
+  box-shadow: 0 0 10px $black-15;
+  &__content {
+    overflow: hidden;
+    padding: 15px 20px;
+    text-align: center;
+    @include bp(large) {
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+  }
+  &__btn {
+    text-align: center;
+    @include bp(large) { text-align: right; }
+  }
+  &__content-location {
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 1em;
+      width: .833em;
+      margin-right: .482em;
+      margin-bottom: .2em;
+      vertical-align: middle;
+      background-image: url( "../img/icons/map-pin.png" );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-size: contain;
+      .svg & { background-image: url( "../img/icons/map-pin.svg" ); }
+    }
+  }
+}
+
+
+// ---------- Overview page ----------
 
 .overview-nav {
   &__item {
@@ -105,7 +178,7 @@ body {
     height: 100%;
     position: absolute;
     top: 0; left: 0;
-    border: 5px solid rgba(255, 255, 255, 0.5);
+    border: 5px solid  $white-5;
   }
 
   &__title {
@@ -122,5 +195,34 @@ body {
     }
     &:before { top: -0.25em; }
     &:after { bottom: -0.35em; }
+  }
+}
+
+
+// ---------- Offers page ----------
+
+.offer-region {
+  background-color: #fff;
+  box-shadow: 0 0 10px $black-15;
+  margin-bottom: 2em;
+  margin-top: 3em;
+  & + & { margin-top: 5em; }
+  &__image {
+    @include bp(large) {
+      position: absolute;
+      top:0;left:0;bottom:0;right:0;
+      height: auto;
+    }
+  }
+  &__title { position: absolute; top: 30px; left: 30px; right: 30px; }
+
+  &__content {
+    padding: 0 25px 30px;
+    @include bp(large) { padding: 20px 30px; }
+  }
+  .offer { margin-bottom: 0; }
+  @include bp(large) {
+    &__content { padding: 20px 30px 0 30px; }
+    .offer { margin-bottom: -2em; }
   }
 }

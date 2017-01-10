@@ -39,18 +39,21 @@ h5, .h5 {
   letter-spacing: 0.03em;
   + * { margin-top: .2em; }
 
+  &--sans { font-family: $main-font-family; }
+  &--italic { font-style: italic; }
+
   &--margin    { margin-bottom: 0.5em; }
 
   &--xxl    { font-size: 2.986em; }
-  &--xl   { font-size: 2.488em; }
-  &--lg    { font-size: 2.2em; }
-  &--md  { font-size: 2.2em; }
-  &--sm { font-size: 1.728em; }
-  &--xs     { font-size: 1.2em; }
+  &--xl     { font-size: 2.488em; }
+  &--lg     { font-size: 2.2em; }
+  &--md     { font-size: 2.2em; }
+  &--sm     { font-size: 1.728em; }
+  &--xs     { font-size: 1.44em; }
   &--xxs    { font-size: 0.9em; }
 
   &--light     { font-weight: 200; }
-  &--medium     { font-weight: 300; }
+  &--medium    { font-weight: 300; }
   &--bold      { font-weight: 600; }
   &--bolder    { font-weight: 800; }
   &--expanded  { letter-spacing: .2em; }
@@ -59,6 +62,7 @@ h5, .h5 {
   &--lower     { text-transform: initial; }
 
   &--kerning-wide { letter-spacing: 0.06em; }
+  &--kerning-xwide { letter-spacing: 0.16em; }
 
   @include bp(large) {
     &--xxl    { font-size: 5.16em; }
@@ -127,13 +131,15 @@ dl {
 .btn {
   @include transition;
   display:inline-block;
-  padding: .55em 3em .4em;
+  padding: .55em 1em .4em;
+  min-width: 150px;
   border: 2px solid $partner-primary;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.05em;
   font-size: 0.9em;
   color: $partner-primary;
-  font-weight: 800;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 3px;
   &:hover {
     color: white;
     background-color: $partner-primary;
@@ -145,16 +151,25 @@ dl {
   &--large { font-size: 1.2em; padding: .6em 3em; }
 }
 
+
+// ---------- images ----------
+
+.image-pop {
+  border-radius: 3px;
+  box-shadow: 0 0 5px $black-25;
+}
+
 // -------- general content styles --------
 
 p             { max-width: 720px; }
 p + *         { margin-top: 1em; }
-.lead-paragraph { font-size: 1.25em; }
+.lead-paragraph { font-size: 1.2em; line-height: 1.4; }
 li            { list-style-position: inside; }
 ul li         { list-style-type: disc; }
 ol li         { list-style-type: decimal; }
 em            { font-style: italic; }
 strong        { font-weight: 800; }
+.small        { font-size: 0.9em; line-height: 1.5; }
 .align-left   { text-align: left; }
 .align-right  { text-align: right; }
 .align-center { text-align: center; }
@@ -165,12 +180,21 @@ p.align-center,
   color: #fff;
   p,h1,h2,h3,h4,h5,h6,
   .h1,.h2,.h3,.h4,.h5,.h6 { color: #fff; }
-  hr { background-color: $white-15; }
+  hr { border-color: $white-15; }
+}
+
+.color-default {
+  color: $text-paragraph;
+  p,h1,h2,h3,h4,h5,h6,
+  .h1,.h2,.h3,.h4,.h5,.h6 { color: $text-title; }
+  hr { border-color: $black-25; }
 }
 
 hr {
   border: 0;
-  height: 1px;
-  background-color: $light-grey;
-  margin: 1em 0;
+  border-top: 3px double $black-25;
+  margin: 1.5em 0;
+  &.center { width: 80px; margin-left: auto; margin-right: auto; }
 }
+
+

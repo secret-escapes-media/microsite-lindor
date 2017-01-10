@@ -10,7 +10,7 @@ $susy:(
   gutters: 0,
 );
 $gutters:( gutters: 1 / 2, );
-$margin: 2em;
+$margin: 3em;
 
 
 // -------- Sections --------
@@ -26,6 +26,7 @@ section {
 
 .section {
   &--white-bg { background-color: $white; }
+  &--grey-bg { background-color: $grey; }
   &--light-grey-bg { background-color: $light-grey; }
   &--dark-grey-bg { background-color: $dark-grey; color: $white; }
   &--black-bg { background-color: $black; color: $white; }

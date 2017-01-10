@@ -5,29 +5,53 @@ class: lindt-lindor
 nav-order: 7
 
 banner-title: Lindor
-banner-content: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam.
+banner-content: Experience the Difference.
+
+intro-content: >
+  <p class="lead-paragraph">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
 ---
 
 
 <section>
-  <div class="row row--padding row--columns-4-4-4-gutters">
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-  </div>
   <div class="row row--padding">
-    <a href="#" class="btn">button</a>
+    <h2 class="title">Treat yourself</h2>
+    <p>Nothing speaks the language of indulgement better than a famous Lindor chocolate truffle. Perfectly round, the Lindt milk chocolate gives way to an irresistibly smooth melting filling. Share this moment with someone, or keep it to yourself – each will guarantee a moment of bliss.</p>
+  </div>
+
+  <div class="row row--padding">
+    <h2 class="title">The Swiss Chocolatier</h2>
+    <p>For almost 150 years, Swiss chocolatiers have been trying to uncover the secret family recipe that Rodolphe Lindt perfected all those years ago. Lindt has become synonymous with famous Swiss chocolate, carved from Alpine heights and a penchant to create only the highest quality chocolate for you to enjoy.</p>
   </div>
 </section>
 
-<section class="section--light-grey-bg ">
-  <div class="row row--padding row--columns-4-8-gutters">
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <div class="row__column">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    </div>
+
+<section class="section--grey-bg">
+
+  <!--========  Lindor Approved Breaks ========-->
+  <div class="row row--padding align-center">
+    <h2 class="title title--margin title--md title--italic">Lindor Approved Breaks</h2>
+    <hr class="center">
+      <p class="lead-paragraph">Add a touch of opulence to your Secret Escapes getaway with generous giveaways from Lindor.
+      <p>Book any Lindor Approved break (as signified by the Lindor banner) and be in with the chance to receive a selection of Lindt chocolates waiting on your arrival. You’ll have the chance to be greeted by a box of the irresistible Lindor truffles, or, for a lucky few, your very own Lindor hamper. An opportunity not to be missed!</p>
   </div>
+
+  {% assign lindor-offers = site.data.offers | where:"lindor","true" %}
+  <!-- Featured break -->
+  {% for offer in lindor-offers %}
+    {% if offer.lindor-hero %}
+      <div class="row row--padding">
+        {% include offer-block.html class="feature" %}
+      </div>
+    {% endif %}
+  {% endfor %}
+  <!-- Other Lindor breaks -->
+  <div class="row row--padding row--columns-6-6-gutters">
+  {% for offer in lindor-offers %}
+    {% unless offer.lindor-hero %}
+        {% include offer-block.html %}
+    {% endunless %}
+  {% endfor %}
+  </div>
+
 </section>
 
-{% include example-modal.html %}
