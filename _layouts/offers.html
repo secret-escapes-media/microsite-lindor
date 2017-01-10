@@ -18,7 +18,7 @@ layout: default
 
       <div class="row__column expert-section__offer">
         {% assign offers = site.data.offers | where:"type",page.class %}
-        {% for offer in offers | limit:1 %}
+        {% for offer in offers limit:1 %}
           {% if offer.experts-pick %}
           <div class="expert-offer">
 

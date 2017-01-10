@@ -8,31 +8,43 @@ banner-title: Lindor
 banner-content: Experience the Difference.
 
 intro-content: >
-  <p class="lead-paragraph">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui.</p>
+  <p class="lead-paragraph">Indulge in Lindor, the perfect blissful treat for you and that special someone</p>
 ---
 
 
-<section>
-  <div class="row row--padding">
-    <h2 class="title">Treat yourself</h2>
-    <p>Nothing speaks the language of indulgement better than a famous Lindor chocolate truffle. Perfectly round, the Lindt milk chocolate gives way to an irresistibly smooth melting filling. Share this moment with someone, or keep it to yourself – each will guarantee a moment of bliss.</p>
-  </div>
 
-  <div class="row row--padding">
-    <h2 class="title">The Swiss Chocolatier</h2>
-    <p>For almost 150 years, Swiss chocolatiers have been trying to uncover the secret family recipe that Rodolphe Lindt perfected all those years ago. Lindt has become synonymous with famous Swiss chocolate, carved from Alpine heights and a penchant to create only the highest quality chocolate for you to enjoy.</p>
+<section>
+  <div class="row row--padding row--columns-5-7-gutters row--columns-vertical-align">
+  <div class="row__column">
+    <div class="bg-image-ratio bg-image-ratio--4-3 image-pop" style="background-image: url({{ site.baseurl }}/img/content/lindor-chocolate.jpg);"></div>
+  </div>
+    <div class="row__column">
+      <h3 class="title title--italic title--margin">Treat yourself</h3>
+      <p>Nothing speaks the language of indulgement better than a famous Lindor chocolate truffle. Perfectly round, the Lindt milk chocolate gives way to an irresistibly smooth melting filling. Share this moment with someone, or keep it to yourself – each will guarantee a moment of bliss.</p>
+    </div>
   </div>
 </section>
 
 
 <section class="section--grey-bg">
+  <div class="row row--padding row--columns-7-5-gutters row--columns-vertical-align">
+    <div class="row__column">
+      <h3 class="title title--italic title--margin">The Swiss Chocolatier</h3>
+      <p>For almost 150 years, Swiss chocolatiers have been trying to uncover the secret family recipe that Rodolphe Lindt perfected all those years ago. Lindt has become synonymous with famous Swiss chocolate, carved from Alpine heights and a penchant to create only the highest quality chocolate for you to enjoy.</p>
+    </div>
+    <div class="row__column bg-image-ratio bg-image-ratio--4-3 image-pop" style="background-image: url({{ site.baseurl }}/img/content/lindor-chef.jpg);"></div>
+  </div>
+</section>
+
+
+<section class="section--white-bg">
 
   <!--========  Lindor Approved Breaks ========-->
   <div class="row row--padding align-center">
     <h2 class="title title--margin title--md title--italic">Lindor Approved Breaks</h2>
     <hr class="center">
       <p class="lead-paragraph">Add a touch of opulence to your Secret Escapes getaway with generous giveaways from Lindor.
-      <p>Book any Lindor Approved break (as signified by the Lindor banner) and be in with the chance to receive a selection of Lindt chocolates waiting on your arrival. You’ll have the chance to be greeted by a box of the irresistible Lindor truffles, or, for a lucky few, your very own Lindor hamper. An opportunity not to be missed!</p>
+      <p>Book any Lindor Approved break (as signified by the Lindor banner) and be in with the chance to receive a selection of Lindt chocolates waiting on your arrival. You’ll have the chance to be greeted by a box of the irresistible Lindor truffles, or, for a lucky few, your very own Lindor hamper. Indulge in these delectable chocolates from the comfort of your luxury getaway.</p>
   </div>
 
   {% assign lindor-offers = site.data.offers | where:"lindor","true" %}
