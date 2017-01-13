@@ -32,6 +32,7 @@ section {
   &--black-bg { background-color: $black; color: $white; }
   &--partner-bg { background-color: $partner-secondary; color: $white; }
   // Section padding
+  &--padding-top-none { padding-top: 0; }
   &--padding-none { padding: 0; }
   &--padding-sm { padding-top: 1.2em; padding-bottom: 1.2em; }
   &--padding-md { padding-top: 3.583em; padding-bottom: 3.583em;  }
@@ -44,6 +45,7 @@ section {
 .row {
   @include container( $xxxlarge );
   position: relative;
+  &--full-width { @include container( 100% ); }
   & + .row { margin-top: $margin; }
 }
 

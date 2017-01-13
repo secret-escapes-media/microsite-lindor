@@ -49,16 +49,33 @@ body {
 
 .banner {
   position: relative;
-  padding-top: 100px;
+  z-index: -1;
+  padding-top: 150px;
   padding-bottom: 300px;
   color: $white;
   background-color: $se-light-grey;
   background: $se-light-grey center no-repeat;
-  background-image: url('../img/bg/bg.jpg');
   background-size: cover;
   background-position: center;
-  &__title { letter-spacing: 0.3em; line-height: 1; text-shadow: 0 0 60px #2f1d28; }
-  &__content { display: block; float: left; padding-top: 20px; margin-top: 20px; border-top: 3px double $white-75; text-shadow: 0 0 20px #2f1d28; }
+  &__title {
+    letter-spacing: 0.3em;
+    line-height: 1;
+    text-shadow: 0 0 60px #2f1d28;
+    // wierd fix to keep hr to length of word and not 100%, when on two lines e.g. romantic breaks
+    max-width: 0;
+    overflow: visible;
+  }
+  &__title-wrap {
+    display: inline-block;
+    padding-bottom: 25px;
+    border-bottom: 3px double $white-75;
+  }
+  &__content {
+    display: block;
+    float: left;
+    padding-top: 15px;
+    text-shadow: 0 0 20px #2f1d28;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -74,19 +91,30 @@ body {
 }
 
 .banner-overlap {
-  margin-top: -150px;
+  margin-top: -200px;
 }
 
 
 // ---------- Page intro ----------
 
 .intro {
-  &__content {
+  padding: 5px;
+  text-align: center;
+  &__wrap {
+    display: inline-block;
     width: 100%;
-    padding: 30px;
-    background-color: $partner-primary;
-    border: 5px solid  $white-5;
+    padding: ($margin/1.5) $margin;
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+      text-align-last: center;
+    }
   }
+  &--white { background-color:$white-5; }
+  &--white &__wrap { background-color: $white; }
+  &--partner-primary { background-color: $partner-primary-5; }
+  &--partner-primary &__wrap { background-color: $partner-primary; }
 }
 
 
@@ -94,7 +122,12 @@ body {
 
 .competition-section {
   &__content {
-    padding: 3em 1.5em;
+    text-align: left;
+  }
+  &__wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ($xxxlarge/2);
   }
   @include bp(large) {
     height: 480px;
@@ -179,6 +212,10 @@ body {
     position: absolute;
     top: 0; left: 0;
     border: 5px solid  $white-5;
+    @include transition;
+    &:hover {
+      background-color: $black-33;
+    }
   }
 
   &__title {
@@ -224,5 +261,64 @@ body {
   @include bp(large) {
     &__content { padding: 20px 30px 0 30px; }
     .offer { margin-bottom: -2em; }
+  }
+}
+
+
+// ------------- Lindor page
+
+.lindt-lindor {
+  .banner {
+    background-image: url('../img/bg/banner-lindt-lindor.jpg');
+    background: url('../img/bg/lindor-pour-bg.png') 70% -80px / 280px no-repeat, url('../img/bg/banner-lindt-lindor.jpg') center / cover no-repeat;
+  }
+}
+
+
+// ---------- Entered Page ----------
+
+.fancy-number {
+  display: inline-block;
+  margin-top: .25em;
+  margin-bottom: .25em;
+  color: $partner-purple;
+  font-family: $title-font-family;
+  font-style: italic;
+  font-size: 3.375em;
+  line-height: 0;
+}
+
+.entered {
+  .banner__content {
+    text-align: center;
+    text-shadow: 0px 2px 60px rgb(69,16,16),  0px 2px 60px rgb(69,16,16);
+    float: none;
+  }
+  .countdown {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1.5em;
+    &__wrap {
+      position: relative;
+      display: block;
+    }
+    &__unit {
+      display: inline-block;
+      padding-left: .5em;
+      padding-right: .5em;
+      font-style: italic;
+      font-size: 4em;
+      font-weight: 300;
+      line-height: 1.25;
+      color: $partner-primary;
+    }
+    &__label {
+      display: block;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: .25em;
+      font-weight: 400;
+      color: $text-black;
+    }
   }
 }

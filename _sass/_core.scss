@@ -36,7 +36,10 @@ $se-dark-grey-66: rgba(41,39,40,.66);
 $se-dark-grey-85: rgba(41,39,40,.85);
 
 $partner-primary:   #af4343;
+$partner-primary-5: rgba(175,67,67,.5);
 $partner-secondary: #a98b40;
+$partner-purple:    #650a26;
+$partner-purple-33:  rgba(101,10,38,.33);
 
 $text-black:      #0d0d0d;
 $text-title:    #650a26;
@@ -178,6 +181,27 @@ $z-background:      -1;
     display: block;
     content: "";
     width: 100%;
+  }
+  &__link {
+    position: absolute;
+    z-index: $z-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    @include transition;
+    // vertically center the button
+    .csstransforms.csstransforms3d & > * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    &:hover {
+      opacity: 1;
+      background-color: $black-33;
+    }
   }
 }
 .bg-image-ratio--1-1:before   { padding-top: 100%; }

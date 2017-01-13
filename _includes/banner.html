@@ -1,15 +1,17 @@
 <section
-  class="banner site-header__offset color-white"
-  style="background-image: url('{{ site.baseurl }}/img/bg/banner-{{ page.class }}.jpg');">
+  class="banner site-header__offset color-white"{% unless page.class == 'lindt-lindor' %}style="background-image: url('{{ site.baseurl }}/img/bg/banner-{{ page.class }}.jpg');"{% endunless%}
+  >
 
   <div class="row row--padding">
 
     <h1 class="banner__title title title--xxl">
-      {% if page.banner-title %}
+      <div class="banner__title-wrap">
+        {% if page.banner-title %}
         {{ page.banner-title | upcase }}
-      {% else %}
+        {% else %}
         {{ page.title | upcase }}
-      {% endif %}
+        {% endif %}
+      </div>
     </h1>
     {% if page.banner-content %}
       <p class="banner__content lead-paragraph title--kerning-wide">{{ page.banner-content }}</p>

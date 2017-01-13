@@ -24,7 +24,7 @@ $site-header-height: ($core-nav-height + $site-nav-height);
   font-family: $core-font-family;
   color: $white;
   text-align: center;
-  background-color: $black-66;
+  background-color: $black-85;
   * { vertical-align: middle; }
   &__wrap {
     position: relative;
@@ -141,7 +141,7 @@ $nav-arrow-width: 66px;
   line-height: 1.2;
   letter-spacing: .066em;
   text-transform: uppercase;
-  background-color: $se-dark-grey-66;
+  background-color: $se-dark-grey-85;
   overflow: hidden;
   &__list {
     overflow-x: auto;

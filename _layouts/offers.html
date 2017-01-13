@@ -11,7 +11,7 @@ layout: default
     <div class="expert-section row row--columns-6-6 row--columns-vertical-align">
 
       <div class="row__column expert-section__content color-white">
-        <h2 class="title--kerning-xwide title--sans">EXPERT'S PICK:</h2>
+        <h2 class="title--kerning-xwide title--sans">EDITOR'S PICK:</h2>
         <h3 class="title title--margin title--italic">{{ page.expert-title }}</h3>
         {{ page.expert-content }}
       </div>
@@ -93,5 +93,7 @@ layout: default
     <a href="{{ site.baseurl }}/offers" class="btn btn--solid btn--large">View all offers</a>
   </div>
 </section>
+
+{% include competition-section.html %}
 
 

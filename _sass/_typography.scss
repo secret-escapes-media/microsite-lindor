@@ -46,8 +46,8 @@ h5, .h5 {
 
   &--xxl    { font-size: 2.986em; }
   &--xl     { font-size: 2.488em; }
-  &--lg     { font-size: 2.2em; }
-  &--md     { font-size: 2.2em; }
+  &--lg     { font-size: 2.25em; }
+  &--md     { font-size: 2.074em; }
   &--sm     { font-size: 1.728em; }
   &--xs     { font-size: 1.44em; }
   &--xxs    { font-size: 0.9em; }
@@ -64,11 +64,37 @@ h5, .h5 {
   &--kerning-wide { letter-spacing: 0.06em; }
   &--kerning-xwide { letter-spacing: 0.16em; }
 
+  &--hr:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 22px;
+    border-bottom: 3px double $partner-purple-33;
+  }
+  &--hr-center:after{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--hr-special {
+    display: inline-block;
+    &:after{
+      content: '';
+      display: block;
+      width: 50%;
+      height: 0px;
+      margin: 15px auto;
+      border-top: 3px double $white-85;
+    }
+  }
+
   @include bp(large) {
-    &--xxl    { font-size: 5.16em; }
-    &--xl   { font-size: 4.3em; }
-    &--lg    { font-size: 3.375em; }
-    &--md  { font-size: 2.986em; }
+    &--xxl { font-size: 5.16em; }
+    &--xl  { font-size: 4.3em; }
+    &--lg  { font-size: 3.375em; }
+    &--md  { font-size: 2.488em; }
+    &--sm  { font-size: 2.25em; }
   }
 
 }
@@ -146,6 +172,7 @@ dl {
     text-decoration: none;
   }
   * + & { margin-top: 1.5em; }
+  * + &--inline { margin-top: 0; }
 
   &--solid { color: white; border: 0; background-color: $partner-primary; }
   &--large { font-size: 1.2em; padding: .6em 3em; }

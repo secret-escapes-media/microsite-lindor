@@ -4,6 +4,7 @@ layout: default
 
 {% include banner.html %}
 
+{% if page.intro-content %}
 <section class="banner-overlap section--padding-none">
 
   <div class="intro row row--padding">
@@ -13,6 +14,7 @@ layout: default
   </div>
 
 </section>
+{% endif %}
 
 {{ content }}
 
