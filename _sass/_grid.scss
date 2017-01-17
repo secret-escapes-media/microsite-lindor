@@ -31,12 +31,13 @@ section {
   &--dark-grey-bg { background-color: $dark-grey; color: $white; }
   &--black-bg { background-color: $black; color: $white; }
   &--partner-bg { background-color: $partner-secondary; color: $white; }
+  &--purple-bg { background-color: $partner-purple; color: $white; }
   // Section padding
-  &--padding-top-none { padding-top: 0; }
-  &--padding-none { padding: 0; }
   &--padding-sm { padding-top: 1.2em; padding-bottom: 1.2em; }
   &--padding-md { padding-top: 3.583em; padding-bottom: 3.583em;  }
   &--padding-lg { padding-top: 5.16em; padding-bottom: 5.16em;  }
+  &--padding-top-none { padding-top: 0; }
+  &--padding-none { padding: 0; }
 }
 
 
@@ -46,8 +47,10 @@ section {
   @include container( $xxxlarge );
   position: relative;
   &--full-width { @include container( 100% ); }
+  &--thin { @include container( $xlarge ); }
   & + .row { margin-top: $margin; }
 }
+
 
 .row--padding {
   padding-left: ( $margin / 2 );
@@ -101,18 +104,22 @@ section {
 @include bp(large){
 
   // two columns without gutter
+  .row--columns-3-9 { @include two-column-grid( 3, 9 ); }
   .row--columns-4-8 { @include two-column-grid( 4, 8 ); }
   .row--columns-5-7 { @include two-column-grid( 5, 7 ); }
   .row--columns-6-6 { @include two-column-grid( 6, 6 ); }
   .row--columns-7-5 { @include two-column-grid( 7, 5 ); }
   .row--columns-8-4 { @include two-column-grid( 8, 4 ); }
+  .row--columns-9-3 { @include two-column-grid( 9, 3 ); }
 
   // two columns with gutter
+  .row--columns-3-9-gutters { @include two-column-grid( 3, 9, gutters ); }
   .row--columns-4-8-gutters { @include two-column-grid( 4, 8, gutters ); }
   .row--columns-5-7-gutters { @include two-column-grid( 5, 7, gutters ); }
   .row--columns-6-6-gutters { @include two-column-grid( 6, 6, gutters ); }
   .row--columns-7-5-gutters { @include two-column-grid( 7, 5, gutters ); }
   .row--columns-8-4-gutters { @include two-column-grid( 8, 4, gutters ); }
+  .row--columns-9-3-gutters { @include two-column-grid( 9, 3, gutters ); }
 
   // three columns without gutter
   .row--columns-4-4-4 .row__column { @include gallery(4); }

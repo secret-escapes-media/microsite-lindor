@@ -10,32 +10,25 @@
   z-index: $z-overlay;
   background-color: $black;
   background-color: $black-66;
-  cursor: pointer;
   overflow: hidden;
+  overflow-y: auto;
   &.is-open { display: block;}
   &.is-closed { display: none; }
   &__wrap {
-    position: absolute;
-    top: ($margin * 1.5);
-    left: ($margin / 2);
-    right: ($margin / 2);
-    bottom: ($margin * 1.5);
-    cursor: auto;
-    overflow-y: auto;
-    margin-top: 0 !important;
+    background-color: $white;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 2em auto;
+  }
+  &__intro {
+    border-bottom: 1px solid $light-grey;
+    padding: ($margin / 2);
     @include bp(large){
-      left: $margin;
-      right: $margin;
+      padding: $margin;
     };
   }
   &__content {
-    background-color: $white;
-    padding-top: ($margin / 2);
-    padding-bottom: ($margin / 2);
-    @include bp(large){
-      padding-top: $margin;
-      padding-bottom: $margin;
-    };
+    padding: ($margin / 2) $margin;
   }
   &__close {
     position: absolute;

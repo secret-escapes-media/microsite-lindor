@@ -68,15 +68,21 @@
       modalCloseBtn  = $('.js-close-modal');
 
     // opens modal
-    function modalOpen(event){
+    modalLaunchBtn.click(function(){
       event.preventDefault();
       // disable scrolling on background content (doesn't work iOS)
       $('body').addClass('disable-scroll');
+
+      // show correct expert
+      var target = $(this).attr('data-expert');
+      modal.find('.modal__wrap').hide();
+      modal.find('.modal__wrap#' + target ).show().addClass('active');
+
       // // open modal
       modal.fadeIn('250', function(){
         $(this).removeClass('is-closed').addClass('is-open');
       });
-    }
+    });
 
     // closes modal
     function modalClose(event){
@@ -88,11 +94,6 @@
         $(this).removeClass('is-open').addClass('is-closed');
       });
     }
-
-    // launches modal when offer is clicked
-    modalLaunchBtn.on('click', function(event) {
-      modalOpen(event);
-    });
 
     // closes modal on close icon click
     modalCloseBtn.on('click', function(event) {

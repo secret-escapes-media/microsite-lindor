@@ -49,7 +49,7 @@ h5, .h5 {
   &--lg     { font-size: 2.25em; }
   &--md     { font-size: 2.074em; }
   &--sm     { font-size: 1.728em; }
-  &--xs     { font-size: 1.44em; }
+  &--xs     { font-size: 1.54em; }
   &--xxs    { font-size: 0.9em; }
 
   &--light     { font-weight: 200; }
@@ -68,7 +68,7 @@ h5, .h5 {
     content: '';
     display: block;
     height: 3px;
-    width: 50%;
+    width: 33%;
     margin-top: 15px;
     margin-bottom: 22px;
     border-bottom: 3px double $partner-purple-33;
@@ -94,7 +94,7 @@ h5, .h5 {
     &--xl  { font-size: 4.3em; }
     &--lg  { font-size: 3.375em; }
     &--md  { font-size: 2.488em; }
-    &--sm  { font-size: 2.25em; }
+    &--sm  { font-size: 1.9em; }
   }
 
 }
@@ -159,10 +159,10 @@ dl {
   display:inline-block;
   padding: .55em 1em .4em;
   min-width: 150px;
-  border: 2px solid $partner-primary;
+  border: 2px solid $partner-purple;
   letter-spacing: 0.05em;
   font-size: 0.9em;
-  color: $partner-primary;
+  color: $partner-purple;
   font-weight: 400;
   text-align: center;
   border-radius: 3px;
@@ -174,8 +174,8 @@ dl {
   * + & { margin-top: 1.5em; }
   * + &--inline { margin-top: 0; }
 
-  &--solid { color: white; border: 0; background-color: $partner-primary; }
-  &--large { font-size: 1.2em; padding: .6em 3em; }
+  &--solid { color: white; border: 0; background-color: $partner-purple; }
+  &--large { font-size: 1.1em; padding: .5em 3em; }
 }
 
 
@@ -184,6 +184,11 @@ dl {
 .image-pop {
   border-radius: 3px;
   box-shadow: 0 0 5px $black-25;
+}
+
+.image-inline {
+  * + & { margin-left: 15px; }
+  & + * { margin-left: 15px; }
 }
 
 // -------- general content styles --------

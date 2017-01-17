@@ -5,10 +5,26 @@ class: overview
 nav-order: 1
 
 banner-title: Romantic Breaks
-banner-content: Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.
+banner-content: >
+  <h2 class="title--xs">Love beckons as romance envelopes this heart-stirring time of year.</h2>
+
 ---
 
-<section class="banner-overlap section--padding-top-none">
+
+<section class="banner-overlap section--padding-none">
+  <div class="row row--padding">
+    <div class="intro intro--white">
+      <div class="intro__wrap">
+        <p class="lead-paragraph">Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.</p>
+        <p>Browse curated Secret Escapes offers that feature top picks from three iconic themes – the privacy and beauty of the country, the replenishing and stunning coastal breaks, and the electric excitement of the city. Don’t miss exclusive giveaways and competition prizes from LINDOR, to make your stay that little bit more blissful...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section>
   <div class="row row--padding row--columns-6-6-gutters align-center overview-nav">
 
     {% assign overview-nav = site.pages | sort:"overview-nav-order" %}
@@ -24,3 +40,67 @@ banner-content: Let us inspire you with breaks and getaways that promise to offe
 
   </div>
 </section>
+
+
+
+<section class="section--padding-lg section--padding-top-none">
+  <div class="row row--padding align-center">
+    <h3 class="title title--md title--italic title--margin title--hr title--hr-center">Our Romance Experts</h3>
+    <p class="lead-paragraph">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
+  </div>
+  <div class="row row--thin row--padding row--columns-4-4-4-gutters align-center">
+    {% assign experts = site.data.experts %}
+    {% for expert in experts %}
+    <div class="expert row__column bg-image-ratio bg-image-ratio--1-1" style="background-image: url({{ site.baseurl }}/img/content/expert-{{ expert.class }}.jpg);">
+      <a href="#" class="expert__link js-open-modal" data-expert="{{ expert.class }}">
+        <span class="expert__title title--md">
+          {{ expert.name1 }}
+          <span class="expert__title-and">&</span>
+          {{ expert.name2 }}
+        </span>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+<!-- EXPERT MODAL -->
+<div class="js-modal modal is-closed">
+  <div class="js-close-modal modal__close"></div>
+
+    {% assign experts = site.data.experts %}
+    {% for expert in experts %}
+
+      <div class="modal__wrap row--thin" id="{{ expert.class }}">
+
+        <div class="modal__intro row row--columns-3-9-gutters row--columns-vertical-align">
+
+          <div class="row__column expert bg-image-ratio bg-image-ratio--1-1" style="background-image: url({{ site.baseurl }}/img/content/expert-{{ expert.class }}.jpg);"></div>
+
+          <div class="row__column">
+            <h4 class="title title--sm title--margin">{{ expert.name1 }} & {{ expert.name2 }}</h4>
+            <p class="lead-paragraph">{{ expert.introduction }}</p>
+          </div>
+
+        </div>
+
+        {% for question in expert.questions %}
+          <div class="{% cycle "section--light-grey-bg", "" %} modal__content">
+            <p><strong>{{ question.question }}</strong></p>
+            {{ question.answer }}
+          </div>
+        {% endfor %}
+
+        <div class="section--purple-bg modal__content align-center">
+          <a href="#" class="js-close-modal">
+            <img src="{{ site.baseurl }}/img/icons/close.png" width="20" alt="">
+          </a>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+

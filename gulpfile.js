@@ -19,7 +19,7 @@ gulp.task('serve', function () {
       server: {
         baseDir: '_site/',
         routes: {
-          '/lindor': '_site/'
+          '/romantic-breaks': '_site/'
         }
       }
     });

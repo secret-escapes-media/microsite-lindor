@@ -1,0 +1,56 @@
+
+#######  EXPERT 1 #######
+
+- class: fien-elias
+  name1: Fien
+  name2: Elias
+  introduction: Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+  questions:
+    - question: What was the first thing you noticed about each other on that first trip?
+      answer: >
+        <p>Elias: "I was surprised about how adventurous Fien actually is. I never noticed anything annoying, we think and love the same things. That's also why it works between us. Fien also gets sick very often because of the food. Every time we are traveling somewhere far away, she is vomiting. I am a nurse so I don't mind to clean up the room after, haha. :)"</p>
+        <p>Fien: "I noticed that Elias really took care of me while we were traveling. As said, I get sick very fast, and Elias was always there to help me out and even clean up the room."</p>
+
+    - question: What was the most romantic place you’ve visited together?
+      answer: >
+        <p>Venice. Venice is a very beautiful place. We went to Venice for a week. A week is quite long to spend in Venice, there are a lot of things you can see and do. But at the end of the week, we we're just strolling through the streets. That's why it was so lovely: we had a lot of time to spend with each other: to go out for dinner, eating ice creams, laugh with each other,.. We would like to live in Venice when we are old.</p>
+        <p>But there are a lot of romantic places we have visited together. A city can be very romantic such as Venice, Rome,.. But also being in the nature can be very lovely. For example: we spend seven days in Nusa Penida, a little island from Indonesia. There weren't a lot of tourists, we just hired a motorcycle everyday and explored the island. It was very cool to meet locals, spending time at beautiful places and being at the lonely beaches, the nature...</p>
+
+    - question: What have you each learnt about travelling together?
+      answer: >
+        <p>When traveling, you really learn to know each other. Between us, it always went well, but we can understand that there are couples who don't like to spend that much time with each other and get annoyed. Because of the traveling we think we really could live together. We know each other so well. Traveling is really a good relationship test; you can't hide yourself.</p>
+        <p>While traveling we noticed that it was - most of the time - cheaper for us to sleep in a double bedroom in a hotel than in a hostel. Most of the time it's cheaper to travel with two persons. Also for the activities you can split the costs in two. For us it was also important to meet other people. We travel as a couple, but that doesn't mean we don't spend time with other people or that we don't want to meet them. We both are very social and open-minded persons, we like to hear other peoples stories and travel tips. At the end of the day, you return to your accommodation with the one you love, and that's all that matters.</p>
+
+    - question: What is it about travelling with a companion that makes you go again and again?
+      answer: >
+        <p>We both are interested in the same things, and we can find the perfect balance between meeting other people and spending time by ourselves. We really love to spend time with each other, also in Belgium we spend a lot of time together. And after all: we both love to travel and explore the world. Without each other, the traveling would not be such a great thing. We both believe we are having the best time together, to make sure we tick off our bucketlist.</p>
+
+    - question: What would you look for in a romantic destination / break?
+      answer: >
+        <p>A place where you can spend time with each other. The place is beautiful: it can be an old city, or it can be a place surrounded by nature. In those places, there are a lot of things you can do: but not as much as for example in Paris. There is a balance between activities and taking it easy. We like strolling through streets, finding beautiful beaches and perfect nature spots. It also is more romantic when the place isn't to crowded.</p>
+
+#######  EXPERT 2 #######
+
+- class: lina-dave
+  name1: Lina
+  name2: Dave
+  introduction: Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+  questions:
+    - question: Question 1
+      answer: Answer 1
+
+    - question: Question 2
+      answer: Answer 2
+
+#######  EXPERT 3 #######
+
+- class: hamish-gray
+  name1: Expert
+  name2: Expert
+  introduction: Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.
+  questions:
+    - question: Question 1
+      answer: Answer 1
+
+    - question: Question 2
+      answer: Answer 2

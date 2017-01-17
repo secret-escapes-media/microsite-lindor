@@ -235,6 +235,46 @@ body {
   }
 }
 
+.expert {
+  border-radius: 500px;
+  overflow: hidden;
+  border: 4px solid $white-25;
+  background-origin: border-box;
+
+  &__link {
+    @include transition();
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($black, 0.2);
+    &:hover {
+      background-color: rgba($black, 0);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: $title-font-family;
+    text-shadow: 0 0 10px black;
+    line-height: 1.3;
+    &-and {
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+}
+
+
 
 // ---------- Offers page ----------
 
