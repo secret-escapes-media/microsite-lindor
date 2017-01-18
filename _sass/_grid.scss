@@ -32,6 +32,13 @@ section {
   &--black-bg { background-color: $black; color: $white; }
   &--partner-bg { background-color: $partner-secondary; color: $white; }
   &--purple-bg { background-color: $partner-purple; color: $white; }
+  &--bg-img-fixed {
+    padding: 16em 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
   // Section padding
   &--padding-sm { padding-top: 1.2em; padding-bottom: 1.2em; }
   &--padding-md { padding-top: 3.583em; padding-bottom: 3.583em;  }
