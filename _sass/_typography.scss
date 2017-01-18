@@ -184,11 +184,13 @@ dl {
 .image-pop {
   border-radius: 3px;
   box-shadow: 0 0 5px $black-25;
+  margin: 10px 0;
 }
 
 .image-inline {
-  * + & { margin-left: 15px; }
-  & + * { margin-left: 15px; }
+  vertical-align: middle;
+  * + & { margin-left: 10px; }
+  & + * { margin-left: 10px; }
 }
 
 // -------- general content styles --------
@@ -211,14 +213,16 @@ p.align-center,
 .color-white {
   color: #fff;
   p,h1,h2,h3,h4,h5,h6,
-  .h1,.h2,.h3,.h4,.h5,.h6 { color: #fff; }
+  .h1,.h2,.h3,.h4,.h5,.h6,
+  .title { color: #fff; }
   hr { border-color: $white-15; }
 }
 
 .color-default {
   color: $text-paragraph;
   p,h1,h2,h3,h4,h5,h6,
-  .h1,.h2,.h3,.h4,.h5,.h6 { color: $text-title; }
+  .h1,.h2,.h3,.h4,.h5,.h6,
+  .title { color: $text-title; }
   hr { border-color: $black-25; }
 }
 

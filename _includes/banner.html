@@ -1,5 +1,5 @@
 <section
-  class="banner site-header__offset color-white"{% unless page.class == 'lindt-lindor' %}style="background-image: url('{{ site.baseurl }}/img/bg/banner-{{ page.class }}.jpg');"{% endunless%}
+  class="banner site-header__offset color-white"{% unless page.class == 'lindor' %}style="background-image: url('{{ site.baseurl }}/img/bg/banner-{{ page.class }}.jpg');"{% endunless%}
   >
 
   <div class="row row--padding">
@@ -13,10 +13,18 @@
         {% endif %}
       </div>
     </h1>
-    {% if page.banner-content %}
-    <span class="banner__content">
-      {{ page.banner-content }}
-    </span>
+
+    {% if page.class == 'overview' %}
+      <span class="banner__content">
+        <span class="title title--xs title--kerning-wide">
+          IN PARTNERSHIP WITH
+          <img width="80" class="image-inline" src="{{ site.baseurl }}/img/logo/lindor.png" alt="LINDOR">
+        </span>
+      </span>
+    {% elsif page.banner-content %}
+      <span class="banner__content">
+        {{ page.banner-content }}
+      </span>
     {% endif %}
 
   </div>
