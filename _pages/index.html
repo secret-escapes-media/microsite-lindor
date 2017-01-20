@@ -5,7 +5,7 @@ class: overview
 nav-order: 1
 
 banner-title: Romantic Breaks
-banner-content: 
+banner-content:
 
 ---
 
@@ -14,7 +14,7 @@ banner-content:
   <div class="row row--padding">
     <div class="intro intro--white">
       <div class="intro__wrap">
-        <p class="lead-paragraph">Love beckons as romance envelopes this heart-stirring time of year. Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.</p>
+        <p class="lead-paragraph">Love beckons as romance envelops this heart-stirring time of year. Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.</p>
         <p>Browse curated Secret Escapes offers that feature top picks from three iconic themes – the privacy and beauty of the country, the replenishing and stunning coastal breaks, and the electric excitement of the city. Don’t miss exclusive giveaways and competition prizes from LINDOR, to make your stay that little bit more blissful...</p>
       </div>
     </div>
@@ -45,7 +45,6 @@ banner-content:
 <section class="section--padding-lg section--padding-top-none">
   <div class="row row--padding align-center">
     <h3 class="title title--md title--italic title--margin title--hr title--hr-center">Our Romance Experts</h3>
-    <p class="lead-paragraph">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.</p>
   </div>
   <div class="row row--thin row--padding row--columns-4-4-4-gutters align-center">
     {% assign experts = site.data.experts %}
@@ -54,8 +53,10 @@ banner-content:
       <a href="#" class="expert__link js-open-modal" data-expert="{{ expert.class }}">
         <span class="expert__title title--md">
           {{ expert.name1 }}
+          {% if expert.name2 %}
           <span class="expert__title-and">&</span>
           {{ expert.name2 }}
+          {% endif %}
         </span>
       </a>
     </div>
@@ -78,8 +79,12 @@ banner-content:
           <div class="row__column expert bg-image-ratio bg-image-ratio--1-1" style="background-image: url({{ site.baseurl }}/img/content/expert-{{ expert.class }}.jpg);"></div>
 
           <div class="row__column">
-            <h4 class="title title--sm title--margin">{{ expert.name1 }} & {{ expert.name2 }}</h4>
-            <p class="lead-paragraph">{{ expert.introduction }}</p>
+            <h4 class="title title--lg title--margin">
+              {{ expert.name1 }}
+              {% if expert.name2 %}
+                & {{ expert.name2 }}
+              {% endif %}
+            </h4>
           </div>
 
         </div>

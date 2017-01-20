@@ -28,7 +28,10 @@
     };
   }
   &__content {
-    padding: ($margin / 2) $margin;
+    padding: ($margin/2);
+    @include bp(large){
+      padding: ($margin / 2) $margin;
+    };
   }
   &__close {
     position: absolute;
