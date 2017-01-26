@@ -27,7 +27,14 @@
   </div>
 
   <div class="row row--padding align-center">
-    © Copyright <span class="js-year">2016</span> Secret Escapes
+    {% if page.modal %}
+      <p><a class="js-open-modal" href="#">{{page.modal.title}}</a></p>
+    {% endif %}
+    <p>© Copyright <span class="js-year">2016</span> Secret Escapes</p>
   </div>
 
 </footer>
+
+{% if page.modal %}
+  {% include modal.html %}
+{% endif %}

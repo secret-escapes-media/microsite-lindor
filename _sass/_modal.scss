@@ -10,29 +10,38 @@
   z-index: $z-overlay;
   background-color: $black;
   background-color: $black-66;
+  cursor: pointer;
   overflow: hidden;
-  overflow-y: auto;
   &.is-open { display: block;}
   &.is-closed { display: none; }
   &__wrap {
-    background-color: $white;
-    border-radius: 3px;
-    overflow: hidden;
-    margin: 2em auto;
-  }
-  &__intro {
-    border-bottom: 1px solid $light-grey;
-    padding: ($margin / 2);
+    position: absolute;
+    top: $margin;
+    left: ($margin / 2);
+    right: ($margin / 2);
+    bottom: $margin;
+    cursor: auto;
+    overflow-y: auto;
+    margin-top: 0 !important;
     @include bp(large){
-      padding: $margin;
+      left: $margin;
+      right: $margin;
     };
   }
   &__content {
-    padding: ($margin/2);
+    background-color: $white;
+    padding-top: ($margin / 2);
+    padding-bottom: ($margin / 2);
     @include bp(large){
-      padding: ($margin / 2) $margin;
+      padding-top: $margin;
+      padding-bottom: $margin;
     };
   }
+  &__expert {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &__question:nth-child(even){ background-color: $light-grey; }
   &__close {
     position: absolute;
     right: 0;

@@ -15,7 +15,8 @@ $margin: 3em;
 
 // -------- Sections --------
 
-section {
+section,
+.section {
   padding-top: 2.25em;
   padding-bottom: 2.25em;
   @include bp(large) {

@@ -29,6 +29,17 @@
     $('html').addClass('touch');
   }
 
+  // searches for specific queryString, returns value or true if empty value
+  function getQueryStringByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return true;
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
 
 ///////////////////////////////////////
 //        Navigation
@@ -60,7 +71,7 @@
 
 
 ///////////////////////////////////////
-//    Generic modal
+//    Generic modal - with expert filter
 ///////////////////////////////////////
 
   var modal          = $('.js-modal'),
@@ -68,21 +79,42 @@
       modalCloseBtn  = $('.js-close-modal');
 
     // opens modal
-    modalLaunchBtn.click(function(){
-      event.preventDefault();
+    function modalOpen(event){
+      // make event parameter optional
+      var eventVar = event || false;
+      if (eventVar) { event.preventDefault(); }
       // disable scrolling on background content (doesn't work iOS)
       $('body').addClass('disable-scroll');
 
-      // show correct expert
-      var target = $(this).attr('data-expert');
-      modal.find('.modal__wrap').hide();
-      modal.find('.modal__wrap#' + target ).show().addClass('active');
+      // get specific expert content on overview
+      if (eventVar) {
+        var expert = $(event.currentTarget).data('expert');
+        if (expert) {
+          // hides all but shows current expert content
+          $('.modal__expert').hide().filter('.modal__expert--' + expert).show();
+        }
+      }
 
-      // // open modal
+      // open modal
       modal.fadeIn('250', function(){
         $(this).removeClass('is-closed').addClass('is-open');
       });
+
+      // reset modal scroll position
+      $('.js-modal-scroll').scrollTop(0);
+
+    }
+
+    // launches modal when offer is clicked
+    modalLaunchBtn.on('click', function(event) {
+      modalOpen(event);
     });
+
+    // launches modal if query string
+    var queryString = getQueryStringByName('modal');
+    if ( queryString) {
+      modalOpen();
+    }
 
     // closes modal
     function modalClose(event){
