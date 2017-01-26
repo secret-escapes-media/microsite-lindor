@@ -1,73 +1,90 @@
+#######  LINDOR ONLY OFFERS #######
+
+- lindor: true
+  lindor-hero: true
+  details:
+    title: Lainston House
+    location: Winchester, Hampshire
+    description: Award-winning dining and stunning grounds at a five-star country hotel in Winchester
+    price: £165
+    price-description: per suite per night
+    link: https://www.secretescapes.com/lainston-house-winchester-hampshire/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
+
+- lindor: true
+  details:
+    title: The Cornwall Hotel Spa & Estate
+    location: St Austell, Cornwall
+    description: A spa break at a luxury Cornish retreat, with a state-of-the-art wellness centre and infinity pool
+    price: £99
+    price-description: per room per night
+    link: https://www.secretescapes.com/the-cornwall-hotel-spa-and-estate-st-austell-cornwall/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
+
+
 
 #######  CITY OFFERS #######
 
 - type: city
   experts-pick: true
+  lindor: true
   details:
-    title: Hotel Nice Riviera
-    class: nice
-    location: Nice, France
-    description: A polished French Riviera hotel a stroll from the Promenade des Anglais, with spa and indoor pool
-    price: £81
+    title: The Rembrandt
+    location: Knightsbridge, London
+    description: An elegant hotel in upmarket Knightsbridge, with an optional health club access and more
+    price: £120
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/the-rembrandt-knightsbridge-london/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 - type: city
-  lindor: true
   title: London
-  class: london
   subtitle: A treasure of old-world romance.
   description: A treasure of old-world romance, with creaky cosy pubs hidden in labyrinthine medieval streets, and of modern settings, with stunning rooftop bars perfect for cocktails and haute cuisine. London offers diverse romantic getaways, in an enigmatic urban sprawl as iconic as any.
+  link: https://www.secretescapes.com/search/search?query=london&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: London offer
-    class: london-offer
-    location: Woodstock, Oxfordshire
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: Leicester House
+    location: Leicester Square, Central London
+    description: Opt for a suite at an elegant Georgian townhouse hotel off Leicester Square, in central London
+    price: £139
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/leicester-house-leicester-square-central-london/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 - type: city
   title: New York
-  class: new-york
   subtitle: An urban image of dizzying heights.
   description: An urban image of dizzying heights, New York has long been celebrated as a romantic backdrop to a host of iconic films. Romance abounds in this bucket-list destination.
+  link: https://www.secretescapes.com/search/search?query=new%20york&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: New York Offer
-    class: new-york-offer
-    location: New York, New York
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: Sixty Les
+    location: New York, USA
+    description: A desgin-lover's dream in downtown Manhattan, in the heart of one of NYC's hippest neighbourhoods
+    price: £154
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/sixty-les-new-york-usa/sale?utm_source=SE&utm_campaign=LINDOR_270117&utm_medium=Hub
 
 - type: city
   title: Paris
-  class: paris
   subtitle: The city of love.
   description: Lauded, and rightly so, as the city of love, Paris is the champion of romantic backdrops and passionate exploits. From the cafés of Montmartre to strolls along the Seine, it doesn’t get as traditionally romantic as this.
+  link: https://www.secretescapes.com/search/search?query=paris&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Paris break
-    class: paris-break
-    location: Hotel Balmoral, France
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
-    price-description: per room per night
-    link: #
+    title: Belloy Saint-Germain
+    location: Paris, France
+    description: A romantic stay in the heart of Paris with breakfast, a Seine cruise and train travel
+    price: £189
+    price-description: per person for 2 nights
+    link: https://www.secretescapes.com/charming-paris-break-with-eurostar-travel-belloy-saint-germain-france/sale?utm_source=SE&utm_campaign=LINDOR_270117&utm_medium=Hub
 
 - type: city
   title: Rome
-  class: rome
   subtitle: Rome is one of the most beautiful cities in the world.
   description: Rome is one of the most beautiful cities in the world. Steal a kiss at the Trevi Fountain, be awe-inspired by the ancient Pantheon, and gorge yourself in the trattorias and enotecas.
+  link: https://www.secretescapes.com/search/search?query=rome&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Rome Offer
-    class: rome-offer
-    location: Woodstock, Oxfordshire
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: Radisson Blue es. Hotel Rome
+    location: Rome, Italy
+    description: A hilltop beacon of minimalist architecture near some of Rome's most ancient sites
+    price: £120
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/radisson-blu-es-hotel-rome-rome-italy1/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 
 
@@ -76,70 +93,64 @@
 - type: country
   experts-pick: true
   details:
-    title: Blenheim Palace
-    class: blenheim-palace
-    location: Woodstock, Oxfordshire
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: The Lygon Arms
+    location: Broadway, Cotswolds
+    description: A historic hotel with roots dating back to the 1300s, with AA Rosette dinner and spa access
+    price: £139
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/the-lygon-arms-broadway-the-cotswolds/sale?utm_source=SE&utm_campaign=LINDOR_270117&utm_medium=Hub
 
 - type: country
-  lindor: true
   title: Cotswolds
-  class: cotswolds
   subtitle: England has never been as quaint as it is in the Cotswolds.
   description: England has never been as quaint as it is in the Cotswolds. The famous honey-hue stone that decks the homes, inns and castles in this area dot the pristine countryside, offering charming walks and cosy pubs a-plenty.
+  link: https://www.secretescapes.com/search/search?query=cotswolds&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Cotswolds Offer
-    class: cotswolds-offer
-    location: Woodstock, Oxfordshire
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: Eckington Manor
+    location: Eckington, Cotswolds
+    description: An award-winning, five-star country manor, with a 12th-century hall and fine dining
+    price: £89
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/eckington-manor-eckington-cotswolds/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 - type: country
   title: South Africa
-  class: south-africa
   subtitle:
   description: Head to the famous Cape Winelands and enjoy renowned wines in rich, stunning South African countryside. Old-world colonial villages offer quaint romance with fine dining options and stellar wine to match.
+  link: https://www.secretescapes.com/search/search?query=south%20africa&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: SA Offer
-    class: south-africa-offer
-    location: Woodstock, Oxfordshire
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
-    price-description: per room per night
-    link: #
+    title: Sensational South Africa holiday
+    location: Cape Town, Winelands, Garden Route & a beach stay
+    description: A bucket list self-drive South Africa holiday, with the chance to add a luxury safari stay
+    price: £1,445
+    price-description: per person for 11 nights
+    link: https://www.secretescapes.com/sensational-self-drive-south-africa-holiday-with-optional-safari-cape-town-winelands-garden-route-and-a-beach-stay/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 - type: country
   title: Tuscany
-  class: tuscany
   subtitle:
   description: With the looming Apennines to one side, and a host of terracotta villages ripe for exploring, Tuscany is a stalwart Italian destination. Bask in endless rural Italian charms, in one of the most acclaimed wine regions in the world.
+  link: https://www.secretescapes.com/search/search?query=tuscany&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Tuscany Offer
-    class: tuscany-offer
-    location: Tuscany
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
-    price-description: per room per night
-    link: #
+    title: Rural Tuscany holiday with car hire
+    location: Dimora Santa Margherita, Italy
+    description: Three or five nights at a stunning Grosseto country house – with Valentine's availability
+    price: £319
+    price-description: per person for 3 nights
+    link: https://www.secretescapes.com/rural-tuscany-holiday-with-car-hire-dimora-santa-margherita-italy/sale?utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
 
 - type: country
   title: Lake District
-  class: lake-district
   subtitle:
   description: Ragged peaks drop dramatically to a patchwork of lakes, offering a panorama perfect for endless romantic walks. Cosy up in a traditional pub and soak up the literary legacy left by the Romantics, who were in awe of this rugged wilderness.
+  link: https://www.secretescapes.com/search/search?query=lake%20district&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Lake District Offer
-    class: lake-district-offer
-    location: Woodstock, Oxfordshire
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
-    price-description: per room per night
-    link: #
+    title: Staffield Hall Country Retreats
+    location: Penrith, Lake District
+    description: Spacious apartments in an impressive manor house near the Lake District
+    price: £83
+    price-description: per cottage per night
+    link: https://www.secretescapes.com/staffield-hall-country-retreats-penrith-lake-district/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 
 
@@ -148,68 +159,61 @@
 - type: coast
   experts-pick: true
   details:
-    title: Amalfi Coast
-    class: amalfi-coast
-    location: Amalfi Coast, Italy
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
-    price-description: per room per night
-    link: #
+    title: Beachscape Kin Ha Villas & Suites Cancún
+    location: Cancún, Mexico
+    description: A suite stay on a sunny stretch of Cancún shoreline, between the Caribbean and Nichupte Lagoon
+    price: £97
+    price-description: per suite per night
+    link: https://www.secretescapes.com/beachscape-kin-ha-villas-and-suites-cancun-cancun-mexico/sale?utm_source=SE&utm_campaign=LINDOR_270117&utm_medium=Hub
 
 - type: coast
   title: Indian Ocean
-  class: indian-ocean
   subtitle:
   description: Warm azure waters lap against crystalline sands fringed by gently swaying palm trees – it doesn’t get more serene than a break in one of the vast ocean’s exotic locations.
+  link: https://www.secretescapes.com/search/search?query=indian%20ocean&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Indian Ocean Offer
-    class: indian-ocean-offer
-    location: Indian Ocean
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
-    price-description: per room per night
-    link: #
+    title: Lhaviyani Atoll
+    location: Cocoon Maldives, Lhaviyani Atoll
+    description: Optional all-inclusive board and a heavenly villa at a brand new design resort on Lhaviyani Atoll
+    price: £1,699
+    price-description: per person for 7 nights
+    link: https://www.secretescapes.com/serene-maldives-holiday-with-diving-experiences-cocoon-maldives-lhaviyani-atoll/sale?utm_source=SE&utm_campaign=LINDOR_270117&utm_medium=Hub
 
 - type: coast
-  lindor: true
-  lindor-hero: true
   title: Greek Islands
-  class: greek-islands
   subtitle:
   description: Charming white and blue domed Cycladic homes nestle on the rocky crops of the island shores, where the stunning Aegean offers warm dips and instant replenishment. Mediterranean cuisine and eternal sunshine make the Greek Islands one of our firm favourites.
+  link: https://www.secretescapes.com/search/search?query=greece&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Greek Islands Offer
-    class: greek-islands-offer
-    location: Greek Islands, Greece
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: Ostraco Suites
+    location: Mykonos, Greek Islands
+    description: Serenity and white-washed digs at a chic boutique retreat in Mykonos, with round-trip transfers
+    price: £159
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/ostraco-suites-mykonos-greek-islands/sale?utm_source=SE&utm_campaign=LINDOR_270117&utm_medium=Hub
 
 - type: coast
   title: Caribbean
-  class: caribbean
   subtitle:
   description: Jet off to the famous sun-drenched shores of the Caribbean, and indulge in laid-back living. Famous beaches beckon, with beachside shacks offering cocktails in the shade of palm trees.
+  link: https://www.secretescapes.com/search/search?query=caribbean&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Caribbean Offer
-    class: caribbean-offer
-    location: Caribbean
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: Sugar Ridge
+    location: Antigua, Caribbean
+    description: A stylish Caribbean retreat with stunning views, plus an optional plunge pool and more
+    price: £114
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/sugar-ridge-antigua-caribbean/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 - type: coast
-  title: Amalfi Coast
-  class: amalfi-coast
+  title: Sardinia
   subtitle:
-  description: This premiere Mediterranean destination beguiles in its drama and unique charms. Terracotta villages cling to the rocks as cliffs plunge into the sea, in a crescendo of sheer beauty and eternal romance.
+  description: This inspiring Italian outpost beguiles with its heady mix of Italian fervour and laid-back island atmosphere. Stunning emerald waters lap white sands, only hinting at the riches in-store to any visitor of this effortlessly romantic, island destination.
+  link: https://www.secretescapes.com/search/search?query=sardinia&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Amalfi Coast Offer
-    class: amalfi-coast-offer
-    location: Amalfi Coast, Italy
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
-    price: £269
+    title: Lu' Hotel
+    location: Sardinia
+    description: A relaxing stay in southern Sardinia, with dates available over the island's Carnival period
+    price: £56
     price-description: per room per night
-    link: #
+    link: https://www.secretescapes.com/lu-hotel-sardinia-italy/sale?utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub

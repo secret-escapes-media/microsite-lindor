@@ -27,7 +27,7 @@ modal:
 
 <section>
   <div class="row row--columns-4-4-4-gutters row--padding">
-    {% assign offers = site.data.offers %}
+    {% assign offers = site.data.offers | sort: 'lindor-hero' | sort: 'lindor' | reverse %}
     {% for offer in offers %}
       {% include offer-block.html %}
     {% endfor %}
