@@ -152,11 +152,6 @@
 //    Countdown timer
 ///////////////////////////////////////
 
-  // $('.js-countdown').countdown('2018/01/01', function(event) {
-  //   $(this).text(event.strftime('%D days %H:%M:%S'));
-  // });
-
-
   // neat way to give the css classes to each element of countdown
   function countdownSpanWrap(timeUnit, timeLabel) {
     return '<span class="countdown__unit">' + timeUnit + ' <span class="countdown__label">' + timeLabel + '</span> </span>';
@@ -181,17 +176,19 @@
       });
       // NEED TO MAKE THE FINSHED STATE
       // .on('finish.countdown', function(event) {
-      //   // disables the expired offer
-      //   var parent = $(this).closest('.modal__content');
-      //   // remove last cta button
-      //   var lastButton = $('a.btn--large',parent);
-      //   // add in hr
-      //   lastButton.after('<hr class="row">');
-      //   lastButton.remove();
-      //   // disable cta button
-      //   $('a.btn',parent).text('Offer Expired').attr('class', 'btn btn--disabled').removeAttr('href');
+      //   // // disables the expired offer
+      //   // var parent = $(this).closest('.modal__content');
+      //   // // remove last cta button
+      //   // var lastButton = $('a.btn--large',parent);
+      //   // // add in hr
+      //   // lastButton.after('<hr class="row">');
+      //   // lastButton.remove();
+      //   // // disable cta button
+      //   // $('a.btn',parent).text('Offer Expired').attr('class', 'btn btn--disabled').removeAttr('href');
       //   // remove countdown block
       //   $(this).remove();
+      //   $('.js-countdown-active').remove();
+      //   $('.js-countdown-over').show();
       // });
   }
 

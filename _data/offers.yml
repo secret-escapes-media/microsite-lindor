@@ -25,6 +25,18 @@
 
 - type: city
   experts-pick: true
+  details:
+    title: Radisson Blue es. Hotel Rome
+    location: Rome, Italy
+    description: A hilltop beacon of minimalist architecture near some of Rome's most ancient sites
+    price: £120
+    price-description: per room per night
+    link: https://www.secretescapes.com/radisson-blu-es-hotel-rome-rome-italy1/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
+
+- type: city
+  title: London
+  description: A treasure of old-world romance, with creaky cosy pubs hidden in labyrinthine medieval streets, and of modern settings, with stunning rooftop bars perfect for cocktails and haute cuisine. London offers diverse romantic getaways, in an enigmatic urban sprawl as iconic as any.
+  link: https://www.secretescapes.com/search/search?query=london&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   lindor: true
   details:
     title: The Rembrandt
@@ -35,21 +47,7 @@
     link: https://www.secretescapes.com/the-rembrandt-knightsbridge-london/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
 
 - type: city
-  title: London
-  subtitle: A treasure of old-world romance.
-  description: A treasure of old-world romance, with creaky cosy pubs hidden in labyrinthine medieval streets, and of modern settings, with stunning rooftop bars perfect for cocktails and haute cuisine. London offers diverse romantic getaways, in an enigmatic urban sprawl as iconic as any.
-  link: https://www.secretescapes.com/search/search?query=london&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
-  details:
-    title: Leicester House
-    location: Leicester Square, Central London
-    description: Opt for a suite at an elegant Georgian townhouse hotel off Leicester Square, in central London
-    price: £139
-    price-description: per room per night
-    link: https://www.secretescapes.com/leicester-house-leicester-square-central-london/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
-
-- type: city
   title: New York
-  subtitle: An urban image of dizzying heights.
   description: An urban image of dizzying heights, New York has long been celebrated as a romantic backdrop to a host of iconic films. Romance abounds in this bucket-list destination.
   link: https://www.secretescapes.com/search/search?query=new%20york&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -62,7 +60,6 @@
 
 - type: city
   title: Paris
-  subtitle: The city of love.
   description: Lauded, and rightly so, as the city of love, Paris is the champion of romantic backdrops and passionate exploits. From the cafés of Montmartre to strolls along the Seine, it doesn’t get as traditionally romantic as this.
   link: https://www.secretescapes.com/search/search?query=paris&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -74,17 +71,16 @@
     link: https://www.secretescapes.com/charming-paris-break-with-eurostar-travel-belloy-saint-germain-france/sale?utm_source=SE&utm_campaign=LINDOR_270117&utm_medium=Hub
 
 - type: city
-  title: Rome
-  subtitle: Rome is one of the most beautiful cities in the world.
-  description: Rome is one of the most beautiful cities in the world. Steal a kiss at the Trevi Fountain, be awe-inspired by the ancient Pantheon, and gorge yourself in the trattorias and enotecas.
-  link: https://www.secretescapes.com/search/search?query=rome&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
+  title: Venice
+  description: A truly breathtaking destination, Venice seeps in curious cultural traditions and effortlessly romantic vistas. From gliding gondola rides, exploring labyrinthine streets and magnificent piazzas, get lost in the fragile beauty of this gloriously unique city.
+  link: https://www.secretescapes.com/search/search?query=venice&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
-    title: Radisson Blue es. Hotel Rome
-    location: Rome, Italy
-    description: A hilltop beacon of minimalist architecture near some of Rome's most ancient sites
-    price: £120
+    title: Hotel Sant'Elena
+    location: Venice, Italy
+    description: A sleek and stylish boutique hotel set in a former convent in romantic Venice
+    price: £81
     price-description: per room per night
-    link: https://www.secretescapes.com/radisson-blu-es-hotel-rome-rome-italy1/sale?utm_source=SE&utm_campaign=LINDOR_230117&utm_medium=Hub
+    link: https://www.secretescapes.com/hotel-santelena-venice-italy/sale?utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
 
 
 
@@ -102,7 +98,6 @@
 
 - type: country
   title: Cotswolds
-  subtitle: England has never been as quaint as it is in the Cotswolds.
   description: England has never been as quaint as it is in the Cotswolds. The famous honey-hue stone that decks the homes, inns and castles in this area dot the pristine countryside, offering charming walks and cosy pubs a-plenty.
   link: https://www.secretescapes.com/search/search?query=cotswolds&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -115,7 +110,6 @@
 
 - type: country
   title: South Africa
-  subtitle:
   description: Head to the famous Cape Winelands and enjoy renowned wines in rich, stunning South African countryside. Old-world colonial villages offer quaint romance with fine dining options and stellar wine to match.
   link: https://www.secretescapes.com/search/search?query=south%20africa&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -128,7 +122,6 @@
 
 - type: country
   title: Tuscany
-  subtitle:
   description: With the looming Apennines to one side, and a host of terracotta villages ripe for exploring, Tuscany is a stalwart Italian destination. Bask in endless rural Italian charms, in one of the most acclaimed wine regions in the world.
   link: https://www.secretescapes.com/search/search?query=tuscany&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -141,7 +134,6 @@
 
 - type: country
   title: Lake District
-  subtitle:
   description: Ragged peaks drop dramatically to a patchwork of lakes, offering a panorama perfect for endless romantic walks. Cosy up in a traditional pub and soak up the literary legacy left by the Romantics, who were in awe of this rugged wilderness.
   link: https://www.secretescapes.com/search/search?query=lake%20district&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -168,7 +160,6 @@
 
 - type: coast
   title: Indian Ocean
-  subtitle:
   description: Warm azure waters lap against crystalline sands fringed by gently swaying palm trees – it doesn’t get more serene than a break in one of the vast ocean’s exotic locations.
   link: https://www.secretescapes.com/search/search?query=indian%20ocean&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -181,7 +172,6 @@
 
 - type: coast
   title: Greek Islands
-  subtitle:
   description: Charming white and blue domed Cycladic homes nestle on the rocky crops of the island shores, where the stunning Aegean offers warm dips and instant replenishment. Mediterranean cuisine and eternal sunshine make the Greek Islands one of our firm favourites.
   link: https://www.secretescapes.com/search/search?query=greece&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -194,7 +184,6 @@
 
 - type: coast
   title: Caribbean
-  subtitle:
   description: Jet off to the famous sun-drenched shores of the Caribbean, and indulge in laid-back living. Famous beaches beckon, with beachside shacks offering cocktails in the shade of palm trees.
   link: https://www.secretescapes.com/search/search?query=caribbean&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:
@@ -207,7 +196,6 @@
 
 - type: coast
   title: Sardinia
-  subtitle:
   description: This inspiring Italian outpost beguiles with its heady mix of Italian fervour and laid-back island atmosphere. Stunning emerald waters lap white sands, only hinting at the riches in-store to any visitor of this effortlessly romantic, island destination.
   link: https://www.secretescapes.com/search/search?query=sardinia&utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub
   details:

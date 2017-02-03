@@ -11,7 +11,7 @@ layout: default
     <div class="expert-section row row--columns-6-6 row--columns-vertical-align">
 
       <div class="row__column expert-section__content color-white">
-        <h2 class="title--kerning-xwide title--sans">EDITOR'S PICK:</h2>
+        <h2 class="title--kerning-xwide title--sans">{{ page.expert-name | upcase }} PICK:</h2>
         <h3 class="title title--margin title--italic">{{ page.expert-title }}</h3>
         {{ page.expert-content }}
       </div>
@@ -51,7 +51,7 @@ layout: default
 <section class="section--grey-bg">
 
   <div class="row row--padding align-center">
-    <h2 class="title title--margin title--md title--italic">Romantic {{ page.title | downcase }} breaks</h2>
+    <h2 class="title title--margin title--md title--italic">Romantic {% if page.title == "Coast" %}Coastal{% else %}{{ page.title | capitalize }}{% endif %} Breaks</h2>
     <hr class="center">
     {{ page.offer-intro }}
   </div>

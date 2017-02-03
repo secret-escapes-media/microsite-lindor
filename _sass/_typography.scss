@@ -190,6 +190,7 @@ dl {
 
 .image-inline {
   vertical-align: middle;
+  margin-top: 0;
   * + & { margin-left: 10px; }
   & + * { margin-left: 10px; }
 }
