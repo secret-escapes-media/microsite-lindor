@@ -29,10 +29,9 @@ nav-order: 7
 <!--========  Lindor Approved Breaks ========-->
 <section class="section--white-bg">
   <div class="row row--padding align-center">
-    <h2 class="title title--margin title--md">LINDOR <span class="title--italic">Approved Breaks</span></h2>
+    <h2 class="title title--margin title--md">LINDOR <span class="title--italic">Selected Breaks</span></h2>
     <hr class="center">
-      <p class="lead-paragraph">Add a touch of bliss to your Secret Escapes getaway with a generous giveaway from LINDOR.</p>
-      <p>Book the effortlessly romantic Lainston House and for the first lucky few, receive a handcrafted hamper of LINDOR treats. Indulge in these delectable chocolates from the comfort of your blissful getaway.</p>
+      <p class="lead-paragraph">The Lindt Master Chocolatiers have hand-picked three unmissable romantic breaks, perfect for a weekend away that echoes the LINDOR luxury we know and love.</p>
     </div>
 
   {% assign lindor-offers = site.data.offers | where:"lindor","true" %}
@@ -44,10 +43,6 @@ nav-order: 7
       </div>
     {% endif %}
   {% endfor %}
-  <div class="row align-center">
-    <div class="title title--sm title--margin">LINDOR <span class="title--italic">Selected Breaks</span></div>
-    <p>The Lindt Master Chocolatiers have hand-picked two unmissable romantic breaks, perfect for a weekend away that echoes the LINDOR luxury we know and love.</p>
-  </div>
   <div class="row row--padding row--columns-6-6-gutters">
   {% for offer in lindor-offers %}
     {% unless offer.lindor-hero %}
