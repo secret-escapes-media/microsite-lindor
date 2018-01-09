@@ -1,0 +1,22 @@
+$xxxl: 1200px;
+$xxl:  1020px;
+$xl:   930px;
+$lg:   650px;
+$md:   450px;
+$sm:   330px;
+
+@mixin bp($width){
+  @if $width == xxxl { @media (min-width:$xxxl) {@content;} }
+  @if $width == xxl  { @media (min-width:$xxl)  {@content;} }
+  @if $width == xl   { @media (min-width:$xl)   {@content;} }
+  @if $width == lg   { @media (min-width:$lg)   {@content;} }
+  @if $width == md   { @media (min-width:$md)   {@content;} }
+  @if $width == sm   { @media (min-width:$sm)   {@content;} }
+  @else              { @media (min-width:$width){@content;} }
+}
+
+// vertical breakpoint for small screen small
+// NOT SURE IF I NEED THIS? think its only used in core nav. should just use it only there
+@mixin bp-vertical {
+  @media (max-height:$md) and (max-width:$lg) { @content; }
+}

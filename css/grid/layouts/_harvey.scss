@@ -1,0 +1,37 @@
+// Harvey is Bob's second cousin on his Mother's side. He was a troubled
+// youth and, after years of medical examination Harvey was diagnosed with
+// multipersonality disorder. It is this disorder which allows him to build
+// the following two sided image/text layouts.
+// Harvey is a 50/50 text image layout with no gutter. Use Harvey to make
+// an alternating full width section with centred text, and limited height
+// image sizing so the layout works across screens and sizes.
+
+.harvey {
+  @include layout(12 0);
+  text-align: center;
+  &__text { padding: $s4; }
+  & + & { margin: 0; padding: 0; }
+  @include bp(xl){
+    .flexbox & {
+      display: flex;
+      align-items: center;
+    }
+    &__image {
+      @include span(6);
+      min-height: $sm;
+    }
+    &__text {
+      @include span(6 last);
+      padding: $s8;
+    }
+    &:nth-child(odd){
+      .harvey__image { @include span(6 last); }
+      .harvey__text { @include span(6); }
+      .flexbox & {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

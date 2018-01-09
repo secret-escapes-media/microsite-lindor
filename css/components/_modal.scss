@@ -1,0 +1,120 @@
+// modal specific
+
+
+.modal {
+  $icon-size: 3em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: auto;
+  &.is-open   { display: block; }
+  &.is-closed { display: none; }
+  &--standard { max-width: $xl; }
+  &--series   { max-width: $xxl; }
+  &--youtube  { max-width: $xxxl; }
+  &--image    { max-width: $xxl; }
+  &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-overlay;
+    padding-top: ($icon-size*1.5);
+    padding-left: ($icon-size/2);
+    padding-right: ($icon-size/2);
+    padding-bottom: ($icon-size*4);
+    background-color: $grey-darker;
+    background-color: rgba($grey-darker,.9);
+    cursor: pointer;
+    overflow: auto;
+    &.is-open { display: block; }
+    &.is-closed { display: none; }
+    @include bp(md){
+      padding-left: ($icon-size/1.25);
+      padding-right: ($icon-size/1.25);
+    }
+    @include bp(lg){
+      padding-left: $icon-size;
+      padding-right: $icon-size;
+    }
+  }
+  &__content {
+    background-color: $white;
+    padding: $s1 $s2;
+    @include bp(lg){
+      padding: $s4 $s6;
+    };
+  }
+  // THIS SHOULD BE THE ICON COMPONENT POSITIONING SHOULD HAVE A DIFFERENT NAME
+  &__close {
+    position: absolute;
+    right: 0;
+    top: -($icon-size);
+    height: $icon-size;
+    width: $icon-size;
+    background-color: rgba($black,.85);
+    background-image: url('../img/icons/close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: ($icon-size/3);
+    cursor: pointer;
+    z-index: $z-overlay-upper;
+    @include transition;
+    .svg & {
+      background-image: url('../img/icons/close.svg');
+    }
+    &:hover{ background-color: $black; }
+  }
+  &__nav {
+    position: absolute;
+    bottom: -($icon-size);
+    z-index: $z-overlay-upper;
+    top: 50%;
+    width: $icon-size;
+    height: ($icon-size*2);
+    margin-top: -($icon-size/2);
+    background-color: rgba($black, .5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    cursor: pointer;
+    @include transition;
+    &--next {
+      right: -($icon-size);
+      background-image: url('../img/icons/arrow-right.png');
+      .svg & { background-image: url('../img/icons/arrow-right.svg'); }
+    }
+    &--previous {
+      left: -($icon-size);
+      background-image: url('../img/icons/arrow-left.png');
+      .svg & { background-image: url('../img/icons/arrow-left.svg'); }
+    }
+    &:hover{ background-color: $black; }
+  }
+}
+
+.disable-scroll { overflow: hidden; }
+
+.video {
+  position: relative;
+  height: 0;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  background-color: #000;
+  overflow: hidden;
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  // // this centering is an absolute bugger. want to get rid of the wrap
+  // .csstransforms.csstransforms3d &__wrap {
+  //   position: absolute;
+  //   top: 50%;
+  //   width: 100%;
+  //   transform: translateY(-50%);
+  // }
+}

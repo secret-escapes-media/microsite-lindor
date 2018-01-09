@@ -3,14 +3,54 @@
 ---
 
 @import
-  '../bower_components/reset-css/_reset',
-  '../bower_components/susy/sass/susy',
-  'core',
-  'typography',
-  'grid',
-  'navigation',
-  'modal',
-  'styles',
-  'offers',
-  'styleguide'
+
+  // plugins
+  '../node_modules/reset-css/_reset',
+  '../node_modules/susy/sass/susy',
+
+  // core
+  'core/breakpoints',
+  'core/colours',
+  'core/z-index',
+  'core/core',
+  'core/scale',
+
+  // typography
+  'typography/families',
+  'typography/default',
+  'typography/elements',
+  'typography/titles',
+
+  // bg-image
+  'core/bg-img/bg-img',
+  'core/bg-img/breakpoints',
+  'core/bg-img/content',
+
+  // grid
+  'grid/horizontal',
+  'grid/vertical',
+  'grid/layouts/bob',
+  'grid/layouts/harvey',
+  'grid/layouts/henry',
+
+  // navigation
+  'nav/core-nav',
+  'nav/microsite-nav',
+
+  // page
+  'page/footer',
+  'page/banner',
+
+  // components
+  'components/logos',
+  'components/icons',
+  'components/buttons',
+  'components/modal',
+  'components/offer',
+  'components/offer-promo',
+  'components/poi',
+
+  // general
+  'styles'
+
 ;

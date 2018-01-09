@@ -1,0 +1,46 @@
+// Henry is Harvey's twin brother, but totally disreguards image aspect ratio.
+// The feature image will always strech to 100% of the height before stacking
+// for mobile
+
+.henry {
+  &__image {
+    background-color: $grey-light;
+    @include background-attributes();
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 66.666666667%; // 3-2 ratio
+    }
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__text { padding: $s4 $s2 $s8; }
+  @include bp(md){ &__text { padding: $s5 $s4 $s9; } }
+  @include bp(xxl){
+    position: relative;
+    @include clearfix;
+    &__text {
+      float: right;
+      width: 50%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      &:before { display: none; }
+    }
+    &--swap > &__text  { float: left; }
+    &--swap > &__image { left: auto; right: 0; }
+  }
+
+}

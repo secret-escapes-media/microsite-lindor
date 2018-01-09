@@ -1,0 +1,13 @@
+<div class="row row--4-4-4-gutters">
+  {% assign site-regions = site.html_pages | where: 'group', 'resorts' | sort: 'group-order' %}
+  {% for region in site-regions %}
+    <div class="col">
+      <div class="bg-img bg-img--16-9 bg-img--lg-2-3 bg-img--hover border" style="background-image: url('{{site.baseurl}}/img/bg/{{region.id}}-guide.jpg');">
+        <a href="{{site.baseurl}}{{region.url}}" class="bg-img__link"></a>
+        <div class="bg-img__content">
+          <div class="title title--md title--display">{{region.title}}</div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

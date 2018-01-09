@@ -1,0 +1,13 @@
+
+var rdm_num = Number(rdm_num) || Math.floor(Math.random()*10e12);
+
+function generateTrackedLink(scriptlink,imglink){
+  var script = document.createElement('script');
+  script.src = scriptlink;
+  $('#tracked-links').append(script);
+
+  var img = document.createElement('img');
+  img.src = imglink + rdm_num + ';dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?';
+  $('#tracked-links').append(img);
+
+};

@@ -1,0 +1,97 @@
+
+
+// ---------- button ----------
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: $s2 $s6;
+  color: $text-white;
+  font-weight: 600;
+  font-size: $s-1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  line-height: 1.33;
+  border-radius: 3px;
+  cursor: pointer;
+  @include transition;
+  * + & { margin-top: 2em; }
+  // &--xs {
+  //   padding: $s0 $s2;
+  //   font-size: $s-2;
+  // }
+  &--sm {
+    padding: $s1 $s4;
+    font-size: $s-2;
+  }
+  &--orange { background-color: $orange;
+    &:hover { background-color: $orange-dark; }
+  }
+  // &--orange-outline {
+  //   color: inherit;
+  //   &:before {
+  //     // creates a border within the button dimentions. useful if an outline
+  //     // button is inline with a solid colour button
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     border: 1px solid $orange;
+  //     border-radius: inherit;
+  //   }
+  //   &:hover {
+  //     color: $text-white;
+  //     background-color: $orange;
+  //   }
+  // }
+  &--red { background-color: $l-red;
+    &:hover { background-color: $l-red-dark; }
+  }
+  &--red-dark { background-color: $l-red-dark;
+    &:hover { background-color: darken($l-red-dark, 5); }
+  }
+  &--red-dark-outline {
+    color: inherit;
+    &:before {
+      // creates a border within the button dimentions. useful if an outline
+      // button is inline with a solid colour button
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid $l-red-dark;
+      border-radius: inherit;
+    }
+    &:hover {
+      color: $text-white;
+      background-color: $l-red-dark;
+      &:before { border-color: $l-red-dark; }
+    }
+  }
+  // &--white-outline {
+  //   color: inherit;
+  //   &:before {
+  //     // creates a border within the button dimentions. useful if an outline
+  //     // button is inline with a solid colour button
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     border: 1px solid $white;
+  //     border-radius: inherit;
+  //     @include transition;
+  //   }
+  //   &:hover {
+  //     color: $text-white;
+  //     background-color: $l-red;
+  //     &:before { border-color: $l-red; }
+  //   }
+  // }
+}

@@ -1,0 +1,197 @@
+// general styles for the project that wouldn't be a reuseable component
+
+body {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #f3f3f3;
+}
+
+.page--lindor {
+  background-image: url('../img/bg/banner-lindor.jpg');
+  background: url('../img/bg/lindor-pour-bg.png') 71.5% -50px / 280px no-repeat, url('../img/bg/lindor.jpg') center / cover no-repeat #f3f3f3;
+}
+.bg {
+  &--white { background-color: $white; }
+  &--fixed-section {
+    height: 600px;
+    height: 80vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  // &--grey-dark      { background-color: $grey-dark; }
+  // &--grey-lightest  { background-color: $grey-lightest; }
+}
+
+$border-size: 6px;
+.border {
+  border: $border-size solid rgba($white,.5);
+  background-origin: border-box;
+}
+
+.expert {
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 300px;
+  overflow: hidden;
+  &__link {
+    @include transition();
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($black, 0.2);
+    &:hover {
+      background-color: rgba($black, 0);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    color: $white;
+    text-align: center;
+    text-shadow: 0 0 10px $black;
+    transform: translateY(-50%);
+  }
+}
+
+.modal__expert                  { background-color: $white; }
+.modal__question:nth-child(even){ background-color: $grey-lightest; }
+
+.mobile-center {
+  text-align: center;
+  @include bp(lg){ text-align: inherit; }
+}
+
+
+.region {
+  position: relative;
+  margin-bottom: ($s4 * 3);
+  background-color:$white;
+  box-shadow: 0 0 10px rgba($black,.15);
+  // & + & { margin-top: $s8; }
+  &__offer {
+    margin-bottom: -($s4 * 3);
+    box-shadow: 0 0 10px rgba($black,.15);
+    .offer__content{
+      border: 0;
+    }
+  }
+  &__image {
+    display: block;
+    position: relative;
+    background-color: $grey-lighter;
+    @include background-attributes;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%; // 4-3 ratio
+    }
+    @include bp(xl) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right:0;
+      bottom: 0;
+      &:before { display: none; }
+    }
+  }
+  &__image-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include bp(xl){ position: relative; }
+  }
+  // &__title {
+  //   position: absolute;
+  //   top: 30px;
+  //   left: 30px;
+  //   right: 30px;
+  // }
+  // &__content {
+  //   padding-left: 25px;
+  //   padding-right: 25px;
+  //   padding-bottom: 30px;
+  //   @include bp(large) {
+  //     padding: 20px 30px;
+  //   }
+  // }
+  // .offer { margin-bottom: 0; }
+  // @include bp(large) {
+  //   &__content { padding: 20px 30px 0 30px; }
+  //   .offer { margin-bottom: -2em; }
+  // }
+}
+
+
+
+
+// .region {
+//   margin-top: $s6;
+//   margin-bottom: $s4;
+//   background-color:$white;
+//   box-shadow: 0 0 10px rgba($black,.15);
+//   & + & { margin-top: $s8; }
+//   &__image {
+//     @include bp(large) {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       right:0;
+//       bottom: 0;
+//       height: auto;
+//     }
+//   }
+//   &__title {
+//     position: absolute;
+//     top: 30px;
+//     left: 30px;
+//     right: 30px;
+//   }
+//   &__content {
+//     padding-left: 25px;
+//     padding-right: 25px;
+//     padding-bottom: 30px;
+//     @include bp(large) {
+//       padding: 20px 30px;
+//     }
+//   }
+//   .offer { margin-bottom: 0; }
+//   @include bp(large) {
+//     &__content { padding: 20px 30px 0 30px; }
+//     .offer { margin-bottom: -2em; }
+//   }
+// }
+
+// this probably could be on title and then the inline stuff saved as another inline style class
+.fancy-number {
+  display: inline-block;
+  margin-top: $s-6;
+  margin-bottom: $s-6;
+  color: $l-red-dark;
+  font-family: $font-family-headline-01;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: $s6;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0;
+}
+
+.site-nav {
+  .page--overview &       { background-color: rgba(#434361,.5) }
+  .page--secret-romance & { background-color: rgba(#62748c,.5) }
+  &--footer               { background-color: $grey-darker; }
+  &--footer > &           { background-color: transparent; }
+}

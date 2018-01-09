@@ -1,0 +1,71 @@
+// general typographic elements like paragraphs, lists, etc
+
+.text {
+  @include bp(md){
+    &--xxl    { font-size: $s2; }
+    &--xl     { font-size: $s1_2; }
+    &--lg     { font-size: $s1; }
+    &--sm     { font-size: $s-1; font-weight: 400; }
+  }
+  &--left     { text-align: left; }
+  &--right    { text-align: right; }
+  &--bold     { font-weight: bold; }
+  &--italic   { font-style: italic; }
+  &--center   { text-align: center; }
+  &--white    { color: $white; }
+  &--black    { color: $text; }
+  &--dark     { color: $text-dark; }
+  &--light    { color: $text-light; }
+  &--red      { color: $l-red; }
+  &--red-dark { color: $l-red-dark; }
+}
+
+.line-length {
+  display: inline-block;
+  max-width: 40rem;
+  &--lg {
+    display: inline-block;
+    max-width: 47rem;
+  }
+}
+
+
+// -------- general element styles --------
+
+.page__content {
+  * + p,
+  * + ul,
+  * + ol               { padding-top: $s1; }
+  li                   { list-style-position: outside; margin-left: $s2; }
+  li + li              { padding-top: $s-2; }
+  ul li                { list-style-type: disc; }
+  ol li                { list-style-type: decimal; }
+  em                   { font-style: italic; font-weight: 400; }
+  strong               { font-weight: 700; }
+  a[href]:not([class]) {
+    color: $orange;
+    @include transition;
+    &:hover { color: $orange-darker; }
+  }
+  sup {
+    font-size: $s-1;
+    vertical-align: super;
+    line-height: 0;
+  }
+}
+
+hr {
+  display: inline-block;
+  height: 0;
+  width: 100%;
+  max-width: 200px;
+  margin-top: $s1;
+  margin-bottom: $s1;
+  border: 0;
+  border-bottom: 3px double rgba($l-red-dark,.75);
+}
+
+.hr {
+  &--sm    { max-width: 100px; }
+  &--white { border-color: rgba($white,.75); }
+}

@@ -1,63 +1,65 @@
 ---
-layout: home
-title: Overview
-class: overview
+layout: default
+id: overview
 nav-order: 1
+title: Overview
+intro: Love beckons as romance envelops this heart-stirring time of year. Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.
 
-banner-title: Romantic Breaks
-banner-content:
+banner:
+  title: Romantic Breaks
+  title-sub: In Partnership With Lindor
 ---
 
-<section class="banner-overlap section--padding-none">
-  <div class="row row--padding">
-    <div class="intro intro--white">
-      <div class="intro__wrap">
-        <p class="lead-paragraph">Love beckons as romance envelops this heart-stirring time of year. Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.</p>
+<div class="row row--xxl row--padding">
+  <div class="border">
+    <div class="row boxpad--lg text--center bg--white ">
+      <div class="line-length--lg">
+        <p class="text--xl">{{page.intro}}</p>
         <p>Browse curated Secret Escapes offers that feature top picks from three iconic themes – the privacy and beauty of the country, the replenishing and stunning coastal breaks, and the electric excitement of the city. Discover an opulent competition prize that will take you to the home of the Master Chocolatiers, LINDOR.</p>
-        
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section>
-  <div class="row row--padding row--columns-6-6-gutters align-center overview-nav">
-
-    {% assign overview-nav = site.pages | sort:"overview-nav-order" %}
-    {% for nav in overview-nav %}
-    {% if nav.overview-nav-order %}
-      <div class="overview-nav__item row__column bg-image-ratio bg-image-ratio--3-2" style="background-image:url('{{ site.baseurl }}/img/bg/banner-{{ nav.class }}.jpg');">
-        <a class="overview-nav__content" href="{{ site.baseurl }}{{ nav.url }}">
-          <span class="overview-nav__title color-white title title--lg title--kerning-wide">{{ nav.title | upcase }}</span>
-        </a>
+<div class="section">
+  <div class="space--lg"></div>
+  <div class="row row--6-6-gutters row--padding">
+    {% assign site-sections = site.html_pages | sort:"nav-order" %}
+    {% for section in site-sections %}
+      {% unless section.id == "overview" or section.id == "competition" or section.id == 'entered' %}
+      <div class="col">
+        <div class="bg-img bg-img--3-2 border" style="background-image: url('{{site.baseurl}}/img/content/overview-nav/{{section.id}}.jpg');">
+          <a href="{{site.baseurl}}/{{section.id}}" class="bg-img__link"></a>
+          <div class="bg-img__content">
+            <hr class="hr--sm hr--white">
+            <div class="title title--lg title--upper">{{section.title}}</div>
+            <hr class="hr--sm hr--white">
+          </div>
+        </div>
       </div>
-    {% endif %}
+      {% endunless %}
     {% endfor %}
-
   </div>
-</section>
+</div>
 
-<section class="section--padding-lg section--padding-top-none">
-  <div class="row row--padding align-center">
-    <h3 class="title title--md title--italic title--margin title--hr title--hr-center">Our Romantic Travellers</h3>
+<div class="section row--padding text--center">
+  <div class="row">
+    <h3 class="title title--md title--italic text--red-dark">Our Romantic Travellers</h3>
+    <hr>
   </div>
-  <div class="row row--thin row--padding row--columns-4-4-4-gutters align-center">
+  <div class="row row--xxl row--padding row--4-4-4-gutters text-center">
     {% assign experts = site.data.experts %}
     {% for expert in experts %}
-    <div class="expert row__column bg-image-ratio bg-image-ratio--1-1" style="background-image: url({{ site.baseurl }}/img/content/expert-{{ expert.class }}.jpg);">
-      <a href="#" class="expert__link js-open-modal" data-expert="{{ expert.class }}">
-        <span class="expert__title title--md">
-          {{ expert.name1 }}
-          {% if expert.name2 %}
-          <span class="expert__title-and">&</span>
-          {{ expert.name2 }}
-          {% endif %}
-        </span>
-      </a>
+    <div class="col">
+      <div class="expert border bg-img bg-img--1-1" style="background-image: url({{ site.baseurl }}/img/content/experts/{{ expert.class }}.jpg);">
+        <a href="#" class="expert__link js-open-modal" data-open-modal="{{ expert.class }}">
+          <span class="expert__title title title--sm">
+            {{ expert.name1 }}{% if expert.name2 %} & {{ expert.name2 }}{% endif %}
+          </span>
+        </a>
+      </div>
     </div>
     {% endfor %}
   </div>
-</section>
-
-<!-- EXPERT MODAL -->
-{% include modal-expert.html %}
+  <div class="space--xl"></div>
+</div>

@@ -1,54 +1,42 @@
 ---
-layout: content
+layout: default
+id: lindor
+nav-order: 5
 title: Lindor
-class: lindor
-nav-order: 7
+intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae magni aperiam odit unde nihil voluptatem tempore quo omnis dicta reprehenderit est mollitia, amet at maxime labore consequuntur architecto non fuga.
+no-bg: true
 ---
 
-<section class="banner-overlap section--padding-none">
+<div class="row row--xxl row--padding">
+  <div class="border">
+    <div class="row boxpad--lg text--center bg--white ">
+      <div class="line-length--lg">
+        <h3 class="title title--md text--red-dark"><span class="title--italic">Treat yourself to</span> LINDOR <span class="title--italic">bliss</span></h3>
+        <hr class="hr--sm">
+        <div>
+          <p class="text--lg">Nothing speaks the language of indulgence better than a LINDOR chocolate truffle. Perfectly round, the Lindt milk chocolate gives way to an irresistibly smooth melting filling. Share this moment with someone, or keep it to yourself – each will guarantee a moment of bliss.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="section">
+  <div class="space--md"></div>
   <div class="row row--padding">
-    <div class="intro intro--white">
-      <div class="intro__wrap">
-        <h3 class="title title--margin title--hr title--hr-center"><span class="title--italic">Treat yourself to</span> LINDOR <span class="title--italic">bliss</span></h3>
-        <p>Nothing speaks the language of indulgence better than a LINDOR chocolate truffle. Perfectly round, the Lindt milk chocolate gives way to an irresistibly smooth melting filling. Share this moment with someone, or keep it to yourself – each will guarantee a moment of bliss.</p>
+    <div class="bob bob--swap">
+      <div class="bob__image">
+        <a href="{{site.client.link}}"><div class="bg-img bg-img--3-2" style="background-image: url('{{site.baseurl}}/img/content/lindor/chef.jpg');"></div></a>
+      </div>
+      <div class="bob__text">
+        <div class="title title--md title--italic text--red-dark">The Lindt Master Chocolatier</div>
+        <div class="row">
+          <p>Since 1845 the Lindt Master Chocolatiers have been creating the ultimate chocolate delights. From sourcing the finest quality cocoa beans, to pioneering the conching process that makes Lindt chocolate so irresistibly smooth and silky, Lindt chocolates are defined by the passion for innovation that the Lindt Master Chocolatiers embody. Over 60 years ago the Lindt Master Chocolatier and his colleagues were busy creating delectable chocolate delights, and had no idea that they were about to come across something truly unique and as precious as the LINDOR chocolate truffle. The smooth melting centre has delivered moments of bliss ever since.</p>
+        </div>
       </div>
     </div>
   </div>
-</section>
-
-<section>
-  <div class="row row--padding row--columns-7-5-gutters row--columns-vertical-align">
-    <div class="row__column">
-      <h3 class="title title--italic title--margin">The Lindt Master Chocolatier</h3>
-      <p>Since 1845 the Lindt Master Chocolatiers have been creating the ultimate chocolate delights. From sourcing the finest quality cocoa beans, to pioneering the conching process that makes Lindt chocolate so irresistibly smooth and silky, Lindt chocolates are defined by the passion for innovation that the Lindt Master Chocolatiers embody. Over 60 years ago the Lindt Master Chocolatier and his colleagues were busy creating delectable chocolate delights, and had no idea that they were about to come across something truly unique and as precious as the LINDOR chocolate truffle. The smooth melting centre has delivered moments of bliss ever since.</p>
-    </div>
-    <div class="row__column bg-image-ratio bg-image-ratio--4-3 image-pop" style="background-image: url({{ site.baseurl }}/img/content/lindor-chef.jpg);"></div>
-  </div>
-</section>
-
-<!--========  Lindor Approved Breaks ========-->
-<section class="section--white-bg">
-  <div class="row row--padding align-center">
-    <h2 class="title title--margin title--md">LINDOR <span class="title--italic">Selected Breaks</span></h2>
-    <hr class="center">
-      <p class="lead-paragraph">The Lindt Master Chocolatiers have hand-picked three unmissable romantic breaks, perfect for a weekend away that echoes the LINDOR luxury we know and love.</p>
-    </div>
-
-  {% assign lindor-offers = site.data.offers | where:"lindor","true" %}
-  <!-- Featured break -->
-  {% for offer in lindor-offers %}
-    {% if offer.lindor-hero %}
-      <div class="row row--padding">
-        {% include offer-block.html class="feature" %}
-      </div>
-    {% endif %}
-  {% endfor %}
-  <div class="row row--padding row--columns-6-6-gutters">
-  {% for offer in lindor-offers %}
-    {% unless offer.lindor-hero %}
-        {% include offer-block.html %}
-    {% endunless %}
-  {% endfor %}
-  </div>
-
-</section>
+  <div class="space--xxl"></div>
+</div>

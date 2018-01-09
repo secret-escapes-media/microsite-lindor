@@ -1,0 +1,180 @@
+// site header and navigation styles
+
+
+$core-nav-height:     $s8;
+$core-nav-height-sm:  $s7;
+$core-nav-padding:    $s2;
+$core-nav-padding-sm: $s0;
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $z-nav-upper;
+  height: $core-nav-height-sm;
+  @include bp(md){
+    height: $core-nav-height;
+  }
+  &__offset:before {
+    // corrects header overlapping content
+    content: '';
+    display: block;
+    height: $core-nav-height-sm;
+    @include bp(md){
+      height: $core-nav-height;
+    }
+  }
+  // &__offset-padding {
+  //   padding-top: $core-nav-height-sm;
+  //   @include bp(md){
+  //     padding-top: $core-nav-height;
+  //   }
+  // }
+}
+
+
+// ---------- NAV FOR CORE SE SITE ----------
+
+$logo-bp: 600px;
+$nav-list-bp: 730px;
+.core-nav {
+  height: 100%;
+  padding-left: $core-nav-padding-sm;
+  padding-right: $core-nav-padding-sm;
+  font-family: $font-family;
+  color: $white;
+  text-align: center;
+  background-color: rgba($black,.75);
+  @include bp(md){
+    padding-left: $core-nav-padding;
+    padding-right: $core-nav-padding;
+  }
+  * { vertical-align: middle; }
+  > * { height: 100%; }
+  &__wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  &__column {
+    position: absolute;
+    padding-top: $s2;
+    .csstransforms.csstransforms3d & {
+      top: 50%;
+      padding-top: 0;
+      transform: translateY(-50%);
+    }
+    &--left {
+      @include bp($nav-list-bp){ display: none; }
+    }
+    &--center {
+      width: auto;
+      .csstransforms.csstransforms3d & {
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      @include bp($nav-list-bp) {
+        left: 0;
+        .csstransforms.csstransforms3d & {
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    &--right {
+      right: 0;
+      display: none;
+      @include bp($logo-bp){ display: block; }
+    }
+  }
+  &__list {
+    display: none;
+    margin-left: $s2;
+    line-height: 0;
+    @include bp($nav-list-bp){ display: inline-block; }
+  }
+  &__item {
+    display: inline-block;
+    line-height: 0;
+    & + & { margin-left: $s0; }
+  }
+  &__link {
+    color: $grey-lighter;
+    font-size: .833em;
+    font-weight: 600;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    line-height: 1;
+    @include transition;
+    &:hover,
+    &--current {
+      color: $orange;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// ---------- MOBILE NAV OFF CANVAS ----------
+
+$mobile-nav-width: 75%;
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: $z-overlay;
+  width: $mobile-nav-width;
+  color: $grey-lighter;
+  font-family: $font-family;
+  background-color: rgba($grey-darker,.9);
+  overflow-y: auto;
+  @include transition;
+  &.is-closed {
+    left: -$mobile-nav-width;
+    visibility: hidden;
+    opacity: 0;
+  }
+  &.is-open {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  &__wrap {
+    padding-left: $core-nav-padding-sm;
+    padding-right: $core-nav-padding-sm;
+    @include bp(md){
+      padding-left: $core-nav-padding;
+      padding-right: $core-nav-padding;
+    }
+  }
+  &__icon {
+    line-height: $core-nav-height-sm;
+    @include bp(md){ line-height: $core-nav-height; }
+  }
+  &__item {
+    & + & { border-top: 1px solid rgba($black,.33); }
+  }
+  &__link {
+    @include transition;
+    display: block;
+    padding-top: $s-1;
+    padding-bottom: $s-1;
+    font-size: $s0;
+    font-weight: 600;
+    text-transform: uppercase;
+    &--current { color: $orange; }
+  }
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    background: rgba($grey-darker,.85);
+    text-align: center;
+     > * { vertical-align: middle; }
+    @include bp($logo-bp){ display: none; }
+  }
+  @include bp($nav-list-bp){ display: none; }
+}

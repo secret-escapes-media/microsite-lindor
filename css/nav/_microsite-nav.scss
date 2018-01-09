@@ -1,0 +1,165 @@
+// styles for the microsite nav
+
+
+$site-nav-height:     $s7;
+$site-nav-height-sm:  $s6;
+$nav-arrow-width:     $s8;
+$nav-width-bp:        760px;
+
+.site-nav {
+  height: $site-nav-height-sm;
+  text-align: center;
+  font-weight: 400;
+  font-size: $s-1;
+  letter-spacing: .2em;
+  line-height: $site-nav-height-sm;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $grey-dark;
+  background-color: rgba($grey-dark,.66);
+  overflow: hidden;
+  @include bp(md){
+    height: $site-nav-height;
+    line-height: $site-nav-height;
+  }
+  &__wrap {
+    position: relative;
+    max-width: $xxxl;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__list {
+    padding-right: $nav-arrow-width;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    &:before {
+      // prompt for horizontal scroll on phone
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: $z-nav-upper;
+      display: block;
+      width: $nav-arrow-width;
+      height: $site-nav-height-sm;
+      background-image: url("../img/icons/nav-arrow-dark.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: $nav-arrow-width auto;
+      @include bp(md){
+        height: $site-nav-height;
+      }
+    }
+    @include bp($nav-width-bp){
+      // remove the prompt for sideways scroll
+      padding-right: 0;
+      overflow: visible;
+      &:before { display: none; }
+    }
+  }
+  &__item {
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 1px solid rgba($white,.12);
+    &:last-child { border-right: 0; }
+    @include transition;
+    &:hover {
+      background-color: rgba($white,.12);
+      border-right-color: transparent;
+    }
+    // &:hover + & { border-right-color: transparent; }
+    &.is-current { }
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding-left: 2em;
+    padding-right: 2em;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      opacity: 0;
+      @include transition();
+    }
+  }
+  @include bp($nav-width-bp){
+    overflow: visible;
+    height: auto;
+    .flexbox & {
+      &__list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+      }
+      &__item { flex-grow: 1; }
+      &__link {
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ---------- DROP DOWN LIST NAV ----------
+
+.group-nav {
+  display: none;
+  @include bp(lg){
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: $z-nav;
+    display: none;
+    width: 100%;
+    margin-left: -1px;
+    margin-right: -1px;
+    color: $grey-dark;
+    table-layout: fixed; // weird even columns table cell hack
+    transition: all ($transition-time*2) ease;
+    .csstransforms.csstransforms3d & {
+      display: table;
+      transform: scaleY(0);
+      transform-origin: top center;
+    }
+    .site-nav__item:hover &{
+      display: table;
+      .csstransforms.csstransforms3d & {
+      transform: scaleY(1);
+      }
+    }
+  }
+  &__item {
+    display: table-cell;
+    width: 2%; // weird even columns table cell hack
+    height: $s15;
+    background-color: $grey-darkest;
+    vertical-align: top;
+    @include background-attributes;
+  }
+  &__link {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($white,.75);
+    &-wrap {
+      display: table-cell;
+      vertical-align: middle;
+      white-space: normal;
+      // font-size: $s0;
+      // line-height: 1.33;
+      padding-left: $s2;
+      padding-right: $s2;
+    }
+    @include transition;
+    &:hover {
+      text-decoration: none;
+      letter-spacing: .225em
+    }
+  }
+}

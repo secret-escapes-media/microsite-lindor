@@ -1,10 +1,18 @@
 # Site settings
 title: Romantic Breaks
+client:
+  name: Lindor
+  link: http://www.lindt.co.uk/shop/our-brands/lindor
 description: >
   Love beckons as romance envelops this heart-stirring time of year. Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.
 baseurl: "/romantic-breaks" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 
+
 # Build settings
 markdown: kramdown
-exclude: [node_modules, gulpfile.js, package.json, bower_components, bower.json, README.md]
+exclude: [node_modules, gulpfile.js, package.json, package-lock.json, js/script.js]
+keep_files: [js/scripts.min.js]
+sass:
+    sass_dir: css
+    style: compressed

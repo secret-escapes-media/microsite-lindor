@@ -1,0 +1,13 @@
+---
+# dashes needed for jekyll to process scss into a css file
+---
+
+// Special page specific SCSS goes here after the main imports
+// Gets added as a separate link after the main css in the head
+
+// Will need to import to access the global variables and mixins
+// @import
+//   'core/breakpoints',
+//   'core/colours',
+//   'core/z-index'
+// ;

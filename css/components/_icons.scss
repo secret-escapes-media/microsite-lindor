@@ -1,0 +1,24 @@
+// general icon styles
+
+// should try and ref this in the modal as well use it in more places than the nav
+
+
+$icon-size: 24px;
+.icon {
+  display: inline-block;
+  height: $icon-size;
+  width: $icon-size;
+  cursor: pointer;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $icon-size;
+  &--menu {
+    background-image: url("../img/icons/menu.png");
+    svg & { background-image: url("../img/icons/menu.svg"); }
+  }
+  &--close {
+    background-image: url("../img/icons/close.png");
+    svg & { background-image: url("../img/icons/close.svg"); }
+  }
+}

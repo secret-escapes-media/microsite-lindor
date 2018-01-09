@@ -1,0 +1,18 @@
+<div class="banner">
+  <div class="banner__nav site-header__offset-padding">
+    {% include nav/microsite-nav.html %}
+  </div>
+  <div class="banner__content site-header__offset-padding">
+    <div class="row row--xxl row--padding">
+      {% if page.banner.content %}
+        {{page.banner.content | liquify}}
+      {% else %}
+      <div class="row row--xl row--align">
+        {% if page.banner.title-super %}<div class="title title--display title--super title--xs title--upper title--kerning-lg">{{page.banner.title-super}}</div>{% endif %}
+          <h1 class="title title--display title--xxxl title--kerning title--line"><span>{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</span></h1>
+        {% if page.banner.title-sub %}<div class="title title--display title--xs title--upper title--kerning-lg">{{page.banner.title-sub}}</div>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
