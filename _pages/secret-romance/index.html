@@ -114,7 +114,7 @@ picks:
       <h3 class="title title--lg">{{pick.title}}</h3>
       <h4 class="title title--sub title--xxs">In {{pick.location}}</h4>
       <p>{{pick.description}}</p>
-      <a href="{{pick.country.link}}" class="btn btn--sm btn--red-dark-outline">See {{pick.country.title}} Offers</a>
+      <a id="track-{{pick.id}}-se-offers-btn" href="{{pick.country.link}}" class="btn btn--sm btn--red-dark-outline">See {{pick.country.title}} Offers</a>
     </div>
   </div>
   {% endfor %}

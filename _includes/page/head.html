@@ -12,7 +12,7 @@
   {% elsif page.intro %}
     {% assign page-description = page.intro | strip_html | strip_newlines | truncate: 155 %}
   {% else %}
-    {% assign page-description = site.description %}
+    {% assign page-description = site.description | truncate: 155 %}
   {% endif %}
 
   <meta charset="utf-8">
@@ -34,7 +34,7 @@
   <meta name="twitter:description" content="{{page-description}}">
   <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/img/social/social.jpg">
   <!-- END Social Data -->
-  
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,600italic,600,400italic,300italic,300,200|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   {% if page.extra-css %}<link rel="stylesheet" href="{{ site.baseurl }}/css/{{page.title | slugify}}.css">{% endif %}

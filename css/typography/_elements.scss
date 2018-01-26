@@ -7,17 +7,24 @@
     &--lg     { font-size: $s1; }
     &--sm     { font-size: $s-1; font-weight: 400; }
   }
-  &--left     { text-align: left; }
-  &--right    { text-align: right; }
   &--bold     { font-weight: bold; }
   &--italic   { font-style: italic; }
-  &--center   { text-align: center; }
   &--white    { color: $white; }
   &--black    { color: $text; }
   &--dark     { color: $text-dark; }
   &--light    { color: $text-light; }
   &--red      { color: $l-red; }
   &--red-dark { color: $l-red-dark; }
+
+  // alignment
+  &--left   { text-align: left; }
+  &--right  { text-align: right; }
+  &--center { text-align: center; }
+  @include bp(xxl) {
+    &--bp-left   { text-align: left; }
+    &--bp-right  { text-align: right; }
+    &--bp-center { text-align: center; }
+  }
 }
 
 .line-length {

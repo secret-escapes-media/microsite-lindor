@@ -32,11 +32,12 @@
   &--capital    { text-transform: capitalize; }
   &--upper      { text-transform: uppercase; }
   &--italic     { font-style: italic; }
+  &--hyphens    { hyphens: auto; }
 
   &--display-size { font-size: $s9; }
   &--xxxxxl       { font-size: $s7; }
   &--xxxxl        { font-size: $s7; }
-  &--xxxl         { font-size: $s7; }
+  &--xxxl         { font-size: $s6; }
   &--xxl          { font-size: $s6; }
   &--xl           { font-size: $s5; }
   &--lg           { font-size: $s4; }
@@ -44,7 +45,11 @@
   &--sm           { font-size: $s2; }
   &--xs           { font-size: $s1; }
   &--xxs          { font-size: $s0; }
-  &--xxxs         { font-size: $s-1; }
+  &--xxxs         { font-size: $s0; }
+
+  @include bp(sm){
+    &--xxxl         { font-size: $s7; }
+  }
 
   @include bp(md){
     &--display-size { font-size: $s11; }

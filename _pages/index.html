@@ -22,14 +22,16 @@ banner:
   </div>
 </div>
 
-<div class="section">
-  <div class="space--lg"></div>
-  <div class="row row--6-6-gutters row--padding">
+<div class="space--lg"></div>
+
+<div class="vpad--xl">
+  <div class="row row--padding">
+    <div class="overview-nav">
     {% assign site-sections = site.html_pages | sort:"nav-order" %}
     {% for section in site-sections %}
       {% unless section.id == 'overview' or section.id == 'lindor' or section.id == 'entered' or section.id == 'terms' %}
-      <div class="col">
-        <div class="bg-img bg-img--3-2 border" style="background-image: url('{{site.baseurl}}/img/content/overview-nav/{{section.id}}.jpg');">
+      <div class="overview-nav__item">
+        <div class="bg-img bg-img--hover bg-img--3-2 border" style="background-image: url('{{site.baseurl}}/img/content/overview-nav/{{section.id}}.jpg');">
           <a href="{{site.baseurl}}/{{section.id}}" class="bg-img__link"></a>
           <div class="bg-img__content">
             <hr class="hr--sm hr--white">
@@ -40,10 +42,11 @@ banner:
       </div>
       {% endunless %}
     {% endfor %}
+    </div>
   </div>
 </div>
 
-<div class="section row--padding text--center">
+<div class="row--padding text--center">
   <div class="row">
     <h3 class="title title--md title--italic text--red-dark">Our Romantic Travellers</h3>
     <hr>
@@ -52,8 +55,8 @@ banner:
     {% assign experts = site.data.experts %}
     {% for expert in experts %}
     <div class="col">
-      <div class="expert border bg-img bg-img--1-1" style="background-image: url({{ site.baseurl }}/img/content/experts/{{ expert.class }}.jpg);">
-        <a href="#" class="expert__link js-open-modal" data-open-modal="{{ expert.class }}">
+      <div class="expert border bg-img bg-img--hover bg-img--1-1" style="background-image: url({{ site.baseurl }}/img/content/experts/{{ expert.class }}-nav.jpg);">
+        <a class="expert__link js-open-modal" data-open-modal="{{ expert.class }}">
           <span class="expert__title title title--sm">
             {{ expert.name1 }}{% if expert.name2 %} & {{ expert.name2 }}{% endif %}
           </span>
@@ -62,5 +65,7 @@ banner:
     </div>
     {% endfor %}
   </div>
-  <div class="space--xl"></div>
 </div>
+
+<div class="space--xxxl"></div>
+<div class="space--lg"></div>

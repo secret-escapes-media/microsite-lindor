@@ -28,6 +28,10 @@ function modalOpen(event){
   modal.fadeIn('250', function(){
     $(this).removeClass('is-closed').addClass('is-open');
   });
+
+  // reset modal scroll position
+  modal.scrollTop(0);
+
 }
 
 // closes modal

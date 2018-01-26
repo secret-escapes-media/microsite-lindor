@@ -31,6 +31,7 @@
   @include bp(lg){
     &--xxxxl { padding-top: $s14; padding-bottom: $s14; }
     &--xxxl  { padding-top: $s12; padding-bottom: $s12; }
+    &--xxl   { padding-top: $s10; padding-bottom: $s10; }
   }
 }
 
@@ -48,9 +49,16 @@
 
 // box padding for inner page elements like offer cards
 .boxpad {
-  &--xxl  { padding: $s10; }
-  &--xl   { padding: $s8; }
-  &--lg   { padding: $s6; }
-  &--md   { padding: $s4; }
-  &--sm   { padding: $s2; }
+  &--xxl  { padding: $s8; }
+  &--xl   { padding: $s6; }
+  &--lg   { padding: $s4; }
+  &--md   { padding: $s2; }
+  &--sm   { padding: $s0; }
+  @include bp(md) {
+    &--xxl  { padding: $s10; }
+    &--xl   { padding: $s8; }
+    &--lg   { padding: $s6; }
+    &--md   { padding: $s4; }
+    &--sm   { padding: $s2; }
+  }
 }

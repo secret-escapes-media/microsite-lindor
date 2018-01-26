@@ -39,7 +39,6 @@ gulp.task('js', function(){
       './js/_lib/modernizr-custom.js',
       './node_modules/jquery/dist/jquery.min.js',
       './node_modules/jquery-countdown/dist/jquery.countdown.min.js',
-      './node_modules/fittext.js/jquery.fittext.js',
 
       // custom js - with on doc ready wrapper
       './js/_components/on-ready/start.js',

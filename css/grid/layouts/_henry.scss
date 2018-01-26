@@ -4,6 +4,7 @@
 
 .henry {
   &__image {
+    position: relative;
     background-color: $grey-light;
     @include background-attributes();
     &:before {

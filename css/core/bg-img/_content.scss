@@ -3,7 +3,7 @@
 .bg-img {
   // Vertically centered content in bg-image
   @include transition;
-  // box-shadow: 0;
+  box-shadow: 0;
   &__link {
     position: absolute;
     top: 0;

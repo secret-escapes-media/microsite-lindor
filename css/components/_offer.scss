@@ -23,6 +23,7 @@ section.offers { border-top: 5px solid $grey-lightest; }
   &--horizontal {
     width: 100%;
     max-width: $xxxl;
+    .col + .col { margin-top: 0; }
   }
   // END GRID SHIZZ
   &__link {
@@ -61,13 +62,15 @@ section.offers { border-top: 5px solid $grey-lightest; }
   }
   &__image {
     .offer--horizontal & {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
       display: block;
-      width: 50%;
+      @include bp(lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+      }
     }
   }
   &__content {
@@ -77,13 +80,15 @@ section.offers { border-top: 5px solid $grey-lightest; }
     border-bottom: 1px solid $grey-lighter;
     background-color: $white;
     .offer--horizontal & {
-      display: flex;
-      min-height: $s15;
-      border-top: 1px solid $grey-lighter;
-      border-left: 0;
-      border-right: 1px solid $grey-lighter;
-      border-bottom: 1px solid $grey-lighter;
-      align-items: center;
+      @include bp(lg) {
+        display: flex;
+        min-height: $s15;
+        border-top: 1px solid $grey-lighter;
+        border-left: 0;
+        border-right: 1px solid $grey-lighter;
+        border-bottom: 1px solid $grey-lighter;
+        align-items: center;
+      }
     }
   }
   &__title {

@@ -14,7 +14,7 @@
   description: Stay right on the Grand Canal at an elegant Venice abode
   price: 55
   price-description: per person per night
-  saved: 18
+  saved: 38
   expires: 2018/01/30
   link: "https://www.secretescapes.com/hotel-palazzo-giovanelli-venice-italy/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
@@ -88,12 +88,12 @@
   expires: 2018/01/30
   link: "https://www.secretescapes.com/luxury-barbados-beach-holiday-with-motorised-watersports-tamarind-by-elegant-hotels-caribbean/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
-- id: victory-house-m-gallery-by-sofitel
-  title: Victory House MGallery by Sofitel
-  location: Leicester Square, Central London
-  description: A new film-inspired Sofitel stay in London's Leicester Square
-  price: 1
-  price-description: per person per night
-  saved: 1
-  expires: 2018/01/30
-  link: "https://www.secretescapes.com/victory-house-mgallery-by-sofitel-leicester-square-central-london/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
+- id: the-curtain
+  title: The Curtain
+  location: Shoreditch, London
+  description: A luxe hotel and members' club in London's hip Shoreditch
+  price: 160
+  price-description: per room per night
+  saved: 44
+  expires: 2018/01/31
+  link: "https://www.secretescapes.com/the-curtain-shoreditch-london/sale?gce_sa=0&utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"

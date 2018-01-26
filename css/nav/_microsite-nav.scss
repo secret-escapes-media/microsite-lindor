@@ -65,12 +65,14 @@ $nav-width-bp:        760px;
     border-right: 1px solid rgba($white,.12);
     &:last-child { border-right: 0; }
     @include transition;
-    &:hover {
+    &.is-current {
       background-color: rgba($white,.12);
       border-right-color: transparent;
     }
-    // &:hover + & { border-right-color: transparent; }
-    &.is-current { }
+    &:hover {
+      background-color: rgba($white,.24);
+      border-right-color: transparent;
+    }
   }
   &__link {
     position: relative;
