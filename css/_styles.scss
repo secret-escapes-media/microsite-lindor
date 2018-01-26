@@ -12,6 +12,7 @@ body {
 }
 .bg {
   &--white { background-color: $white; }
+  &--grey  { background-color: $grey-lightest; }
   &--fixed-section {
     height: 600px;
     height: 80vh;
@@ -190,8 +191,8 @@ $border-size: 6px;
 }
 
 .site-nav {
-  .page--overview &       { background-color: rgba(#434361,.5) }
-  .page--secret-romance & { background-color: rgba(#62748c,.5) }
+  // .page--overview &       { background-color: rgba(#434361,.5) }
+  // .page--secret-romance & { background-color: rgba(#62748c,.5) }
   &--footer               { background-color: $grey-darker; }
   &--footer > &           { background-color: transparent; }
 }

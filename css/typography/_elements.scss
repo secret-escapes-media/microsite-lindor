@@ -69,3 +69,8 @@ hr {
   &--sm    { max-width: 100px; }
   &--white { border-color: rgba($white,.75); }
 }
+
+br.desktop-break {
+  display: none;
+  @include bp(xxxl){ display: block; }
+}

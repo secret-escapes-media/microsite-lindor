@@ -9,7 +9,7 @@
   cursor: auto;
   &.is-open   { display: block; }
   &.is-closed { display: none; }
-  &--standard { max-width: $xl; }
+  &--standard { max-width: 750px; }
   &--series   { max-width: $xxl; }
   &--youtube  { max-width: $xxxl; }
   &--image    { max-width: $xxl; }

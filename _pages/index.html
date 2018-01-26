@@ -7,7 +7,8 @@ intro: Love beckons as romance envelops this heart-stirring time of year. Let us
 
 banner:
   title: Romantic Breaks
-  title-sub: In Partnership With Lindor
+  title-sub: In Partnership With <img class="js-svg-swap logo logo--partner" src="{{ site.baseurl }}/img/logo/partner.png" alt="{{site.client.name}} Logo">
+
 ---
 
 <div class="row row--xxl row--padding">
@@ -15,7 +16,7 @@ banner:
     <div class="row boxpad--lg text--center bg--white ">
       <div class="line-length--lg">
         <p class="text--xl">{{page.intro}}</p>
-        <p>Browse curated Secret Escapes offers that feature top picks from three iconic themes – the privacy and beauty of the country, the replenishing and stunning coastal breaks, and the electric excitement of the city. Discover an opulent competition prize that will take you to the home of the Master Chocolatiers, LINDOR.</p>
+        <p>Discover secret romance this Valentine’s, with a handpicked selection of unique experiences guaranteed to woo your loved ones. Browse curated Secret Escapes offers in iconic, romantic destinations and don’t miss the exclusive competition prize from LINDOR, to make your stay that little bit more blissful…</p>
       </div>
     </div>
   </div>
@@ -26,7 +27,7 @@ banner:
   <div class="row row--6-6-gutters row--padding">
     {% assign site-sections = site.html_pages | sort:"nav-order" %}
     {% for section in site-sections %}
-      {% unless section.id == "overview" or section.id == "competition" or section.id == 'entered' %}
+      {% unless section.id == 'overview' or section.id == 'lindor' or section.id == 'entered' or section.id == 'terms' %}
       <div class="col">
         <div class="bg-img bg-img--3-2 border" style="background-image: url('{{site.baseurl}}/img/content/overview-nav/{{section.id}}.jpg');">
           <a href="{{site.baseurl}}/{{section.id}}" class="bg-img__link"></a>

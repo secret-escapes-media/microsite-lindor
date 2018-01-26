@@ -10,7 +10,7 @@
       <div class="row row--xl row--align">
         {% if page.banner.title-super %}<div class="title title--display title--super title--xs title--upper title--kerning-lg">{{page.banner.title-super}}</div>{% endif %}
           <h1 class="title title--display title--xxxl title--kerning title--line"><span>{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</span></h1>
-        {% if page.banner.title-sub %}<div class="title title--display title--xs title--upper title--kerning-lg">{{page.banner.title-sub}}</div>{% endif %}
+        {% if page.banner.title-sub %}<div class="title title--display title--xs title--upper title--kerning-lg">{{page.banner.title-sub | liquify}}</div>{% endif %}
       </div>
       {% endif %}
     </div>

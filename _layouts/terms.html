@@ -9,7 +9,9 @@
 
     {% include page/header.html %}
 
-    {% include page/banner.html %}
+    <div class="site-header__offset">
+      {% include nav/microsite-nav.html %}
+    </div>
 
     <div class="page__content">
 
@@ -17,15 +19,7 @@
 
     </div>
 
-    {% unless page.id == 'competition' or page.id == 'entered' or page.id == 'offers' %}{% include components/comp-promo.html %}{% endunless %}
-
-    {% if page.id == 'offers' %}
-      {% include components/offer-promo.html %}
-    {% endif %}
-
     {% include page/footer.html %}
-
-    {% include modal/modal.html %}
 
   </body>
 

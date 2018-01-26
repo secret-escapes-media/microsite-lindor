@@ -45,7 +45,7 @@ $nav-list-bp: 730px;
   font-family: $font-family;
   color: $white;
   text-align: center;
-  background-color: rgba($black,.75);
+  background-color: rgba($black,.8);
   @include bp(md){
     padding-left: $core-nav-padding;
     padding-right: $core-nav-padding;
