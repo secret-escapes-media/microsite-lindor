@@ -1,0 +1,117 @@
+.title {
+  font-family: $font-family-headline-01;
+  line-height: 1.175;
+  letter-spacing: .0125em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  &--display {
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  &--core {
+    font-family: $font-family;
+    line-height: 1.25;
+    font-weight: 200;
+  }
+
+  & + *         { padding-top: .75em; }
+  &--sub        { padding-top: 0 !important; }
+  &--super + *  { padding-top: 0 !important; }
+  &--light      { font-weight: 200; }
+  &--bold       { font-weight: 500; }
+  &--bolder     { font-weight: 600; }
+  &--kerning    { letter-spacing: .1em; }
+  &--kerning-lg { letter-spacing: .3em; }
+  &--kerning-xl { letter-spacing: .5em; }
+  &--tight      { line-height: .9; }
+  &--tighter    { line-height: .8; }
+  &--capital    { text-transform: capitalize; }
+  &--upper      { text-transform: uppercase; }
+  &--italic     { font-style: italic; }
+  &--hyphens    { hyphens: auto; }
+
+  &--display-size { font-size: $s9; }
+  &--xxxxxl       { font-size: $s7; }
+  &--xxxxl        { font-size: $s7; }
+  &--xxxl         { font-size: $s6; }
+  &--xxl          { font-size: $s6; }
+  &--xl           { font-size: $s5; }
+  &--lg           { font-size: $s4; }
+  &--md           { font-size: $s3; }
+  &--sm           { font-size: $s2; }
+  &--xs           { font-size: $s1; }
+  &--xxs          { font-size: $s0; }
+  &--xxxs         { font-size: $s0; }
+
+  @include bp(sm){
+    &--xxxl         { font-size: $s7; }
+  }
+
+  @include bp(md){
+    &--display-size { font-size: $s11; }
+    &--xxxxxl       { font-size: $s10; }
+    &--xxxxl        { font-size: $s9; }
+    &--xxxl         { font-size: $s8; }
+    &--xxl          { font-size: $s7; }
+    &--xl           { font-size: $s6; }
+    &--lg           { font-size: $s5; }
+    &--md           { font-size: $s4; }
+    &--sm           { font-size: $s3; }
+  }
+  @include bp(lg){
+    &--display-size { font-size: $s13; }
+    &--xxxxxl       { font-size: $s12; }
+    &--xxxxl        { font-size: $s10; }
+    &--xxxl         { font-size: $s9; }
+    &--xxl          { font-size: $s8; }
+    &--xl           { font-size: $s7; }
+    &--lg           { font-size: $s6; }
+    &--md           { font-size: $s5; }
+    &--sm           { font-size: $s4; }
+    &--xs           { font-size: $s3; }
+    &--xxs          { font-size: $s2; }
+    &--xxxs         { font-size: $s1; }
+  }
+
+  &--line {
+    max-width: 0;
+    > *:first-child {
+      display: inline-block;
+      padding-bottom: 25px;
+      border-bottom: 3px double rgba($white,.75);
+    }
+  }
+
+  // &--line {
+  //   overflow: hidden;
+  //   text-align: center;
+  //   color: $s-red;
+  //   &-wrap {
+  //     position: relative;
+  //     display: inline-block;
+  //     &:before,
+  //     &:after {
+  //       // line either side of title effect
+  //       content: '';
+  //       position: absolute;
+  //       top: 52%; // 2% offset for source sans' weird line height
+  //       height: 1px;
+  //       width: 300%;
+  //       background-color: $s-red-lighter;
+  //     }
+  //     &:before {
+  //       right: 100%;
+  //       margin-right: $s1;
+  //     }
+  //     &:after {
+  //       left: 100%;
+  //       margin-left: $s1;
+  //     }
+  //   }
+  // }
+
+}

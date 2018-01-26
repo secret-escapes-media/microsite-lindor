@@ -1,41 +1,27 @@
 ---
-layout: content
+layout: default
+id: offers
+nav-order: 4
 title: Offers
-class: offers
-nav-order: 5
-overview-nav-order: 4
-modal:
-  title: Booking Confirmation Terms &amp; Conditions
-  content: >
-    <p>To enter this prize draw, participants must make a booking between 00:01am GMT on 27th January 2017 and 11:59pm GMT on 13th February 2017. Prize includes hotel stay only between 1 – 3 nights. The winner will be drawn at random by an independent party from all eligible entrants on 14th February 2017. Cancellation of the booking voids entry. The winning entrant will have the total price of their hotel reimbursed to the payment method used at checkout. The prizes are non-transferable and no cash or credit alternatives will be substituted for the prizes on offer. The winner will be contacted via email by <a href="mailto:zeena.sodha@secretescapes.com">zeena.sodha@secretescapes.com</a> to the winner’s membership e-mail address. If the winner rejects or fails to claim the prize within 3 days of being contacted, the prize may be awarded to other entrants at the absolute and sole discretion of Secret Escapes. Promoter reserves the right to refuse to honour any entry or to recover the full value of any prize if it considers there has been an abuse or breach of the terms and conditions of this Prize Draw.</p>
-
+intro: Browse these curated Secret Escapes offers below for that perfect romantic getaway. From the rustic charms of Tuscany to cosy pubs hidden in the Lake District, snuggle up with a loved one and plan your perfect break.
 ---
 
-<section class="banner-overlap section--padding-none">
-  <div class="row row--padding">
-    <div class="intro intro--white">
-      <div class="intro__wrap">
-        <h3 class="title title--margin title--hr title--hr-center">
-          <span class="title--italic">Sweeten your getaway with this</span> LINDOR <span class="title--italic">giveaway...</span>
-        </h3>
-        <p>From the rustic charms of Tuscany to cosy pubs hidden in the Lake District, snuggle up with a loved one and plan your perfect break.</p>
-        <p>A lucky five bookers will have the opportunity to have their Secret Escapes break reimbursed in full, courtesy of LINDOR. Book any hotel for up to three nights between 27 January and 13 February with Secret Escapes and be in with a chance to win. Simply opt in through the booking confirmation and dream of romance afar...</p>
+<div class="row row--xxl row--padding">
+  <div class="border">
+    <div class="row boxpad--lg text--center bg--white ">
+      <div class="line-length--lg">
+        <h3 class="title title--md text--red-dark">
+          <span class="title--italic">Have your romantic break paid for by</span> LINDOR <span class="title--italic">& sweeten your getaway</span></h3>
+        <hr class="hr--sm">
+        <p>{{page.intro}}</p>
+        <p>A lucky five bookings will have the opportunity to have any of the below Secret Escapes romantic getaways paid for in full, courtesy of LINDOR. Book any romantic stay of up to three nights with Secret Escapes and be automatically entered into the draw.</p>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section>
-  <div class="row row--columns-4-4-4-gutters row--padding">
-    {% assign offers = site.data.offers | sort: 'lindor-hero' | sort: 'lindor' | reverse %}
-    {% for offer in offers %}
-      {% include offer-block.html %}
-    {% endfor %}
+<div class="section">
+  <div class="row row--padding">
+    {% include components/offers.html %}
   </div>
-</section>
-
-<section>
-  <div class="row row--padding align-center">
-    <a href="https://www.secretescapes.com/romantic/filter?utm_source=SE&utm_campaign=Lindor_20170125&utm_medium=hub" class="btn btn--solid btn--large">View More Offers</a>
-  </div>
-</section>
+</div>

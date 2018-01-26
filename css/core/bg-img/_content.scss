@@ -1,0 +1,41 @@
+// styles for adding titles, links and hover effects for .bg-image
+
+.bg-img {
+  // Vertically centered content in bg-image
+  @include transition;
+  box-shadow: 0;
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-content-overlay;
+  }
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-content-upper;
+    width: 100%;
+    color: $white;
+    text-align: center;
+    padding: 1em;
+    .csstransforms.csstransforms3d & {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__bg { // need to rethink this - doesn't make sense to have .bg-img with a .bg inside of it
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-content;
+    @include background-attributes;
+    background-image: url(../img/img.jpg);
+    opacity: .8;
+  }
+  &--hover:hover { transform: scale(1.025); @include shadow; }
+}

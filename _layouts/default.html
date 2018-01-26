@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+  {% include page/head.html %}
 
-  <body id="top" class="{% if page.class %}{{ page.class }}{% endif %}" {% if page.class %}data-current-page="{{ page.class }}"{% endif %}>
+  <body id="top" class="page--{{page.id}}{% if page.group %} group--{{page.group}}{% endif %}" data-current-page="{{page.id}}"{% unless page.no-bg %} style="background-image: url({{site.baseurl}}/img/bg/{{page.id}}.jpg);"{% endunless %}>
 
-    {% include tracking.html %}
+    {% include page/tracking.html %}
 
-    {% include header.html %}
+    {% include page/header.html %}
 
-    {{ content }}
+    {% include page/banner.html %}
 
-    {% include footer.html %}
+    <div class="page__content">
+
+      {{ content }}
+
+    </div>
+
+    {% unless page.id == 'competition' or page.id == 'entered' or page.id == 'offers' %}{% include components/comp-promo.html %}{% endunless %}
+
+    {% if page.id == 'offers' %}
+      {% include components/offer-promo.html %}
+    {% endif %}
+
+    {% include page/footer.html %}
+
+    {% include modal/modal.html %}
 
   </body>
 

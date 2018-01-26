@@ -1,0 +1,124 @@
+---
+layout: default
+id: iconic-romance
+nav-order: 3
+title: Iconic Romance
+intro: From Paris to the Cyclades, lose yourself in effortlessly romantic settings with true Valentine’s icons.
+
+places:
+
+- id: paris
+  title: Paris
+  country:
+    title: Parisian
+    link: https://www.secretescapes.com/search/search?query=Paris, France
+  description: Lauded, and rightly so, as the city of love, Paris is the champion of romantic backdrops and passionate exploits. From the cafés of Montmartre to strolls along the Seine, it doesn’t get as traditionally romantic as this.
+  offer-id: dress-code-hotel-spa
+
+- id: venice
+  title: Venice
+  country:
+    title: Venetian
+    link: https://www.secretescapes.com/search/search?query=Veneto, Italy
+  description: A truly breathtaking destination, Venice seeps in curious cultural traditions and effortlessly romantic vistas. From gliding gondola rides, exploring labyrinthine streets and magnificent piazzas, get lost in the fragile beauty of this gloriously unique city.
+  offer-id: hotel-palazzo-giovanelli
+
+- id: bruges
+  title: Bruges
+  country:
+    title: Belgian
+    link: https://www.secretescapes.com/search/search?query=Belgium
+  description: A chocolate-box city full of medieval wonder and picture-postcard perfect scenes makes for a truly romantic escape. In the shadow of the magnificent belfry, wander the labyrinthine streets and find curious Belgian beer bars and cosy restaurants.
+  offer-id: floris-karos-hotel
+
+- id: rome
+  title: Rome
+  country:
+    title: Roman
+    link: https://www.secretescapes.com/search/search?query=Rome, Italy
+  description: Rome is one of the most beautiful cities in the world. Steal a kiss at the Trevi Fountain, be awe-inspired by the ancient Pantheon, and gorge yourself in the trattorias and enotecas.
+  offer-id: hotel-savoy
+
+- id: french-riveria
+  title: French Riveria
+  country:
+    title: French
+    link: https://www.secretescapes.com/search/search?query=France
+  description: The Côte d'Azur is a bonafide celebrity on the shores of the Mediterranean. Glitz and glamour frame this stunning stretch of coastline, epitomised in chic, continental towns like St Tropez, Cannes, Monte Carlos and Nice.
+  offer-id: hotel-suisse-nice
+
+- id: greek-islands
+  title: Greek Islands
+  country:
+    title: Greek
+    link: https://www.secretescapes.com/search/search?query=Greece
+  description: Charming white and blue domed Cycladic homes nestle on the rocky crops of the island shores, where the stunning Aegean offers warm dips and instant replenishment. Mediterranean cuisine and eternal sunshine make the Greek Islands one of our firm favourites.
+  offer-id: all-inclusive-rhodes-holiday-with-private-pool
+
+- id: indian-ocean
+  title: Indian Ocean
+  country:
+    title: Maldives
+    link: https://www.secretescapes.com/search/search?query=Maldives
+  description: Warm azure waters lap against crystalline sands fringed by gently swaying palm trees – it doesn’t get more serene than a break in one of the vast ocean’s exotic locations.
+  offer-id: adaaran-prestige-vadoo
+
+- id: new-york
+  title: New York
+  country:
+    title: New York
+    link: https://www.secretescapes.com/search/search?query=New York, USA
+  description: An urban image of dizzying heights, New York has long been celebrated as a romantic backdrop to a host of iconic films. Romance abounds in this bucket-list destination.
+  offer-id: the-james-new-york
+
+- id: caribbean
+  title: Caribbean
+  country:
+    title: Caribbean
+    link: https://www.secretescapes.com/search/search?query=Caribbean
+  description: Jet off to the famous sun-drenched shores of the Caribbean, and indulge in laid-back living. Famous beaches beckon, with beachside shacks offering cocktails in the shade of palm trees.
+  offer-id: luxury-barbados-beach-holiday-with-motorised-watersports
+
+- id: london
+  title: London
+  country:
+    title: London
+    link: https://www.secretescapes.com/search/search?query=London, England
+  description: A treasure of old-world romance, with creaky cosy pubs hidden in labyrinthine medieval streets, and of modern settings, with stunning rooftop bars perfect for cocktails and haute cuisine. London offers diverse romantic getaways, in an enigmatic urban sprawl as iconic as any.
+  offer-id: the-curtain
+
+---
+
+<div class="row row--xxl row--padding">
+  <div class="border">
+    <div class="row boxpad--lg text--center bg--white ">
+      <div class="line-length--lg">
+        <p class="text--lg">{{page.intro}}</p>
+        <p>From long-haul sun searching in the balmy Caribbean or exotic Indian Ocean to classic European charms from the cobbled street of Rome and the medieval splendour of Bruges, treat your loved ones to a luxurious escape with Lindor and Secret Escapes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section row row--padding">
+  {% for place in page.places %}
+    <div class="region">
+      <div class="region__image" style="background-image: url('{{site.baseurl}}/img/content/iconic/{{place.id}}.jpg');">
+        <div class="region__image-wrap boxpad--md">
+          <h2 class="title title--lg title--kerning text--white">{{ place.title | upcase }}</h2>
+          <a id="#track-iconic-{{place.id}}-more-offers" href="{{place.country.link}}" class="btn btn--sm btn--red-dark">View {{place.country.title}} offers</a>
+        </div>
+      </div>
+      <div class="region__text boxpad--md">
+        <p class="text--lg">{{ place.description }}</p>
+        <div class="space--md"></div>
+        {% assign this-offer = site.data.offers | where:'id', place.offer-id %}
+        {% for offer in this-offer %}
+          <div class="region__offer">
+            {% include components/offer-horizontal.html %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

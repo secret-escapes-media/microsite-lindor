@@ -1,0 +1,177 @@
+// general styles for the project that wouldn't be a reuseable component
+
+body {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #f3f3f3;
+}
+
+.page--lindor {
+  background: url('../img/bg/lindor-pour-bg.png') 150% -15px / 280px no-repeat, url('../img/bg/lindor-mobile.jpg') top center / cover no-repeat #f3f3f3;
+  @include bp(lg) {
+    background: url('../img/bg/lindor-pour-bg.png') 71.5% -50px / 280px no-repeat, url('../img/bg/lindor.jpg') center / cover no-repeat #f3f3f3;
+  }
+}
+.bg {
+  &--white { background-color: $white; }
+  &--grey  { background-color: $grey-lightest; }
+  &--fixed-section {
+    height: 600px;
+    height: 80vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    // vh issue on ios
+    .touch & {
+      height: 400px;
+      background-size: auto 400px;
+      background-attachment: scroll;
+    }
+  }
+}
+
+$border-size: 6px;
+.border {
+  border: $border-size solid rgba($white,.5);
+  background-origin: border-box;
+}
+
+.expert {
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 300px;
+  overflow: hidden;
+  &__link {
+    @include transition();
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    color: $white;
+    text-align: center;
+    text-shadow: 0 0 10px $black;
+    transform: translateY(-50%);
+  }
+}
+
+.modal__expert                  { background-color: $white; }
+.modal__question:nth-child(even){ background-color: $grey-lightest; }
+
+.mobile-center {
+  text-align: center;
+  @include bp(lg){ text-align: inherit; }
+}
+
+
+.region {
+  @include container($xxxl);
+  @include layout(12 0);
+  position: relative;
+  margin-bottom: ($s4 * 3);
+  background-color:$white;
+  box-shadow: 0 0 10px rgba($black,.15);
+  // & + & { margin-top: $s8; }
+  &__offer {
+    margin-bottom: -($s4 * 3);
+    box-shadow: 0 0 10px rgba($black,.15);
+    .offer__content{
+      border: 0;
+    }
+  }
+  &__image {
+    display: block;
+    position: relative;
+    background-color: $grey-lighter;
+    @include background-attributes;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%; // 4-3 ratio
+    }
+  }
+  &__image-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @include bp(lg){
+    &__image:before { padding-top: 56.25%; } // 0-0 ratio
+  }
+  @include bp(850px) {
+    &__image {
+      @include span(5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right:0;
+      bottom: 0;
+      &:before { display: none; }
+    }
+    &__text { @include span(7 last) }
+    &__image-wrap { position: relative; }
+  }
+}
+
+// this probably could be on title and then the inline stuff saved as another inline style class
+.fancy-number {
+  display: inline-block;
+  margin-top: $s-6;
+  margin-bottom: $s-6;
+  color: $l-red-dark;
+  font-family: $font-family-headline-01;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: $s6;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0;
+}
+
+.site-nav {
+  .page--overview &       { background-color: rgba(#ab5c46,.33) }
+  .page--secret-romance & { background-color: rgba(#57476f,.5) }
+  .page--iconic-romance & { background-color: rgba(#4c5175,.5) }
+  .page--offers &         { background-color: rgba(#7e8d9c,.5) }
+  .page--competition &    { background-color: rgba(#64426d,.5) }
+  .page--lindor &         { background-color: rgba(#3e0808,.75) }
+  .page--entered &        { background-color: rgba(#4c3148,.5) }
+  &--footer               { background-color: $grey-darker; }
+  &--footer > &           { background-color: transparent; }
+}
+
+
+.overview-nav__item {
+  // GRID SHIZZ
+  max-width: $lg;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $s4;
+  @include bp(xl) {
+    @include layout(12 1);
+    @include gallery(6);
+    margin-bottom: gutter(12);
+    // centers single offer
+    &:nth-child(odd):last-child {
+      margin-right: auto;
+      margin-left: auto;
+      float: none !important;
+    }
+  }
+  // END GRID SHIZZ
+}

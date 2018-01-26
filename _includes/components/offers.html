@@ -1,0 +1,7 @@
+{% assign offers = site.data.offers | sort: 'saved' | reverse %}
+
+<div class="row">
+  {% for offer in offers %}
+    {% include components/offer.html %}
+  {% endfor %}
+</div>

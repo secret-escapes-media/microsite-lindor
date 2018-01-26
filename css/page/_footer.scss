@@ -1,0 +1,18 @@
+// ---------- SITE FOOTER ----------
+.footer {
+  padding-top: $s6;
+  padding-bottom: $s6;
+  text-align: center;
+  background-color: $grey-darkest;
+  &__logos {
+    padding-bottom: $s0;
+    .logo {
+      vertical-align: middle;
+      margin: $s-1;
+    }
+  }
+  &__info {
+    font-size: .9em;
+    color: $grey-light;
+  }
+}

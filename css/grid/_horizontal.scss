@@ -1,0 +1,98 @@
+// layouts for all sections, using susy grid plugin
+
+
+// -------- general --------
+
+$susy:(
+  columns: 12,
+  container: 100%,
+  global-box-sizing: border-box,
+  gutters: 0,
+);
+$gutters:( gutters: 1/2 );
+$page-margin: $s4;
+
+
+// -------- two col grid mixin --------
+// creates two columns in 12 column grid with optional gutters
+// column number scheme e.g.  6-6 = 50% 50%    4-8 = 33% x 66%
+@mixin two-column-grid( $col1, $col2, $has-gutters: null ) {
+  .col {
+    @if $has-gutters {
+      @include span( $gutters $col1 );
+    } @else {
+      @include span( $col1 );
+    }
+  }
+  .col:nth-child( even ) {
+    @if $has-gutters {
+      @include span( $gutters last $col2 );
+    } @else {
+       @include span( last $col2 );
+    }
+  }
+}
+
+
+.row {
+  position: relative;
+  @include container($xxxl);
+  &--100     { max-width: 100%; }
+  &--xxl     { max-width: $xxl; }
+  &--xl      { max-width: $xl; }
+  &--lg      { max-width: $lg; }
+  &--md      { max-width: $md; }
+  &--sm      { max-width: $sm; }
+  &--align   { display: inline-block; }
+  &--padding {
+    padding-left: $s2;
+    padding-right: $s2;
+    @include bp(md){
+      padding-left: $s4;
+      padding-right: $s4;
+    }
+  }
+  &--margin {
+    margin-left: $s2;
+    margin-right: $s2;
+    @include bp(md){
+      margin-left: $s4;
+      margin-right: $s4;
+    }
+  }
+
+  // breakpoint for all columns
+  @include bp(lg){
+
+    // aligns columns vertically
+    .flexbox &--valign {
+      display: flex;
+      align-items: center;
+    }
+
+    // two columns without gutter
+    &--4-8 { @include two-column-grid( 4, 8 ); }
+    &--5-7 { @include two-column-grid( 5, 7 ); }
+    &--6-6 { @include two-column-grid( 6, 6 ); }
+    &--7-5 { @include two-column-grid( 7, 5 ); }
+    &--8-4 { @include two-column-grid( 8, 4 ); }
+
+    // two columns with gutter
+    &--3-9-gutters { @include two-column-grid( 3, 9, gutters ); }
+    &--4-8-gutters { @include two-column-grid( 4, 8, gutters ); }
+    &--5-7-gutters { @include two-column-grid( 5, 7, gutters ); }
+    &--6-6-gutters { @include two-column-grid( 6, 6, gutters ); }
+    &--7-5-gutters { @include two-column-grid( 7, 5, gutters ); }
+    &--8-4-gutters { @include two-column-grid( 8, 4, gutters ); }
+    &--9-3-gutters { @include two-column-grid( 9, 3, gutters ); }
+
+    // three columns without gutter
+    &--4-4-4 .col { @include gallery(4); }
+
+    // three columns with gutter
+    &--4-4-4-gutters .col {
+      @include gallery($gutters 4);
+      margin-bottom: gutter();
+    }
+  }
+}

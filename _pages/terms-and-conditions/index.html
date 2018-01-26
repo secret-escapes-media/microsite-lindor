@@ -1,0 +1,13 @@
+---
+layout: terms
+id: terms
+title: Terms & Conditions
+---
+
+{% assign terms = site.data.modals | where:'id', 'ts-and-cs' %}
+
+<div class="vpad--xxxl row--padding">
+  {{terms[0].content}}
+</div>
+
+<div class="space--xxxl"></div>

@@ -1,0 +1,31 @@
+<div class="js-modal modal is-closed">
+  <div class="modal__ui-wrap row row--padding">
+    <div class="js-close-modal modal__close"></div>
+
+    <!-- START - Filter all modals -->
+    {% assign modals = site.data.modals%}
+    {% for modal in modals %}
+      {% if modal.pages %}
+        {% for modal-page in modal.pages %}
+          {% if modal-page.id == page.id or modal-page.id == 'all' or modal-page.layout == page.layout %}
+
+            <!-- START - Modal Content -->
+            <div class="modal__content-wrap is-closed" data-modal-id="{{modal.id}}" data-youtube-id="{{modal.youtube-id}}">
+            {% if modal.type == 'youtube' %}
+              <div class="modal__video">
+            {% else %}
+              <div class="modal__content modal__standard">
+                {{modal.content}}
+            {% endif %}
+              </div>
+            </div>
+            <!-- END - Modal Content -->
+
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    <!-- END - Filter all modals -->
+
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include page/head.html %}
+
+  <body id="top" class="page--{{page.id}}{% if page.group %} group--{{page.group}}{% endif %}" data-current-page="{{page.id}}"{% unless page.no-bg %} style="background-image: url({{site.baseurl}}/img/bg/{{page.id}}.jpg);"{% endunless %}>
+
+    {% include page/tracking.html %}
+
+    {% include page/header.html %}
+
+    <div class="site-header__offset">
+      {% include nav/microsite-nav.html %}
+    </div>
+
+    <div class="page__content">
+
+      {{ content }}
+
+    </div>
+
+    {% include page/footer.html %}
+
+  </body>
+
+</html>

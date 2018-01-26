@@ -3,7 +3,6 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync').create(),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
-    rename      = require('gulp-rename'),
     htmlmin     = require('gulp-htmlmin'),
     autoprefix  = require('gulp-autoprefixer'),
     cssmin      = require('gulp-cssmin'),
@@ -11,10 +10,10 @@ var gulp        = require('gulp'),
     pngquant    = require('imagemin-pngquant');
 
 // Task for building blog when something changed:
-gulp.task('build', shell.task(['jekyll build --watch']));
+gulp.task('build', ['js'], shell.task(['jekyll build --watch']));
 
 // Task for serving sub directory blog with Browsersync
-gulp.task('serve', function () {
+gulp.task('serve', ['js'], function () {
     browserSync.init({
       server: {
         baseDir: '_site/',
@@ -24,26 +23,51 @@ gulp.task('serve', function () {
       }
     });
     // watches js to concat & uglify
-    gulp.watch('js/script.js', ['concatScripts']);
+    gulp.watch('js/**/*.js', ['js']);
     // Reloads page when some of the already built files changed:
     gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
 // concat & min scripts
-gulp.task('concatScripts', function(){
+gulp.task('js', function(){
   return gulp.src([
-    './js/modernizr-custom.js',
-    './bower_components/jquery/dist/jquery.min.js',
-    './bower_components/jquery.countdown/dist/jquery.countdown.min.js',
-    './js/script.js'])
-  .pipe(concat('scripts.js'))
+
+    //  JS MAIN FILE BUILD
+    // --------------------
+
+      // plugins
+      './js/_lib/modernizr-custom.js',
+      './node_modules/jquery/dist/jquery.min.js',
+      './node_modules/jquery-countdown/dist/jquery.countdown.min.js',
+
+      // custom js - with on doc ready wrapper
+      './js/_components/on-ready/start.js',
+
+      // components
+      './js/_components/standard.js',
+      './js/_components/modal.js',
+      './js/_components/offer-countdown.js',
+
+      // custom js for project
+      './js/script.js',
+
+      './js/_components/on-ready/end.js'
+      // end custom js
+
+  ])
+  .pipe(concat('scripts.min.js'))
+  .pipe(gulp.dest('./_site/js'));
+});
+
+// uglify js
+gulp.task('js-compress', function(){
+  return gulp.src('./_site/**/*.js')
   .pipe(uglify())
-  .pipe(rename('scripts.min.js'))
-  .pipe(gulp.dest('./js'));
+  .pipe(gulp.dest('./_site'));
 });
 
 // minify complied html
-gulp.task('htmlMinify', function() {
+gulp.task('html', function() {
   return gulp.src('./_site/**/*.html')
   .pipe(htmlmin({
     collapseWhitespace: true,
@@ -53,7 +77,7 @@ gulp.task('htmlMinify', function() {
 });
 
 // css autoprefix & min
-gulp.task('optimiseCss', function() {
+gulp.task('css', function() {
   return gulp.src('./_site/**/*.css')
   .pipe(autoprefix({
     browsers: ['last 3 versions', 'iOS 7'],
@@ -64,7 +88,7 @@ gulp.task('optimiseCss', function() {
 });
 
 // compress images
-gulp.task('compressImages', function () {
+gulp.task('images', function () {
   return gulp.src('./img/**/*')
   .pipe(imagemin({
     progressive: true,
@@ -76,7 +100,7 @@ gulp.task('compressImages', function () {
 
 
 // builds jekyll site & watch for changes
-gulp.task('default', ['build', 'serve', 'concatScripts']);
+gulp.task('default', ['js', 'build', 'serve' ]);
 
 // run before uploading to live - compresses images & css
-gulp.task('compress', ['compressImages', 'optimiseCss', 'htmlMinify']);
+gulp.task('compress', ['images', 'css', 'html', 'js-compress']);
