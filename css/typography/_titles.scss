@@ -78,7 +78,7 @@
   }
 
   &--line {
-    max-width: 0;
+    // max-width: 0; disabled as causes rendering issues
     > *:first-child {
       display: inline-block;
       padding-bottom: 25px;
