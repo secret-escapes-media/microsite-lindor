@@ -5,7 +5,7 @@
   price: 72
   price-description: per person per night
   saved: 68
-  expires: 2018/01/30
+  expires: 2018/02/06
   link: "https://www.secretescapes.com/dress-code-hotel-and-spa-paris-france/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
 - id: hotel-palazzo-giovanelli
@@ -15,7 +15,7 @@
   price: 55
   price-description: per person per night
   saved: 38
-  expires: 2018/01/30
+  expires: 2018/02/06
   link: "https://www.secretescapes.com/hotel-palazzo-giovanelli-venice-italy/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
 - id: floris-karos-hotel
@@ -25,37 +25,27 @@
   price: 31
   price-description: per person per night
   saved: 42
-  expires: 2018/01/30
+  expires: 2018/02/06
   link: "https://www.secretescapes.com/floris-karos-hotel-bruges-belgium1/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
 - id: hotel-savoy
   title: Hotel Savoy
   location: Rome, Italy
   description: Classic elegance in central Rome near the Spanish Steps
-  price: 45
+  price: 90
   price-description: per person per night
   saved: 39
-  expires: 2018/01/30
+  expires: 2018/02/06
   link: "https://www.secretescapes.com/hotel-savoy-rome-italy-uk/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
-
-- id: hotel-suisse-nice
-  title: Hotel Suisse Nice
-  location: Nice, France
-  description: A boutique French Riviera stay near the beach
-  price: 56
-  price-description: per person per night
-  saved: 40
-  expires: 2018/01/30
-  link: "https://www.secretescapes.com/hotel-suisse-nice-nice-france-e/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
 - id: all-inclusive-rhodes-holiday-with-private-pool
   title: 5* all-inclusive Rhodes holiday with private pool
   location: Rhodes, Greece
   description: Adults-only, all-inclusive bliss at a boutique, five-star hotel on Rhodes
-  price: 499
+  price: 549
   price-description: per person for 5 nights
-  saved: 38
-  expires: 2018/01/30
+  saved: 23
+  expires: 2018/02/06
   link: "https://www.secretescapes.com/5-star-all-inclusive-rhodes-holiday-with-optional-private-pool-esperos-blue-village-and-spa-greek-islands1/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
 - id: adaaran-prestige-vadoo
@@ -65,35 +55,45 @@
   price: 448
   price-description: per villa per night
   saved: 43
-  expires: 2018/01/30
+  expires: 2018/02/06
   link: "https://www.secretescapes.com/adaaran-prestige-vadoo-south-male-atoll-maldives/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
 
-- id: the-james-new-york
-  title: The James New York
-  location: SoHo, New York
-  description: Art-centric boutique digs in chic SoHo, with a rooftop pool
-  price: 61
+- id: hotel-beau-rivage
+  title: Hotel Beau Rivage
+  location: Nice, France
+  description: A historic Nice hotel near the Promenade des Anglais
+  price: 32
   price-description: per person per night
-  saved: 33
-  expires: 2018/01/30
-  link: "https://www.secretescapes.com/the-james-new-york-soho-new-york/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
+  saved: 51
+  expires: 2018/02/06
+  link: "https://www.secretescapes.com/hotel-beau-rivage-nice-france-uk/sale?gce_sa=0&utm_source=SE_Media&utm_medium=RomanticBreaks&utm_campaign=Lindor_2018"
 
-- id: luxury-barbados-beach-holiday-with-motorised-watersports
-  title: Luxury Barbados beach holiday with motorised watersports
-  location: Barbados, Caribbean
-  description: Watersports and tropical cocktails in Barbados
-  price: 1099
-  price-description: per person for 7 nights
-  saved: 30
-  expires: 2018/01/30
-  link: "https://www.secretescapes.com/luxury-barbados-beach-holiday-with-motorised-watersports-tamarind-by-elegant-hotels-caribbean/sale?utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
+- id: the-time-new-york
+  title: The Time New York
+  location: Midtown, New York
+  description: A stylish New York hotel just steps from Times Square
+  price: 52
+  price-description: per person per night
+  saved: 26
+  expires: 2018/02/06
+  link: "https://www.secretescapes.com/the-time-new-york-midtown-new-york/sale?gce_sa=0&utm_source=SE_Media&utm_medium=RomanticBreaks&utm_campaign=Lindor_2018"
 
-- id: the-curtain
-  title: The Curtain
-  location: Shoreditch, London
-  description: A luxe hotel and members' club in London's hip Shoreditch
-  price: 160
+- id: mondrian-london-at-sea-containers
+  title: Mondrian London at Sea Containers
+  location: South Bank, Central London
+  description: A luxe design-led London hotel on the Thames riverbank
+  price: 165
   price-description: per room per night
-  saved: 44
-  expires: 2018/01/31
-  link: "https://www.secretescapes.com/the-curtain-shoreditch-london/sale?gce_sa=0&utm_source=SE_Media&utm_medium=RomanticBreaks_Jan2018&utm_campaign=Lindor_2018"
+  saved: 24
+  expires: 2018/02/07
+  link: "https://www.secretescapes.com/mondrian-london-at-sea-containers-south-bank-central-london/sale?utm_source=SE_Media&utm_medium=RomanticBreaks&utm_campaign=Lindor_2018"
+
+- id: boutique-barbados-getaway-with-ocean-views
+  title: Boutique Barbados getaway with ocean views
+  location: Treasure Beach by Elegant Hotels, Caribbean
+  description: A Barbados beach holiday staying in a redesigned and renovated, adults-only boutique hotel, with breakfast and all travel
+  price: 1199
+  price-description: per person for 7 nights
+  saved: 40
+  expires: 2018/02/13
+  link: "https://www.secretescapes.com/mondrian-london-at-sea-containers-south-bank-central-london/sale?utm_source=SE_Media&utm_medium=RomanticBreaks&utm_campaign=Lindor_2018"
