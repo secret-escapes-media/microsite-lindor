@@ -46,26 +46,4 @@ banner:
   </div>
 </div>
 
-<div class="row--padding text--center">
-  <div class="row">
-    <h3 class="title title--md title--italic text--red-dark">Our Romantic Travellers</h3>
-    <hr>
-  </div>
-  <div class="row row--xxl row--padding row--4-4-4-gutters text-center">
-    {% assign experts = site.data.experts %}
-    {% for expert in experts %}
-    <div class="col">
-      <div class="expert border bg-img bg-img--hover bg-img--1-1" style="background-image: url({{ site.baseurl }}/img/content/experts/{{ expert.class }}-nav.jpg);">
-        <a class="expert__link js-open-modal" data-open-modal="{{ expert.class }}">
-          <span class="expert__title title title--sm">
-            {{ expert.name1 }}{% if expert.name2 %} & {{ expert.name2 }}{% endif %}
-          </span>
-        </a>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
-<div class="space--xxxl"></div>
 <div class="space--lg"></div>

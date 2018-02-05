@@ -16,8 +16,8 @@ body {
   &--white { background-color: $white; }
   &--grey  { background-color: $grey-lightest; }
   &--fixed-section {
-    height: 600px;
-    height: 80vh;
+    height: 500px;
+    height: 50vh;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
