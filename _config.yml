@@ -4,7 +4,7 @@ client:
   name: Lindor
   link: http://www.lindt.co.uk/shop/our-brands/lindor
 description: >
-  Love beckons as romance envelops this heart-stirring time of year. Let us inspire you with breaks and getaways that promise to offer you and that special someone the chance to sneak away and enjoy quality time in opulent surroundings.
+  It’s that time of year again! Let us inspire you with our romantic collections, perfect for Valentine’s, and woo your loved one with luxurious moments. 
 baseurl: "/romantic-breaks" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 
