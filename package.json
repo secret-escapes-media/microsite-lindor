@@ -21,6 +21,7 @@
     "imagemin-pngquant": "^5.0.0",
     "jquery": "^3.2.1",
     "jquery-countdown": "^2.2.0",
+    "natives": "^1.1.6",
     "reset-css": "^2.2.0",
     "susy": "^2.2.12"
   }
