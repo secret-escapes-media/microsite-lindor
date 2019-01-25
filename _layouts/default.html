@@ -17,8 +17,6 @@
 
     </div>
 
-    {% unless page.id == 'competition' or page.id == 'entered' or page.id == 'offers' %}{% include components/comp-promo.html %}{% endunless %}
-
     {% if page.id == 'offers' %}
       {% include components/offer-promo.html %}
     {% endif %}
