@@ -1,7 +1,7 @@
 .offer-promo {
   position: relative;
   color: $white;
-  background-color: rgba(60, 67, 76, 0.75);
+  background-color: rgba($grey-darker,.75);
   text-align: center;
   &__bgs {
     position: absolute;

@@ -14,89 +14,59 @@ picks:
   - id: wish-upon-a-star
     title: Wish upon a star
     location: Isle of Wight
-    country:
-      title: Isle of Wight
-      link: https://www.secretescapes.com/search/search?query=Isle+of+Wight
     description: Already a popular short-hop island escape, the Isle of Wight is famed for its pretty villages and natural beauty; but few have experienced the darkness of the south of the island at night – the perfect location for stargazing. Head for Atherfield or Compton as the sun slowly sinks away, with some blankets and nibbles in hand. Pitch a spot high on the cliffs (take a torch so you don't fall off!) and gaze at the heavens together for an unmissable light show.
 
   - id: win-them-over-with-verse
     title: Win them over with verse
     location: Hay-on-Wye, Wales
-    country:
-      title: Hay-on-Wye
-      link: https://www.secretescapes.com/search/search?query=Hay-on-Wye
     description: This charming village in the evocative Brecon Beacons is the perfect spot for picking out a piece of prose or poetry to best declare your undying love for your partner. After all, this picturesque village is uniquely packed with the highest concentration of second-hand bookshops (one even found in the old castle!) anywhere. It also hosts cosy cafes and delicious restaurants, with country charms fit for long, romantic walks in the surrounding countryside.
 
 
   - id: swim-with-fairies
     title: Swim with fairies
     location: Glenbrittle, Isle of Skye
-    country:
-      title: Isle of Skye
-      link: https://www.secretescapes.com/search/search?query=Isle+of+Skye
     description: Set off on a hike from Glen Brittle – don’t forget the champagne and nibbles – to this beguiling beauty spot in the shadow of the Black Cuillin Ridge; the Fairy Pools. Cascading waterfalls and enchanting pools dot the landscape, with magnificently clear waters. If you’re both feeling brave, take a dip (maybe not in mid-February though!), and marvel at this wonderfully romantic, secluded outdoor hideaway.
 
 
   - id: lose-yourself-in-the-grounds-of-leeds-castle
     title: Lose yourself in the grounds of Leeds Castle
     location: Leeds Castle, Kent
-    country:
-      title: Kent
-      link: https://www.secretescapes.com/search/search?query=Kent
     description: Live, for a moment, like Henry VIII and Catherine of Aragon, flirtatiously chasing one another around the hedge maze of Leeds Castle. Actually, don’t do that – we all know how that romance ended. But do live your own Tudor romance at this Kentish beauty spot, where the famous hedge maze promises Elizabethan frolics galore, in a setting fit for a fairytale romance. Guinevere eat your heart out.
 
 
   - id: shuck-oysters
     title: Shuck oysters
     location: Whitstable, Kent
-    country:
-      title: Kent
-      link: https://www.secretescapes.com/search/search?query=Kent
     description: One of the most beautiful seaside towns in Kent, Whitstable is famed for its glorious oyster heritage, a high street packed with quaint independent shops, and irresistibly picturesque beaches. Head for the harbour front and pitch up at one of the town’s chic oyster bars, slurping this classic ‘food of love’ without trying to make a mess. Sip champagne and delight at this seaside gem.
 
 
   - id: relax-like-the-romans
     title: Relax like the Romans
     location: Bath, Somerset
-    country:
-      title: Bath
-      link: https://www.secretescapes.com/search/search?query=Bath
     description: Spa breaks are top of the pops for a romantic sojourn. So when you’re picking your Valentine’s getaway, go classic, go smart, and head for the blonde Georgian wonder that is Bath. Britain’s premier spa town, the bubbling waters have been delighting visitors since the days of King Lear; now, you too can enjoy the hot springs once more, at the stylish Thermae Bath Spa. Head straight for the rooftop pool for beautiful views of Bath.
 
 
   - id: jazz-jivin
     title: Jazz jivin’
     location: Soho, London
-    country:
-      title: London
-      link: https://www.secretescapes.com/search/search?query=London
     description: Show your cool-cat side by swingin’ and jivin’ at the legendary Ronnie Scott’s jazz club in the heart of Soho. Since 1959, this stalwart club has hosted the likes of Chet Baker, Ella Fitzgerald, Nina Simone, Curtis Mayfield and many more – a pedigree that is sure to woo any concerning music lover. Dress sharp, book a table and revel in a night of slick, city sounds from the coolest hipsters and cats.
 
 
   - id: walk-with-wordsworth-in-aira-force-ullswater
     title: Walk with Wordsworth in Aira Force & Ullswater
     location: Lake District
-    country:
-      title: Lake District
-      link: https://www.secretescapes.com/search/search?query=Lake+District
     description: Romance abounds in the lakeland scenes of Aira Force & Ullswater. Fell-top expeditions and woodland glade tree trails unwind around shimmering Ullswater, and cascading waterfalls are criss-crossed by trails at beautiful Aira Force. Don’t miss the Ullswater Steamer which glides along the length of the lake, in a landscape that proved one of Wordsworth’s most cherished. Top romantic marks all around; don’t forget your Wordsworth collection for a few select readings, you heart stealer.
 
 
   - id: punt-down-the-cam
     title: Punt down the Cam
     location: Cambridge
-    country:
-      title: Cambridge
-      link: https://www.secretescapes.com/search/search?query=Cambridge
     description: Cambridge is a wonderfully charming city, with old college buildings and leafy greens painting a perfect picture of idyllic escape. And what better way to sink into the surroundings than with a traditional punt down the river Cam? Yes, it may not be Venice, but it’s a rather serene glide down-river passing grandiose college buildings and sleepy Cambridge life, offering ample opportunity to look adoringly into your lover’s eyes…
 
 
   - id: raise-a-glass-at-gordon-s-wine-bar
     title: Raise a glass at Gordon’s Wine Bar
     location: London
-    country:
-      title: London
-      link: https://www.secretescapes.com/search/search?query=London
     description: Old London hides in the nooks and crannies of this bustling city, a Dickensian vision of dark alleyways and sordid cockney sorts. No better example then, in Gordon’s – London’s oldest wine bar. Negotiate the tumbling stairs into this subterranean cavern where a special type of old London conviviality exists. Grab a bottle and a cheese board and sit in the candle-lit cave – the light is fantastically flattering and the atmosphere ravishingly romantic...
 
 
@@ -127,7 +97,6 @@ picks:
       <h3 class="title title--lg">{{pick.title}}</h3>
       <h4 class="title title--sub title--xxs">In {{pick.location}}</h4>
       <p>{{pick.description}}</p>
-      <a id="track-{{pick.id}}-se-offers-btn" href="{{pick.country.link}}" class="btn btn--sm btn--red-dark-outline">See {{pick.country.title}} Offers</a>
     </div>
   </div>
   {% endfor %}
