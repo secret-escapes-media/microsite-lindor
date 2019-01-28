@@ -37,38 +37,6 @@ $border-size: 6px;
   background-origin: border-box;
 }
 
-.expert {
-  width: 100%;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 300px;
-  overflow: hidden;
-  &__link {
-    @include transition();
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-
-  &__title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    padding: 0 20px;
-    color: $white;
-    text-align: center;
-    text-shadow: 0 0 10px $black;
-    transform: translateY(-50%);
-  }
-}
-
-.modal__expert                  { background-color: $white; }
-.modal__question:nth-child(even){ background-color: $grey-lightest; }
-
 .mobile-center {
   text-align: center;
   @include bp(lg){ text-align: inherit; }
