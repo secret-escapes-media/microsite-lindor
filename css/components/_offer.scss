@@ -154,15 +154,13 @@ section.offers { border-top: 5px solid $grey-lightest; }
       vertical-align: middle !important;
     }
   }
+  &__spacer {
+    display: table-cell;
+    width: $s2;
+  }
   &__details {
     display: table-cell;
     vertical-align: middle;
-    padding-left: $s2;
-    @include bp(sm){
-      padding-left: $s2;
-    }
-    @include bp(md){
-    }
   }
   &__price {
     color: $orange;
@@ -186,23 +184,21 @@ section.offers { border-top: 5px solid $grey-lightest; }
     }
   }
   &__bottom {
-    @include bp(sm){
-      display: table;
-      width: 100%;
-      padding-top: $s2;
-      * { vertical-align: middle; }
-      strong,
-      span { vertical-align: baseline; }
-      .offer--horizontal & { padding-top: $s0; }
-      &-item {
-        display: table-cell;
-        &--right {
-          text-align: right;
-          vertical-align: bottom !important;
-          @include bp(md){
-            vertical-align: middle !important;
-          };
-        }
+    display: table;
+    width: 100%;
+    padding-top: $s2;
+    * { vertical-align: middle; }
+    strong,
+    span { vertical-align: baseline; }
+    .offer--horizontal & { padding-top: $s0; }
+    &-item {
+      display: table-cell;
+      &--right {
+        text-align: right;
+        vertical-align: bottom !important;
+        @include bp(md){
+          vertical-align: middle !important;
+        };
       }
     }
   }

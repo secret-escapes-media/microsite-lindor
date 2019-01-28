@@ -1,7 +1,13 @@
-{% assign offers = site.data.offers | sort: 'saved' | reverse %}
+{% assign uk-offers = site.data.offers | where: 'uk', 'true' | sort: 'price' %}
+{% assign non-uk-offers = site.data.offers | where: 'uk', 'false' | sort: 'price' %}
+
+
 
 <div class="row">
-  {% for offer in offers %}
+  {% for offer in uk-offers %}
+    {% include components/offer.html %}
+  {% endfor %}
+  {% for offer in non-uk-offers %}
     {% include components/offer.html %}
   {% endfor %}
 </div>

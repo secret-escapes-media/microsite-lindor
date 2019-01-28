@@ -2,7 +2,7 @@
 
   <a class="offer__link" href="{{ offer.link }}"><span class="btn btn--orange">View Offer</span></a>
 
-  <div class="bg-img bg-img--3-2" style="background-image: url('{{ site.baseurl }}/img/offers/{{offer.id}}.jpg')">
+  <div class="bg-img bg-img--3-2" style="background-image: url('{{offer.image}}')">
   </div>
 
   <div class="offer__content">
@@ -12,9 +12,12 @@
 
     <div class="offer__bottom">
       <div class="offer__bottom-item">
-        <div class="offer__saved">
-          <span>Save up to</span> <span class="offer__saved-num">{{ offer.saved }}%</span>
-        </div>
+        {% if offer.saved %}
+          <div class="offer__saved">
+            <span>Save up to</span> <span class="offer__saved-num">{{ offer.saved }}%</span>
+          </div>
+          <div class="offer__spacer"></div>
+        {% endif %}
         <div class="offer__details">
           <div>From <span class="offer__price">£{{ offer.price }}</span></div>
           <div class="text--sm">{{ offer.price-description }}</div>
