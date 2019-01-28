@@ -6,7 +6,7 @@ client:
 description: >
   Let us inspire you with our romantic collections, perfect for a blissful Valentine’s Day, and share unforgettable moments with your loved one.
 baseurl: "/romantic-breaks" # the subpath of your site, e.g. /blog/
-url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
+url: "https://secretescapes.com" # the base hostname & protocol for your site
 
 
 # Build settings
