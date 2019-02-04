@@ -10,18 +10,6 @@
   link: https://www.secretescapes.com/hotel-and-spa-la-belle-juliette-paris-france/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: false
 
-- id: venice-times-hotel
-  title: Venice Times Hotel
-  location: Venice, Italy
-  description: An elegant hotel with monochrome and marble interiors, close to the historic centre of Venice, with breakfast, a welcome drink and more
-  price: 62
-  price-description: per person based on 2 people per room
-  saved: 43
-  expires: 2019/01/29
-  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/82189/00d98f5f_ffd9_4d07_bb5c_0b2660db3a40.jpg
-  link: https://www.secretescapes.com/venice-times-hotel-venice-italy/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
-  uk: false
-
 - id: hotel-prinsenhof
   title: Hotel Prinsenhof
   location: Bruges, Belgium
@@ -29,7 +17,7 @@
   price: 73
   price-description: per person based on 2 people per room
   saved: 40
-  expires: 2019/01/29
+  expires: 2019/02/05
   image: https://d1x3cbuht6sy0f.cloudfront.net/sales/34150/4d3a0a5e_1ca3_4c79_8e56_2b096b80fa47.jpg
   link: https://www.secretescapes.com/hotel-prinsenhof-bruges-belgium-uk/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: false
@@ -41,7 +29,7 @@
   price: 44
   price-description: per person based on 2 people per room
   saved: 47
-  expires: 2019/01/29
+  expires: 2019/02/05
   image: https://d1x3cbuht6sy0f.cloudfront.net/sales/80839/69fb97f6_5750_414c_8099_74f594982ed8.jpg
   link: https://www.secretescapes.com/hotel-savoy-rome-italy-uk-sale/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: false
@@ -53,7 +41,7 @@
   price: 66
   price-description: per person based on 2 people per room
   saved: 56
-  expires: 2019/01/29
+  expires: 2019/02/05
   image: https://d1x3cbuht6sy0f.cloudfront.net/sales/71261/edfd5d34_6873_4db8_b684_c3d2813d93f1.jpg
   link: https://www.secretescapes.com/columbus-monte-carlo-monte-carlo-monaco5/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: false
@@ -70,18 +58,6 @@
   link: https://www.secretescapes.com/all-inclusive-corfu-beach-holiday-with-fine-dining-ikos-dassia-corfu-greece/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: false
 
-- id: ultra-all-inclusive-maldives-holiday-with-private-pool
-  title: 5* ultra all-inclusive Maldives holiday with private pool
-  location: Sun Aqua Iru Veli, Indian Ocean
-  description: A super high-end getaway to a new five-star island resort in the Maldives, with premium all-inclusive board, a massage, excursion, watersports perks, plus an optional overwater villa with private pools
-  price: 2299
-  price-description: per person based on 2 people per room
-  saved: #
-  expires: 2019/02/04
-  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/86651/e11b275d_ee3c_4ad0_904e_03192d666012.jpg
-  link: https://www.secretescapes.com/5-star-ultra-all-inclusive-maldives-holiday-with-private-pool-and-seaplane-transfers-sun-aqua-iru-veli-indian-ocean/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
-  uk: false
-
 - id: roger-new-york
   title: Roger New York
   location: Midtown, New York
@@ -92,18 +68,6 @@
   expires: 2019/02/05
   image: https://d1x3cbuht6sy0f.cloudfront.net/sales/50832/85ec6deb_2adf_4675_93ff_9651c8b7051c.jpg
   link: https://www.secretescapes.com/roger-new-york-midtown-new-york-uk/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
-  uk: false
-
-- id: diverse-barbados-grenada-beach-escape-with-extras
-  title: Diverse Barbados & Grenada beach escape with extras
-  location: Bougainvillea Barbados & Coyaba Beach Resort
-  description: An easygoing holiday at two luxury beach resorts in Barbados and Grenada - with breakfast and all travel
-  price: 1299
-  price-description: per person based on 2 people per room
-  saved: #
-  expires: 2019/02/05
-  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/87108/04ddf376_032b_4ec0_bb63_bed53a9b5952.jpg
-  link: https://www.secretescapes.com/blissful-beach-getaway-to-barbados-and-grenada-bougainvillea-barbados-and-coyaba-beach-resort/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: false
 
 - id: the-athenaeum
@@ -125,21 +89,9 @@
   price: 60
   price-description: per person based on 2 people per room
   saved: 42
-  expires: 2019/01/30
+  expires: 2019/02/06
   image: https://d1x3cbuht6sy0f.cloudfront.net/sales/76528/9ba4690c_d53b_4b07_b35b_6b2da0201855.jpg
   link: https://www.secretescapes.com/tolcarne-beach-village-newquay-cornwall-uk/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
-  uk: true
-
-- id: the-old-stocks-inn
-  title: The Old Stocks Inn
-  location: Stow-on-the-Wold, Cotswolds
-  description: A charming Cotswold stay in a 17th-century hotel with boutique interiors – includes breakfast, a bottle of prosecco, a complimentary minibar, and optional three-course dinner
-  price: 54
-  price-description: per person based on 2 people per room
-  saved: 45
-  expires: 2019/01/30
-  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/16475/c6301939_d1c6_4e86_b311_606602d2b608.jpg
-  link: https://www.secretescapes.com/the-old-stocks-inn-stow-on-the-wold-cotswolds/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: true
 
 - id: stapleford-park-luxury-hotel-spa-and-golf-resort
@@ -154,18 +106,6 @@
   link: https://www.secretescapes.com/stapleford-park-luxury-hotel-spa-and-golf-resort-stapleford-park-leicestershire/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: true
 
-- id: cross-foxes
-  title: Cross Foxes
-  location: Snowdonia National Park, Wales
-  description: High-end boutique lodgings at the foot of Cadair Idris, just south of Snowdonia, with incredible mountain views - includes breakfast, packed lunch and dinner
-  price: 62
-  price-description: per person based on 2 people per room
-  saved: 33
-  expires: 2019/01/30
-  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/63182/0111e390_1e67_4d2a_9e76_aee83297bdde.jpg
-  link: https://www.secretescapes.com/cross-foxes-snowdonia-national-park-wales/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
-  uk: true
-
 - id: grand-hotel-palazzo-livorno
   title: Grand Hotel Palazzo Livorno
   location: Tuscany, Italy
@@ -173,7 +113,7 @@
   price: 44
   price-description: per person based on 2 people per room
   saved: 48
-  expires: 2019/01/29
+  expires: 2019/02/05
   image: https://d1x3cbuht6sy0f.cloudfront.net/sales/41116/659c1bca_8770_433f_8ea4_ae1965778b58.jpg
   link: https://www.secretescapes.com/grand-hotel-palazzo-livorno-tuscany-italy2/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: false
@@ -185,7 +125,7 @@
   price: 74
   price-description: per person based on 2 people per room
   saved: 53
-  expires: 2019/01/30
+  expires: 2019/02/06
   image: https://d1x3cbuht6sy0f.cloudfront.net/sales/56297/28ee12e7_284d_43aa_896e_dd43d52e6a99.jpg
   link: https://www.secretescapes.com/the-borrowdale-hotel-keswick-lake-district/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: true
@@ -197,7 +137,79 @@
   price: 68
   price-description: per person based on 2 people per room
   saved: 49
-  expires: 2019/01/29
+  expires: 2019/02/06
   image: https://d1x3cbuht6sy0f.cloudfront.net/hotels/89/9c12d3be_1d48_4864_beda_5280db749a50.jpg
   link: https://www.secretescapes.com/langshott-manor-horley-surrey/sale-hotel?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
+  uk: true
+
+- id: romantic-venice-escape-with-gondola-ride
+  title: Romantic Venice escape with gondola ride
+  location: Hotel Giorgione, Italy
+  description: Traditional charm and history in the heart of Venice, with breakfast, prosecco, a shared gondola ride and flights
+  price: 219
+  price-description: per person based on 2 people per room
+  saved: #
+  expires: 2019/02/12
+  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/76219/cc432069_2a45_41d4_8663_e6da07e5a8c3.jpg
+  link: https://www.secretescapes.com/romantic-venice-escape-with-gondola-ride-hotel-giorgione-italy1/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
+  uk: false
+
+- id: nika-island-resort-and-spa
+  title: Nika Island Resort and Spa
+  location: Ari Atoll, Maldives
+  description: Low-key luxury on a far-flung island in the Maldives, including full board, a snorkelling tour, signature massage and an over-water villa option
+  price: 116
+  price-description: per person based on 2 people per room
+  saved: 50
+  expires: 2019/02/12
+  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/69495/4c97228d_b28f_448b_8cf1_7d6adefc0a84.jpg
+  link: https://www.secretescapes.com/nika-island-resort-and-spa-ari-atoll-maldives/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
+  uk: false
+
+- id: thompson-playa-del-carmen
+  title: Thompson Playa del Carmen
+  location: Playa del Carmen, Mexico
+  description: A glamorous stay at a stylish boutique hotel in the heart of Playa del Carmen, just steps from the beach
+  price: 68
+  price-description: per person based on 2 people per room
+  saved: 50
+  expires: 2019/02/12
+  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/29087/575381bf_713d_42d9_b6c1_3911d9cd2fb2.jpg
+  link: https://www.secretescapes.com/thompson-playa-del-carmen-playa-del-carmen-mexico/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
+  uk: false
+
+- id: andaz-capital-gate
+  title: Andaz Capital Gate
+  location: Abu Dhabi, UAE
+  description: An elegant hotel with a striking design in Abu Dhabi, close to Sheikh Zayed Grand Mosque, Corniche and Mangrove National Park – includes breakfast and thoughtful perks
+  price: 32
+  price-description: per person based on 2 people per room
+  saved: 78
+  expires: 2019/02/12
+  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/71231/a6fae557_8e4a_4bf2_b93a_bcb415ba2b2c.jpg
+  link: https://www.secretescapes.com/andaz-capital-gate-abu-dhabi-united-arab-emirates/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
+  uk: false
+
+- id: palmeraie-palace
+  title: Palmeraie Palace
+  location: Marrakech, Morocco
+  description: An exotic Moroccan escape to a five-star spa and golf hotel on the edge of Marrakech, including breakfast, spa treatment discount, a shuttle service and more
+  price: 52
+  price-description: per person based on 2 people per room
+  saved: 33
+  expires: 2019/02/12
+  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/14082/49a40a26_6f0c_4387_9309_7b59adbbcf97.jpg
+  link: https://www.secretescapes.com/palmeraie-palace-marrakech-morocco/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
+  uk: false
+
+- id: the-cottage-in-the-wood
+  title: The Cottage in the Wood
+  location: Great Malvern, Worcestershire
+  description: Breathtaking views of the Cotswolds and the Severn Valley from a well-located hotel high in the Malvern Hills – includes, breakfast, optional dinner and late check-out
+  price: 40
+  price-description: per person based on 2 people per room
+  saved: 53
+  expires: 2019/02/06
+  image: https://d1x3cbuht6sy0f.cloudfront.net/sales/57524/b5452916_606f_4daa_b86d_ed01ff1771d3.jpg
+  link: https://www.secretescapes.com/charming-worcestershire-stately-home-escape-the-cottage-in-the-wood-great-malvern/sale?utm_source=SE_Media&utm_medium=Lindor&utm_campaign=Jan2019
   uk: true
