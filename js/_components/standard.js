@@ -62,3 +62,18 @@ if ("ontouchstart" in document.documentElement){
   // if (currentCategory !== ''){
   //   $('.category--' + currentCategory + ' [class*=nav__item--' + currentCategory + ']').addClass('is-current');
   // }
+
+  ///////////////////////////////////////
+  //   query string searcher
+  ///////////////////////////////////////
+
+  // searches for specific queryString, returns value or true if empty value
+  function getQueryStringByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return true;
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }

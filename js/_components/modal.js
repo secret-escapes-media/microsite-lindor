@@ -3,22 +3,31 @@ var modal          = $('.js-modal'),
     modalCloseBtn  = $('.js-close-modal');
 
 // opens modal
-function modalOpen(event){
-  event.preventDefault();
+function modalOpen(event, modalId){
+
+  // is there a click event?
+  if (event) {
+    event.preventDefault();
+    // find the modal id from clicked element
+    var activeModalId = $(event.currentTarget).data('open-modal');
+  } else {
+    // find the modal id from passed string
+    var activeModalId = modalId;
+  }
+
+  // find the active modal dom element
+  var activeModal = $('*[data-modal-id="' + activeModalId + '"]');
+
   // disable scrolling on background content (doesn't work iOS)
   $('body').addClass('disable-scroll');
-
-  // find the modal id & element
-  var activeModalId = $(event.currentTarget).data('open-modal'),
-      activeModal   = $('*[data-modal-id="' + activeModalId + '"]');
 
   // builds youtube video if needed
   if (activeModal.data('youtube-id')) {
     // get youtube id and target div
-    var video     = activeModal.find('.modal__video'),
+    var video     = activeModal.find('.js-modal-video'),
         youtubeId = activeModal.data('youtube-id');
     // insert the code into the target with the id and autoplay
-    video.html('<div class="video__wrap"><div class="video"><iframe class="video__iframe" src="https://www.youtube.com/embed/' + youtubeId + '?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div></div>');
+    video.html('<div class="video__wrap"><iframe class="video" src="https://www.youtube.com/embed/' + youtubeId + '?rel=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>');
   }
 
   // reveal the specific modal content
@@ -31,7 +40,6 @@ function modalOpen(event){
 
   // reset modal scroll position
   modal.scrollTop(0);
-
 }
 
 // closes modal
@@ -49,6 +57,18 @@ function modalClose(event){
   });
 }
 
+// launches modal from url queryString
+var modalQueryString = 'open-modal';
+if (getQueryStringByName(modalQueryString)) {
+  // find modal id & dom element
+  var modalId = getQueryStringByName(modalQueryString);
+  var modalElement = $('*[data-modal-id="' + modalId + '"]');
+  // is there is a modal to open?
+  if ( $(modalElement).length > 0 ) {
+    // open without passing event
+    modalOpen(null, modalId);
+  }
+}
 
 // launches modal when offer is clicked
 modalLaunchBtn.on('click', function(event) {
